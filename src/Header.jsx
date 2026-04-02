@@ -8,12 +8,12 @@ function Header() {
 					<h1>Er waren eens...</h1>
 					<nav>
 						<ul>
-							<li>
-								<Link to="/">home</Link>
-							</li>
-							<li>
-								<Link to="/Rumpelstiltskin">My fairy tale</Link>
-							</li>
+							<Link to="/">
+								<li>home</li>
+							</Link>
+							<Link to="/Rumpelstiltskin">
+								<li>My fairy tale</li>
+							</Link>
 						</ul>
 					</nav>
 				</div>
