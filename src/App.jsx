@@ -9,7 +9,7 @@ import Home from "./pages/home";
 function App() {
 	return (
 		<>
-			<BrowserRouter basename="/frontEnd-sprookje-JoachimGautama">
+			<BrowserRouter /*basename="/frontEnd-sprookje-JoachimGautama"*/>
 				<Routes>
 					<Route path="/home" element={<Home />} />
 					<Route
