@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
 	return (
 		<>
+			<BrowserRouter basename="/{repo-name}"></BrowserRouter>
 			<h1>The end</h1>
 		</>
 	);
