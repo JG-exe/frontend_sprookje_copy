@@ -19,7 +19,7 @@ function App() {
 				</Routes>
 			</BrowserRouter>
 			<Header />
-			<h1>The end</h1>
+			<h1>The end!!</h1>
 		</>
 	);
 }
