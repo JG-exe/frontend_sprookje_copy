@@ -1,25 +1,26 @@
 import "./App.css";
-
-import { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
 import Header from "./Header";
+import Footer from "./Footer";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Rumpelstiltskin from "./pages/Rumpelstiltskin";
-import Home from "./pages/home";
+import Home from "./pages/Home";
 
 function App() {
 	return (
 		<>
 			<BrowserRouter /*basename="/frontEnd-sprookje-JoachimGautama"*/>
-				<Routes>
-					<Route path="/home" element={<Home />} />
-					<Route
-						path="/Rumpelstiltskin"
-						element={<Rumpelstiltskin />}
-					/>
-				</Routes>
+				<Header />
+				<div className="ctx">
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route
+							path="/Rumpelstiltskin"
+							element={<Rumpelstiltskin />}
+						/>
+					</Routes>
+				</div>
 			</BrowserRouter>
-			<Header />
-			<h1>The end!!</h1>
+			<Footer />
 		</>
 	);
 }
