@@ -28,7 +28,7 @@ function Header() {
                 <input
                   type="search"
                   name="search"
-                  id="search"
+                  id="headerSearch"
                   placeholder="Zoek een verhaal"
                 />
               </li>

@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body {
@@ -19,10 +20,15 @@ header h1 {
 }
 
 header {
-  margin-bottom: 3rem;
+  padding-bottom: 0.2rem;
   background-color: black;
   width: 100%;
   height: 100px;
+
+  #headerLogo {
+    height: 90px;
+    width: auto;
+  }
 }
 
 .flexRowSpaceBetween {
@@ -39,6 +45,7 @@ nav {
     a {
       color: gray;
       margin: 0 0.8rem;
+      padding-bottom: 0.5rem;
       transition: all 0.1s ease-in-out;
       transform: all 0.1s ease-in-out;
 
@@ -49,13 +56,14 @@ nav {
 
       &:hover {
         border-bottom: 0.1rem solid whitesmoke;
-        padding-bottom: 0.4rem;
+        padding-bottom: 0.3rem;
       }
     }
 
     li {
       display: inline;
       vertical-align: middle;
+      font-size: medium;
     }
   }
 }
@@ -77,6 +85,7 @@ ul.nav {
 
   li {
     list-style: none;
+    font-size: smaller;
   }
 }
 
@@ -93,12 +102,8 @@ input[type="search"] {
 
 .ctx {
   width: 85vw;
+  height: 100%;
   margin: auto;
-}
-
-#headerLogo {
-  height: 100px;
-  width: auto;
 }
 
 footer {

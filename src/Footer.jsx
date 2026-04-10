@@ -5,10 +5,11 @@ function Footer() {
     <footer>
       <div className="ctx flexRowSpaceBetween">
         <img src="../assets/erWasEensLogosqr.svg" id="footerLogo" />
+
         <input
           type="search"
           name="search"
-          id="search"
+          id="footerSearch"
           placeholder="Zoek een verhaal"
         />
         <div className="links">
