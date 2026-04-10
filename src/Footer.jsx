@@ -27,6 +27,9 @@ function Footer() {
           </ul>
         </div>
       </div>
+      <div className="ctx copyRight">
+        <sub>Copyright (c) 2026 EhB MCT (Joachim Gautama)</sub>
+      </div>
     </footer>
   );
 }
