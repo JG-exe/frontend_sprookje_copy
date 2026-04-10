@@ -45,7 +45,7 @@ nav {
     a {
       color: gray;
       margin: 0 0.8rem;
-      padding-bottom: 0.5rem;
+      padding: 0.5rem 0.5rem;
       transition: all 0.1s ease-in-out;
       transform: all 0.1s ease-in-out;
 
@@ -64,6 +64,7 @@ nav {
       display: inline;
       vertical-align: middle;
       font-size: medium;
+      line-height: normal;
     }
   }
 }
@@ -75,7 +76,7 @@ ul.nav {
   a {
     text-decoration: none;
     color: whitesmoke;
-    padding: 0.5rem 0.5rem;
+    padding: 0.2rem 0.2rem;
     text-transform: uppercase;
 
     &:hover {
@@ -86,6 +87,7 @@ ul.nav {
   li {
     list-style: none;
     font-size: smaller;
+    line-height: 0.5rem;
   }
 }
 
@@ -109,9 +111,9 @@ input[type="search"] {
 footer {
   margin-top: auto;
   padding-bottom: 0.5rem;
-}
 
-#footerLogo {
-  width: 150px;
-  height: auto;
+  #footerLogo {
+    width: 150px;
+    height: auto;
+  }
 }
