@@ -28,7 +28,7 @@ function Footer() {
         </div>
       </div>
       <div className="ctx copyRight">
-        <sub>Copyright (c) 2026 EhB MCT (Joachim Gautama)</sub>
+        <sub>Copyright &copy; 2026 EhB MCT (Joachim Gautama)</sub>
       </div>
     </footer>
   );
