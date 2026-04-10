@@ -1,9 +1,33 @@
+import { Link, NavLink } from "react-router";
+
 function Footer() {
-	return (
-		<div className="ctx">
-			<h1>The end!</h1>
-		</div>
-	);
+  return (
+    <footer>
+      <div className="ctx flexRowSpaceBetween">
+        <img src="../assets/erWasEensLogosqr.svg" id="footerLogo" />
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Zoek een verhaal"
+        />
+        <div className="links">
+          <h4>Pagina's</h4>
+          <ul className="nav">
+            <Link to="/">
+              <li>home</li>
+            </Link>
+            <Link to="/All">
+              <li>alle verhalen</li>
+            </Link>
+            <Link to="/MakingOf">
+              <li>Making of...</li>
+            </Link>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

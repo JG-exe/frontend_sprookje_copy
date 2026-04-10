@@ -2,8 +2,9 @@ import "./css/App.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Rumpelstiltskin from "./pages/Rumpelstiltskin";
+import MakingOf from "./pages/MakingOf";
 import Home from "./pages/Home";
+import All from "./pages/All";
 
 function App() {
   return (
@@ -13,11 +14,12 @@ function App() {
         <div className="ctx">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Rumpelstiltskin" element={<Rumpelstiltskin />} />
+            <Route path="/all" element={<All />} />
+            <Route path="/MakingOf" element={<MakingOf />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 }
