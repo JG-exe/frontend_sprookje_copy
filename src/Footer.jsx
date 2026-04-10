@@ -5,7 +5,7 @@ function Footer() {
     <footer>
       <div className="ctx flexRowSpaceBetween">
         <img src="../assets/erWasEensLogosqr.svg" id="footerLogo" />
-
+        <div className="spacer"></div>
         <input
           type="search"
           name="search"
