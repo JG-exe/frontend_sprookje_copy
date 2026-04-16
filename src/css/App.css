@@ -108,6 +108,16 @@ input[type="search"] {
   margin: auto;
 }
 
+.bookList {
+  .book {
+    margin: 10px;
+  }
+}
+
+.bookList:has(.book.open) .book:not(.open) {
+  scale: 1;
+}
+
 footer {
   margin-top: auto;
   padding-bottom: 0.5rem;

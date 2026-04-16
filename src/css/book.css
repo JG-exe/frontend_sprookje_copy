@@ -1,6 +1,6 @@
 .book {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 150px;
   aspect-ratio: 1 / 1.5;
 
@@ -89,6 +89,7 @@
 .book.open {
   width: 300px;
   transform: translateX(200px);
+  z-index: 2;
   .cover {
     transform: rotateY(-175deg);
   }
