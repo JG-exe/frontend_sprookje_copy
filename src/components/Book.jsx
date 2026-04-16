@@ -1,22 +1,83 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import "../css/book.css";
 
-function Book() {
-  const [open, setOpen] = useState(false);
-  return (
+function Book({ book }) {
+  const [status, setStatus] = useState("idle");
+  const [originRect, setOriginRect] = useState(null);
+  const slotRef = useRef(null);
+  const bookRef = useRef(null);
+
+  const handleClick = () => {
+    if (status !== "idle") return;
+    const rect = slotRef.current.getBoundingClientRect();
+    setOriginRect(rect);
+    setStatus("opening");
+  };
+
+  useEffect(() => {
+    const current = bookRef.current;
+    const style = current.style;
+    if (status === "opening" && bookRef.current && originRect) {
+      style.top = `${originRect.top}px`;
+      style.left = `${originRect.left}px`;
+      style.width = `${originRect.width}px`;
+      style.transform = `none`;
+
+      requestAnimationFrame(() => {
+        style.top = "";
+        style.left = "";
+        style.width = "";
+        style.transform = "";
+      });
+    }
+  });
+
+  const handleClose = (e) => {
+    e.stopPropagation();
+    console.log("click");
+    const current = bookRef.current;
+    const style = current.style;
+
+    const rect = slotRef.current.getBoundingClientRect();
+
+    style.top = `${rect.top}px`;
+    style.left = `${rect.left}px`;
+    style.width = `${rect.width}px`;
+    style.transform = `none`;
+
+    requestAnimationFrame(() => {
+      style.top = `${originRect.top}px`;
+      style.left = `${originRect.left}px`;
+      style.width = `${originRect.width}px`;
+      setStatus("closing");
+    });
+  };
+
+  const handleTransitionEnd = (e) => {
+    if (e.propertyName !== "width") return;
+    if (status === "opening") setStatus("open");
+    if (status === "closing") {
+      bookRef.current.style.cssText = "";
+      setStatus("idle");
+    }
+  };
+
+  const bookMarkup = (
     <div
-      className={`animate book ${open ? "open" : ""}`}
-      onClick={() => setOpen((o) => !o)}
+      ref={bookRef}
+      className={`animate book ${status}`}
+      id={`book${book.id}`}
+      onClick={handleClick}
+      onTransitionEnd={handleTransitionEnd}
     >
       <div className="animate cover">
         <div className="front">
-          <img
-            src="https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg"
-            alt=""
-          />
+          <img src={book.cover} alt="" />
           <div className="info">
-            <div className="story">De prinses en de erwt</div>
-            <div className="creator">Bozo McNugger the third</div>
+            <div className="story">{book.title}</div>
+            <div className="creator">{book.author}</div>
+            <div className="creator">{book.creator}</div>
           </div>
         </div>
 
@@ -30,13 +91,20 @@ function Book() {
         <div className="right half">
           <div className="pagectx">
             <div className="info">
-              <div className="story">De prinses en de erwt</div>
-              <div className="creator">Bozo McNugger the third</div>
+              <div className="story">{book.title}</div>
+              <div className="creator">{book.author}</div>
+              <div className="creator">{book.creator}</div>
             </div>
             <button>go to story</button>
+            {status === "open" && <button onClick={handleClose}>close</button>}
           </div>
         </div>
       </div>
+    </div>
+  );
+  return (
+    <div className="bookSlot" ref={slotRef}>
+      {status === "idle" ? bookMarkup : createPortal(bookMarkup, document.body)}
     </div>
   );
 }

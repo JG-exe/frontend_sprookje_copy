@@ -26,8 +26,7 @@ header {
   height: 100px;
 
   #headerLogo {
-    height: 100px;
-    width: auto;
+    width: 200px;
   }
 }
 
@@ -105,17 +104,18 @@ input[type="search"] {
 .ctx {
   width: 85vw;
   height: 100%;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .bookList {
-  .book {
+  display: flex;
+  .bookSlot {
     margin: 10px;
   }
 }
 
-.bookList:has(.book.open) .book:not(.open) {
-  scale: 1;
+.bookList:has(.book.open) .book:not(.open):not(.closing) {
+  pointer-events: none;
 }
 
 footer {
