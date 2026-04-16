@@ -74,7 +74,7 @@ function Book({ book }) {
       <div className="animate cover">
         <div className="front">
           <img src={book.cover} alt="" />
-          <div className="info">
+          <div className="info animate">
             <div className="story">{book.title}</div>
             <div className="creator">{book.author}</div>
             <div className="creator">{book.creator}</div>
