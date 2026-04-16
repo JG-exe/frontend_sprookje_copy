@@ -54,6 +54,10 @@
   }
 }
 
+.pagectx {
+  margin: 0.4rem;
+}
+
 .front,
 .back {
   inset: 0;

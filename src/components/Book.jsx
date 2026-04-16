@@ -21,14 +21,19 @@ function Book() {
         </div>
 
         <div className="back">
-          <p>Created for Front-End MCT 2</p>
+          <div className="pagectx">
+            <p>Created for Front-End MCT 2</p>
+          </div>
         </div>
       </div>
       <div className="inner">
         <div className="right half">
-          <div className="info">
-            <div className="story">De prinses en de erwt</div>
-            <div className="creator">Bozo McNugger the third</div>
+          <div className="pagectx">
+            <div className="info">
+              <div className="story">De prinses en de erwt</div>
+              <div className="creator">Bozo McNugger the third</div>
+            </div>
+            <button>go to story</button>
           </div>
         </div>
       </div>
