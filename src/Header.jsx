@@ -19,7 +19,7 @@ function Header() {
                   type="search"
                   name="search"
                   id="headerSearch"
-                  placeholder="Zoek een verhaal"
+                  placeholder="Search a story..."
                 />
               </li>
             </ul>

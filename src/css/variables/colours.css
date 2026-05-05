@@ -1,9 +1,9 @@
 :root {
 
   /* -- Backgrounds -- */
-  --color-background-primary: #1c1c1e;
-  --color-background-secondary: #2c2c2e;
-  --color-background-tertiary: #3a3a3c;
+  --color-bg-primary: #1c1c1e;
+  --color-bg-secondary: #2c2c2e;
+  --color-bg-tertiary: #3a3a3c;
 
   /* -- Text -- */
   --color-text-primary: #f2f2f7;
@@ -21,14 +21,13 @@
   --color-error: #c0392b;
   --color-error-dark: #a93226;
 
-  /* -- Legacy/Compatibility (Mapping to new theme) -- */
+  /* -- Legacy/Compatibility -- */
   /* TODO: change these to vars above where possible */
   --color-black: #000; /* Retained for specific cases like deep shadows or overlays */
   --color-white: #fff; /* Retained for high-contrast needs */
-  --color-gray-light: var(--color-background-tertiary);
-  --color-gray-dark: var(--color-background-secondary);
-  --color-silver: var(--color-text-secondary);
+  --color-gray-light: var(--color-bg-tertiary);
+  --color-silver: silver;
   --color-recommended-background: color-mix(in srgb, goldenrod, transparent 50%);
-  --color-black-transparent-60: rgba(0, 0, 0, 0.6);
-  --color-white-transparent-18: rgba(255, 255, 255, 0.18);
+  --color-black-transparent: rgba(0, 0, 0, 0.6);
+  --color-white-hl: rgba(255, 255, 255, 0.15);
 }

@@ -34,17 +34,15 @@
 .front::before {
     content: '';
     position: absolute;
-    left: 2%;
+    left: 1%;
     top: 0;
     width: .2rem;
     height: 100%;
     background: linear-gradient(
             to right,
-            transparent,
-            var(--color-black-transparent-60) 15%,
-            transparent 74%,
-            transparent 75%,
-            var(--color-white-transparent-18) 80%,
+            var(--color-black-transparent) 10%,
+            var(--color-black-transparent) 50%,
+            var(--color-white-hl) 80%,
             transparent 100%
     );
     pointer-events: none;
@@ -97,7 +95,7 @@
 .back {
     transform: rotateY(-180deg);
     background-color: var(--color-white);
-    color: var(--color-success);
+    color: var(--color-black);
 }
 
 .inner {

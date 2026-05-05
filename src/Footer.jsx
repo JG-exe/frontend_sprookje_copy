@@ -11,10 +11,10 @@ function Footer() {
                     type="search"
                     name="search"
                     id="footerSearch"
-                    placeholder="Zoek een verhaal"
+                    placeholder="Search a story..."
                 />
                 <div className="links">
-                    <h4>Pagina's</h4>
+                    <h4>Pages</h4>
                     <ul className="nav">
                         {Routes.map((link) => (
                             <Link to={link.route}>
