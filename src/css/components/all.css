@@ -1,0 +1,13 @@
+.recommended {
+    h2 {
+        text-align: center;
+    }
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    background-color: green;
+    width: fit-content;
+    margin: 0 auto;
+    .bookList{
+        margin: 0 auto;
+    }
+}

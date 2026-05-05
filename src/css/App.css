@@ -116,12 +116,13 @@ input[type="search"]::placeholder {
 
 .centerCt {
   margin: 1rem 0;
-  max-width: 40%;
 }
 
 .bookList {
   display: flex;
   width: fit-content;
+  flex-direction: row;
+  flex-wrap: wrap;
   .bookSlot {
     margin: 10px;
   }
