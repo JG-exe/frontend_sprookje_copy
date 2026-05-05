@@ -21,11 +21,15 @@
 - [x] Demonstrate the use of Hooks for certain features of your page.
 - [ ] Deploy your website to GitHub Pages.
 
-### One-page scrolling website
-- [ ] A fairytale: onepager based on Rumpelstiltskin.
-- [ ] Add a creative Parallax effect.
-- [ ] Add well-thought-out and functional animations.
-- [ ] Add an easter egg by making use of a rollover animation.
+### Rumpelstiltskin
+#### Scenes
+- [ ] Scene 1 – Kingdom | parallax layers | click daughter → `sfx-cry.wav`
+- [ ] Scene 2 – Mill room | spinning wheel | click → spin → Rumpelstiltskin slides in
+- [ ] Scene 3 – Gold spun | shimmer/particle CSS anim on click
+- [ ] Scene 4 – Baby scene | Rumpelstiltskin demands child
+- [ ] Scene 5 – Name guessing | input field | wrong → shake | correct → destroy sequence
+- [ ] Scene 6 – Tears self in two | destroy state | CSS class swap | `sfx-destroy.wav`
+
 - [ ] We encourage you to explore and experiment on your own. Adding extras is encouraged.
 
 ### Submitting your project

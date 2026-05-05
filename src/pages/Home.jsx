@@ -1,6 +1,7 @@
 import books from "../../books.json";
 import Book from "../components/Book.jsx";
 import {useMemo} from "react";
+import {Link} from "react-router";
 
 function Home() {
     const recommendedBooks = useMemo(() => {
@@ -22,6 +23,7 @@ function Home() {
                         ))}
                     </div>
                 </div>
+                <Link to="/All">ALL STORIES</Link>
             </div>
         </>
     );
