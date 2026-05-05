@@ -23,21 +23,12 @@
 
   /* -- Legacy/Compatibility (Mapping to new theme) -- */
   /* TODO: change these to vars above where possible */
-  --color-background-dark: var(--color-background-primary);
-  --color-text-primary-legacy: var(--color-text-primary);
   --color-black: #000; /* Retained for specific cases like deep shadows or overlays */
   --color-white: #fff; /* Retained for high-contrast needs */
-  --color-gray-medium: var(--color-text-secondary);
-  --color-white-smoke: var(--color-text-primary);
   --color-gray-light: var(--color-background-tertiary);
   --color-gray-dark: var(--color-background-secondary);
   --color-silver: var(--color-text-secondary);
-  --color-recommended-background: color-mix(in srgb, var(--color-accent-secondary), transparent 70%);
+  --color-recommended-background: color-mix(in srgb, goldenrod, transparent 50%);
   --color-black-transparent-60: rgba(0, 0, 0, 0.6);
   --color-white-transparent-18: rgba(255, 255, 255, 0.18);
-  --color-gray-darker: var(--color-text-secondary);
-  --color-green: var(--color-success);
-  --color-red-dark: var(--color-error-dark);
-  --color-red: var(--color-error);
-  --color-red-shadow: var(--color-accent-shadow);
 }

@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  background-color: var(--color-background-dark);
+  background-color: var(--color-background-primary);
   color: var(--color-text-primary);
 }
 
@@ -42,7 +42,7 @@ nav {
     text-align: right;
 
     a {
-      color: var(--color-gray-medium);
+      color: var(--color-text-secondary);
       margin-right: 1rem;
       padding: 0.5rem 0.5rem;
       transition: all 0.1s ease-in-out;
@@ -53,7 +53,7 @@ nav {
       }
 
       &:hover {
-        border-bottom: 0.1rem solid var(--color-white-smoke);
+        border-bottom: 0.1rem solid var(--color-text-primary);
         padding-bottom: 0.3rem;
       }
     }
@@ -73,12 +73,12 @@ ul.nav {
 
   a {
     text-decoration: none;
-    color: var(--color-white-smoke);
+    color: var(--color-text-primary);
     padding: 0.2rem 0.2rem;
     text-transform: uppercase;
 
     &:hover {
-      color: var(--color-white-smoke);
+      color: var(--color-text-primary);
     }
   }
 
@@ -98,7 +98,7 @@ input[type="search"] {
 }
 
 input[type="search"]::placeholder {
-  color: var(--color-background-dark);
+  color: var(--color-background-primary);
 }
 
 /* todo: edit highlight when selected/typing here */

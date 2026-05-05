@@ -65,7 +65,7 @@
     }
 
     & .front .info {
-        background-color: color-mix(in srgb, var(--color-gray-darker), transparent 80%);
+        background-color: color-mix(in srgb, var(--color-text-secondary), transparent 80%);
         mix-blend-mode: exclusion;
         top: -4rem;
         padding: 0.2rem;
@@ -97,7 +97,7 @@
 .back {
     transform: rotateY(-180deg);
     background-color: var(--color-white);
-    color: var(--color-green);
+    color: var(--color-success);
 }
 
 .inner {
@@ -109,7 +109,7 @@
 .half {
     flex: 1;
     height: 100%;
-    background-color: var(--color-white-smoke);
+    background-color: var(--color-text-primary);
 }
 
 .book:hover {
