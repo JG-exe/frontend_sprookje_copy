@@ -1,0 +1,19 @@
+:root {
+  --color-background-dark: #101212;
+  --color-text-primary: #dfe0e2;
+  --color-black: #000;
+  --color-gray-medium: gray;
+  --color-white: #fff;
+  --color-white-smoke: whitesmoke;
+  --color-gray-light: #cdcdcd;
+  --color-gray-dark: rgb(54, 54, 54);
+  --color-silver: silver;
+  --color-recommended-background: rgb(184 134 11 / 0.3);
+  --color-black-transparent-60: rgba(0, 0, 0, 0.60);
+  --color-white-transparent-18: rgba(255, 255, 255, 0.18);
+  --color-gray-darker: darkgray;
+  --color-green: green;
+  --color-red-dark: darkred;
+  --color-red: red;
+  --color-red-shadow: rgba(200, 0, 0, 0.6);
+}

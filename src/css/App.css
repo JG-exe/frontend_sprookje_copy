@@ -1,3 +1,4 @@
+@import url(./variables/colours.css);
 @import url(./components/typo.css);
 @import url(./components/button.css);
 
@@ -8,8 +9,8 @@
 
 body {
   margin: 0;
-  background-color: #101212;
-  color: #dfe0e2;
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary);
 }
 
 #root {
@@ -20,7 +21,7 @@ body {
 
 header {
   padding-bottom: 0.2rem;
-  background-color: black;
+  background-color: var(--color-black);
   width: 100%;
   height: 100px;
 
@@ -41,18 +42,18 @@ nav {
     text-align: right;
 
     a {
-      color: gray;
+      color: var(--color-gray-medium);
       margin-right: 1rem;
       padding: 0.5rem 0.5rem;
       transition: all 0.1s ease-in-out;
 
       &.active {
-        border-bottom: 0.3rem solid white;
-        color: white;
+        border-bottom: 0.3rem solid var(--color-white);
+        color: var(--color-white);
       }
 
       &:hover {
-        border-bottom: 0.1rem solid whitesmoke;
+        border-bottom: 0.1rem solid var(--color-white-smoke);
         padding-bottom: 0.3rem;
       }
     }
@@ -72,12 +73,12 @@ ul.nav {
 
   a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--color-white-smoke);
     padding: 0.2rem 0.2rem;
     text-transform: uppercase;
 
     &:hover {
-      color: whitesmoke;
+      color: var(--color-white-smoke);
     }
   }
 
@@ -89,15 +90,15 @@ ul.nav {
 }
 
 input[type="search"] {
-  background-color: #cdcdcd;
-  border: 0.2rem solid rgb(54, 54, 54);
+  background-color: var(--color-gray-light);
+  border: 0.2rem solid var(--color-gray-dark);
   border-radius: 10rem;
   padding: 0.5rem 0.8rem;
   height: fit-content;
 }
 
 input[type="search"]::placeholder {
-  color: #101212;
+  color: var(--color-background-dark);
 }
 
 /* todo: edit highlight when selected/typing here */
@@ -119,8 +120,35 @@ input[type="search"]::placeholder {
   margin: 2rem 0;
 }
 
-.centerTxt{
+.onceUponATime{
   text-align: center;
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  h1::first-letter{
+    initial-letter: 2 raise;
+  }
+}
+
+.divider{
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.8rem 0;
+
+  span{
+    color: var(--color-silver);
+    font-size: 1rem;
+  }
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-silver), transparent);
 }
 
 .recommended {
@@ -129,7 +157,7 @@ input[type="search"]::placeholder {
   }
   padding: 1rem 3rem;
   border-radius: 8px;
-  background-color: rgb(184 134 11 / 0.3);
+  background-color: var(--color-recommended-background);
   width: fit-content;
   margin: 0 auto;
   .bookList{

@@ -1,19 +1,19 @@
 a.linkBtn{
+    display: inline-block;
     text-decoration: none;
-    color: #cdcdcd;
+    color: var(--color-gray-light);
     padding: 1rem 2rem;
-    background-color: darkred;
+    background-color: var(--color-red-dark);
     border-radius: 8px;
-
     transition: all .3s ease-in-out;
 }
 
 .linkBtn:hover {
-    background-color: red;
-    box-shadow: 2px 2px 4px 0 rgba(200, 0, 0, 0.6);
+    background-color: var(--color-red);
+    box-shadow: 2px 2px 4px 0 var(--color-red-shadow);
 }
 
 .linkBtn:active {
-    background-color: darkred;
+    background-color: var(--color-red-dark);
     box-shadow: none;
 }

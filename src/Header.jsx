@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router";
-import routes from "./routes.js";
+import Routes from "./Routes.js";
 
 function Header() {
   return (
@@ -11,7 +11,7 @@ function Header() {
           </Link>
           <nav>
             <ul className="nav">
-              {routes.map((link) => (
+              {Routes.map((link) => (
                   <NavLink to={link.route}>{link.label}</NavLink>
               ))}
               <li>
