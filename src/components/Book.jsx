@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
-import "../css/book.css";
+import "../css/components/book.css";
 
 function Book({ book }) {
   const [status, setStatus] = useState("idle");

@@ -1,5 +1,10 @@
 function Home() {
-	return <p>This is the home page</p>;
+
+    return (
+        <div className="centerCt">
+            <h1>In the spotlight</h1>
+        </div>
+    );
 }
 
 export default Home;
