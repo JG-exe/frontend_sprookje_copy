@@ -1,20 +1,29 @@
-a.linkBtn{
+.linkBtn, button{
     display: inline-block;
     text-decoration: none;
+    padding: .5rem 1rem;
     color: var(--color-text-primary);
-    padding: 1rem 2rem;
-    background-color: var(--color-accent-primary);
+    background-color: var(--color-bg-tertiary);
     border-radius: 8px;
     transition: all .3s ease-in-out;
+    border: transparent;
 }
 
-.linkBtn:hover {
+.linkBtn:hover, button:hover {
     color: var(--color-text-primary);
-    background-color: var(--color-accent-primary-hover);
-    box-shadow: 2px 2px 4px 0 var(--color-accent-shadow);
+    background-color: var(--color-bg-primary);
 }
 
 .linkBtn:active {
     background-color: var(--color-accent-primary-hover);
     box-shadow: inset 2px 2px 4px 0 color-mix(in srgb,var(--color-accent-primary), transparent 10%);
+}
+
+.linkBtn{
+    background-color: var(--color-accent-primary);
+}
+
+.linkBtn:hover{
+    background-color: var(--color-accent-primary-hover);
+    box-shadow: 2px 2px 4px 0 var(--color-accent-shadow);
 }

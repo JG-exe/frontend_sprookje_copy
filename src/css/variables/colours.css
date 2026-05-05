@@ -18,8 +18,8 @@
   /* -- UI & State Colors -- */
   --color-accent-shadow: rgba(230, 126, 34, 0.3);
   --color-success: #27ae60;
-  --color-error: #c0392b;
-  --color-error-dark: #a93226;
+  --color-danger: #c0392b;
+  --color-danger-dark: #a93226;
 
   /* -- Legacy/Compatibility -- */
   /* TODO: change these to vars above where possible */
