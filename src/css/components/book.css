@@ -1,24 +1,23 @@
 .bookSlot {
-  width: 150px;
-  aspect-ratio: 1 / 1.5;
-  margin: 0.4rem;
+    width: 150px;
+    aspect-ratio: 1 / 1.5;
+    margin: 0.4rem;
 }
 
 .book {
-  position: relative;
-  display: block;
-  width: 150px;
-  aspect-ratio: 1 / 1.5;
+    position: relative;
+    display: block;
+    width: 150px;
+    aspect-ratio: 1 / 1.5;
 
-  perspective: 1200px;
-  transform-style: preserve-3d;
+    perspective: 1200px;
+    transform-style: preserve-3d;
 
-  scale: 1;
+    scale: 1;
 }
 
 .animate {
-  transition:
-    opacity 0.4s ease-in-out,
+    transition: opacity 0.4s ease-in-out,
     width 0.8s ease-in-out,
     top 0.8s ease-in-out,
     left 0.8s ease-in-out,
@@ -27,106 +26,127 @@
 }
 
 .info {
-  position: relative;
-  margin: 0 0.4rem;
-  line-height: 1rem;
+    position: relative;
+    margin: 0 0.4rem;
+    line-height: 1rem;
+}
+
+.front::before {
+    content: '';
+    position: absolute;
+    left: 2%;
+    top: 0;
+    width: .2rem;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.75),
+            transparent 74%,
+            transparent 75%,
+            rgba(255, 255, 255, 0.13) 80%,
+            transparent 100%
+    );
+    pointer-events: none;
 }
 
 .cover {
-  position: absolute;
-  z-index: 1;
-  transform-style: preserve-3d;
-  inset: 0;
-  transform-origin: left center;
+    position: absolute;
+    z-index: 1;
+    transform-style: preserve-3d;
+    inset: 0;
+    transform-origin: left center;
 
-  img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-
-  & .front .info {
-    background-color: color-mix(in srgb, darkgray, transparent 80%);
-    mix-blend-mode: exclusion;
-    top: -4rem;
-    padding: 0.2rem;
-    width: fit-content;
-    border-radius: 4px;
-    opacity: 100%;
-
-    .story {
-      font-size: small;
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
     }
-    .creator {
-      font-size: x-small;
+
+    & .front .info {
+        background-color: color-mix(in srgb, darkgray, transparent 80%);
+        mix-blend-mode: exclusion;
+        top: -4rem;
+        padding: 0.2rem;
+        width: fit-content;
+        border-radius: 4px;
+        opacity: 100%;
+
+        .story {
+            font-size: small;
+        }
+
+        .creator {
+            font-size: x-small;
+        }
     }
-  }
 }
 
 .pagectx {
-  margin: 0.4rem;
+    margin: 0.4rem;
 }
 
 .front,
 .back {
-  inset: 0;
-  position: absolute;
-  backface-visibility: hidden;
+    inset: 0;
+    position: absolute;
+    backface-visibility: hidden;
 }
 
 .back {
-  transform: rotateY(-180deg);
-  background-color: white;
-  color: green;
+    transform: rotateY(-180deg);
+    background-color: white;
+    color: green;
 }
 
 .inner {
-  position: absolute;
-  display: flex;
-  inset: 0;
+    position: absolute;
+    display: flex;
+    inset: 0;
 }
 
 .half {
-  flex: 1;
-  height: 100%;
-  background-color: whitesmoke;
+    flex: 1;
+    height: 100%;
+    background-color: whitesmoke;
 }
 
 .book:hover {
-  scale: 1.1;
-  z-index: 2;
-  .cover {
-    transform: rotateY(-20deg);
-  }
+    scale: 1.1;
+    z-index: 2;
+
+    .cover {
+        transform: rotateY(-20deg);
+    }
 }
 
 .book.open,
 .book.opening,
 .book.closing {
-  position: fixed;
-  transform: translate(-50%, -50%);
+    position: fixed;
+    transform: translate(-50%, -50%);
 
-  top: 50%;
-  left: 50%;
+    top: 50%;
+    left: 50%;
 
-  z-index: 2;
-  width: 300px;
+    z-index: 2;
+    width: 300px;
 }
 
 .book.open .cover {
-  transform: rotateY(-175deg);
-  & .front .info {
-    opacity: 0%;
-  }
+    transform: rotateY(-175deg);
+
+    & .front .info {
+        opacity: 0%;
+    }
 }
 
 .book.closing .cover {
-  transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 
 .right {
-  transform-origin: left center;
-  background-color: white;
-  color: black;
+    transform-origin: left center;
+    background-color: white;
+    color: black;
 }

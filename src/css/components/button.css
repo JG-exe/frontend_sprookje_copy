@@ -1,0 +1,19 @@
+a.linkBtn{
+    text-decoration: none;
+    color: #cdcdcd;
+    padding: 1rem 2rem;
+    background-color: darkred;
+    border-radius: 8px;
+
+    transition: all .3s ease-in-out;
+}
+
+.linkBtn:hover {
+    background-color: red;
+    box-shadow: 2px 2px 4px 0 rgba(200, 0, 0, 0.6);
+}
+
+.linkBtn:active {
+    background-color: darkred;
+    box-shadow: none;
+}

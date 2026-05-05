@@ -15,15 +15,17 @@ function Home() {
     return (
         <>
             <div className={"centerCt"}>
-                <div className="recommended centerCt">
-                    <h2>In the spotlight</h2>
-                    <div className={"bookList"}>
+                <h2>In the spotlight</h2>
+                <div className="centerCt">
+                    <div className={"bookList show"}>
                         {recommendedBooks.map((book) => (
                             <Book key={book.id} book={book}/>
                         ))}
                     </div>
                 </div>
-                <Link to="/All">ALL STORIES</Link>
+                <div className={"centerCt centerTxt"}>
+                    <Link to="/All" className={"linkBtn"}>ALL STORIES</Link>
+                </div>
             </div>
         </>
     );

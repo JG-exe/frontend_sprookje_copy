@@ -1,4 +1,5 @@
 @import url(./components/typo.css);
+@import url(./components/button.css);
 
 * {
   margin: 0;
@@ -115,8 +116,13 @@ input[type="search"]::placeholder {
 }
 
 .centerCt {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
+
+.centerTxt{
+  text-align: center;
+}
+
 .recommended {
   h2 {
     text-align: center;
@@ -143,6 +149,11 @@ input[type="search"]::placeholder {
 
 .bookList:has(.book.open) .book:not(.open):not(.closing) {
   pointer-events: none;
+}
+
+.show{
+  margin: 0 auto;
+  scale: 1.2;
 }
 
 footer {

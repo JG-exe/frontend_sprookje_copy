@@ -6,8 +6,8 @@
 - [ ] A portal page: an overview of all stories in class. It contains at least:
     - [x] Homepage
     - [ ] Introductory text
-    - [ ] Three one-page scrolling websites (random)
-    - [ ] A button leading to all projects (projects page)
+    - [x] Three one-page scrolling websites (random)
+    - [x] A button leading to all projects (projects page)
 - [ ] Projects page
     - [ ] An overview of all projects from your classmates with a link to the deployed website
 - [ ] Making of page
