@@ -1,5 +1,10 @@
 function MakingOf() {
-  return <p>This holds the Making Of Rumpelstiltskin</p>;
+    return (
+        <>
+            <div className={"centerCt"}>
+                <h1>Making of Rumpelstiltskin</h1>
+            </div>
+        </>)
 }
 
 export default MakingOf;

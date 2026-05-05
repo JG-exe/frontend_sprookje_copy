@@ -14,7 +14,7 @@ function Home() {
 
     return (
         <>
-            <div className={"centerCt"}>
+            <div className={"centerCt home"}>
                 <h2>In the spotlight</h2>
                 <div className="centerCt">
                     <div className={"bookList show"}>
@@ -24,7 +24,7 @@ function Home() {
                     </div>
                 </div>
                 <div className={"centerCt centerTxt"}>
-                    <Link to="/All" className={"linkBtn"}>ALL STORIES</Link>
+                    <Link to="/All" className={"linkBtn bigTopM"}>ALL STORIES</Link>
                 </div>
             </div>
         </>

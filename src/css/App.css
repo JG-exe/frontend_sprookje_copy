@@ -156,9 +156,18 @@ input[type="search"]::placeholder {
   scale: 1.2;
 }
 
+.home{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  h2{
+    text-align: center;
+  }
+}
+
 footer {
   margin-top: auto;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 
   #footerLogo {
     width: 150px;
