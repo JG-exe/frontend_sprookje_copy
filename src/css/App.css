@@ -117,6 +117,19 @@ input[type="search"]::placeholder {
 .centerCt {
   margin: 1rem 0;
 }
+.recommended {
+  h2 {
+    text-align: center;
+  }
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  background-color: rgb(184 134 11 / 0.3);
+  width: fit-content;
+  margin: 0 auto;
+  .bookList{
+    margin: 0 auto;
+  }
+}
 
 .bookList {
   display: flex;
