@@ -5,8 +5,8 @@
 
 body {
   margin: 0;
-  background-color: black;
-  color: whitesmoke;
+  background-color: #101212;
+  color: #dfe0e2;
 }
 
 #root {
@@ -91,11 +91,15 @@ ul.nav {
 }
 
 input[type="search"] {
-  background-color: whitesmoke;
-  border: 0.2rem solid gray;
+  background-color: #cdcdcd;
+  border: 0.2rem solid rgb(54, 54, 54);
   border-radius: 10rem;
   padding: 0.5rem 0.8rem;
   height: fit-content;
+}
+
+input[type="search"]::placeholder {
+  color: #101212;
 }
 
 /* todo: edit highlight when selected/typing here */
@@ -105,6 +109,10 @@ input[type="search"] {
   width: 85vw;
   height: 100%;
   margin: 0 auto;
+}
+
+.centerCt {
+  margin: 1rem 0;
 }
 
 .bookList {
