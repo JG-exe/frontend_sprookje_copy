@@ -108,12 +108,20 @@ input[type="search"]::placeholder {
   margin: 0 auto;
 }
 
+.gridHalf{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
 .centerCt {
   margin: 1rem 0;
+  max-width: 40%;
 }
 
 .bookList {
   display: flex;
+  width: fit-content;
   .bookSlot {
     margin: 10px;
   }
