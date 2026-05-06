@@ -3,7 +3,7 @@
 ## Features
 
 ### Portal Page
-- [ ] A portal page: an overview of all stories in class. It contains at least:
+- [x] A portal page: an overview of all stories in class. It contains at least:
     - [x] Homepage
     - [x] Introductory text
     - [x] Three one-page scrolling websites (random)
