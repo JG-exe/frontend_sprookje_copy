@@ -1,5 +1,5 @@
 import {Link, NavLink} from "react-router";
-import Routes from "./Routes.js";
+import Routes from "../Routes.js";
 
 function Footer() {
     return (

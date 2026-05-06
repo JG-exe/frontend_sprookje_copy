@@ -41,7 +41,10 @@ nav {
     margin: auto 0 1rem;
 
     ul.nav {
+        display: flex;
+        flex-wrap: wrap;
         text-align: right;
+        justify-content: flex-end;
 
         a {
             color: var(--color-text-secondary);
@@ -88,6 +91,16 @@ ul.nav {
         list-style: none;
         font-size: smaller;
         line-height: 0.5rem;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul.nav li:has(input) {
+        order: -1;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -130,9 +143,11 @@ input[type="search"]::placeholder {
     h1, p {
         font-family: 'Eagle Lake', sans-serif;
     }
+
     p::first-letter {
         initial-letter: 2 raise;
     }
+
     p {
         font-size: 14px;
         line-height: 1.8rem;

@@ -1,7 +1,7 @@
 function Fairytale() {
     return (
         <>
-            This is the story of Rumpelstiltskin
+            <p>This is the story of Rumpelstiltskin</p>
         </>
     )
 }
