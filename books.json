@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "De prinses en de erwt",
+    "author": "Bozo McNugger the third",
+    "creator": "classmate McDumbface Junior",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "Created for Front-End MCT 2"
+  },
+  {
+    "id": 2,
+    "title": "De draak van het westen",
+    "author": "Jane Doe",
+    "creator": "classmate Dumberface Senior",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "A tale of dragons and windmills"
+  },
+  {
+    "id": 3,
+    "title": "Het vergeten koninkrijk",
+    "author": "Pietje Puk",
+    "creator": "classmate Snorkel van Dijk",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "A forgotten kingdom resurfaces beneath the Zuiderzee"
+  },
+  {
+    "id": 4,
+    "title": "Spoken van Amsterdam",
+    "author": "Grietje Bloem",
+    "creator": "classmate Klaasje Worst",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "Ghosts haunt the canals of Amsterdam every autumn"
+  },
+  {
+    "id": 5,
+    "title": "De ijzeren molen",
+    "author": "Henk de Vries",
+    "creator": "classmate Brammetje Kaas",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "A sentient windmill terrorises the polder at midnight"
+  },
+  {
+    "id": 6,
+    "title": "Nacht boven de Veluwe",
+    "author": "Sofie Janssen",
+    "creator": "classmate Dirkje Pannenkoek",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "Strange lights appear over the Veluwe forest each winter"
+  },
+  {
+    "id": 7,
+    "title": "De laatste tulp",
+    "author": "Roos van der Berg",
+    "creator": "classmate Floris Stroopwafel",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "One tulip holds the secret to an ancient Dutch curse"
+  },
+  {
+    "id": 8,
+    "title": "Zeehelden en schelmen",
+    "author": "Maarten Zeilmaker",
+    "creator": "classmate Anke Haringboom",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "Pirates and admirals clash on the Noordzee in 1672"
+  },
+  {
+    "id": 9,
+    "title": "De toverstaf van Leiden",
+    "author": "Willemijn Kok",
+    "creator": "classmate Sjaak Boekentas",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "A student at Leiden University accidentally summons a warlock"
+  },
+  {
+    "id": 10,
+    "title": "Ijs en vuur",
+    "author": "Bas Vermeer",
+    "creator": "classmate Tineke Dropje",
+    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
+    "back": "Two rival skating clans battle for control of the frozen IJssel"
+  }
+]
