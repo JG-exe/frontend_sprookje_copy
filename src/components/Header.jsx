@@ -1,5 +1,5 @@
 import {Link, NavLink} from "react-router";
-import Routes from "../Routes.js";
+import Routes from "../constants/Routes.js";
 
 function Header() {
     return (
@@ -7,7 +7,7 @@ function Header() {
             <header>
                 <div className="ctx flexRowSpaceBetween">
                     <Link to="/">
-                        <img src="../assets/erWasEensLogoRect.svg" id="headerLogo"/>
+                        <img src="../../assets/logos/erWasEensLogoRect.svg" id="headerLogo"/>
                     </Link>
                     <nav>
                         <ul className="nav">

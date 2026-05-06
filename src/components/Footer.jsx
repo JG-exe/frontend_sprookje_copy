@@ -1,11 +1,11 @@
 import {Link, NavLink} from "react-router";
-import Routes from "../Routes.js";
+import Routes from "../constants/Routes.js";
 
 function Footer() {
     return (
         <footer>
             <div className="ctx flexRowSpaceBetween">
-                <img src="../assets/erWasEensLogosqr.svg" id="footerLogo"/>
+                <img src="../../assets/logos/erWasEensLogosqr.svg" id="footerLogo"/>
                 <div className="spacer"></div>
                 <input
                     type="search"

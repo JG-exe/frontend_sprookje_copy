@@ -5,11 +5,11 @@
 ### Portal Page
 - [ ] A portal page: an overview of all stories in class. It contains at least:
     - [x] Homepage
-    - [ ] Introductory text
+    - [x] Introductory text
     - [x] Three one-page scrolling websites (random)
     - [x] A button leading to all projects (projects page)
-- [ ] Projects page
-    - [ ] An overview of all projects from your classmates with a link to the deployed website
+- [x] Projects page
+    - [x] An overview of all projects from your classmates with a link to the deployed website
 - [ ] Making of page
     - [ ] A page where you explain the techniques you used in the creation of your project
 - [x] Navigation: home, projects, making-of
@@ -18,8 +18,8 @@
 - [x] Organize your website logically into different Components.
 - [x] Use the map() function to iterate over your data from a JSON file.
 - [x] Use React Router for the navigation of your portal page.
-- [x] Demonstrate the use of Hooks for certain features of your page.
-- [ ] Deploy your website to GitHub Pages.
+- [ ] Demonstrate the use of Hooks for certain features of your page.
+- [x] Deploy your website to GitHub Pages.
 
 ### Rumpelstiltskin
 #### Scenes
@@ -36,4 +36,4 @@
 In Canvas, provide the following:
 - [ ] A video demo of your features (just the result, not the code). Explain what you are showing
 - [ ] Add the link to your repo as a comment
-- [ ] A comment to your live site
+  - [ ] add link to your live site as well
