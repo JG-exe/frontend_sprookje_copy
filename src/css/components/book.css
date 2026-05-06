@@ -123,7 +123,7 @@
 .book.opening,
 .book.closing {
     position: fixed;
-    transform: translate(-50%, -50%);
+    transform: translate(5%, -50%);
 
     top: 50%;
     left: 50%;
