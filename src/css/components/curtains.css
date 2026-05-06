@@ -1,0 +1,69 @@
+.curtain-left,
+.curtain-right {
+    position: fixed;
+    top: -10px;
+    width: 50%;
+    height: 110%;
+    z-index: 5;
+}
+
+.curtain-content {
+    position: fixed;
+    pointer-events: none;
+}
+
+.curtain-left {
+    left: 0;
+    background: repeating-linear-gradient(
+            to right,
+            color-mix(in srgb, var(--color-curtain-base) 52%, #000)  0%,
+            color-mix(in srgb, var(--color-curtain-base) 83%, #fff)  5%,
+            color-mix(in srgb, var(--color-curtain-base) 62%, #000)  9%,
+            color-mix(in srgb, var(--color-curtain-base) 43%, #000) 14%,
+            color-mix(in srgb, var(--color-curtain-base) 77%, #fff) 19%,
+            color-mix(in srgb, var(--color-curtain-base) 67%, #fff) 23%,
+            color-mix(in srgb, var(--color-curtain-base) 47%, #000) 29%,
+            color-mix(in srgb, var(--color-curtain-base) 73%, #fff) 34%,
+            color-mix(in srgb, var(--color-curtain-base) 57%, #000) 39%,
+            color-mix(in srgb, var(--color-curtain-base) 86%, #fff) 44%,
+            color-mix(in srgb, var(--color-curtain-base) 63%, #000) 49%,
+            color-mix(in srgb, var(--color-curtain-base) 41%, #000) 54%,
+            color-mix(in srgb, var(--color-curtain-base) 79%, #fff) 59%,
+            color-mix(in srgb, var(--color-curtain-base) 53%, #000) 64%,
+            color-mix(in srgb, var(--color-curtain-base) 84%, #fff) 69%,
+            color-mix(in srgb, var(--color-curtain-base) 46%, #000) 74%,
+            color-mix(in srgb, var(--color-curtain-base) 71%, #fff) 79%,
+            color-mix(in srgb, var(--color-curtain-base) 59%, #000) 84%,
+            color-mix(in srgb, var(--color-curtain-base) 87%, #fff) 90%,
+            color-mix(in srgb, var(--color-curtain-base) 44%, #000) 95%,
+            color-mix(in srgb, var(--color-curtain-base) 56%, #000) 100%
+    );
+    box-shadow: 20px 0 30px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+.curtain-right {
+    right: 0;
+    background: repeating-linear-gradient(
+            to left,
+            color-mix(in srgb, var(--color-curtain-base) 50%, #000) 0%,
+            color-mix(in srgb, var(--color-curtain-base) 85%, #fff) 6%,
+            color-mix(in srgb, var(--color-curtain-base) 65%, #000) 11%,
+            color-mix(in srgb, var(--color-curtain-base) 40%, #000) 16%,
+            color-mix(in srgb, var(--color-curtain-base) 80%, #fff) 21%,
+            color-mix(in srgb, var(--color-curtain-base) 70%, #fff) 25%,
+            color-mix(in srgb, var(--color-curtain-base) 45%, #000) 32%,
+            color-mix(in srgb, var(--color-curtain-base) 75%, #fff) 38%,
+            color-mix(in srgb, var(--color-curtain-base) 55%, #000) 44%,
+            color-mix(in srgb, var(--color-curtain-base) 88%, #fff) 49%,
+            color-mix(in srgb, var(--color-curtain-base) 60%, #000) 55%,
+            color-mix(in srgb, var(--color-curtain-base) 42%, #000) 62%,
+            color-mix(in srgb, var(--color-curtain-base) 78%, #fff) 68%,
+            color-mix(in srgb, var(--color-curtain-base) 58%, #000) 75%,
+            color-mix(in srgb, var(--color-curtain-base) 82%, #fff) 81%,
+            color-mix(in srgb, var(--color-curtain-base) 48%, #000) 88%,
+            color-mix(in srgb, var(--color-curtain-base) 70%, #fff) 93%,
+            color-mix(in srgb, var(--color-curtain-base) 55%, #000) 100%
+    );
+    box-shadow: -20px 0 30px 6px rgba(0, 0, 0, 0.6);
+}
