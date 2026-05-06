@@ -1,6 +1,7 @@
 import "../css/fairytale.css"
 import {useEffect, useRef, useState} from "react";
 import {motion, useScroll, useTransform} from "motion/react"
+import {Link} from "react-router";
 
 function Fairytale() {
     const [gone, setGone] = useState(false);
@@ -70,7 +71,7 @@ function Fairytale() {
     return (
         <>
             <button
-                className={`autoscrollBtn ${autoScroll ? 'active' : ''}`}
+                className={`btn autoscrollBtn ${autoScroll ? 'active' : ''}`}
                 onClick={() => {
                     setGone(true)
                     setAutoScroll(prev => !prev)
@@ -78,9 +79,21 @@ function Fairytale() {
             >
                 {autoScroll ? '⏸' : '▶'}
             </button>
+            <Link to="/" className={"btn homeBtn"}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="0,40 40,5 80,40"/>
+                    <polyline points="12,40 12,75 68,75 68,40"/>
+                    <rect x="30" y="52" width="20" height="23" rx="2"/>
+                </svg>
+            </Link>
             <motion.div
                 className="curtain-left"
-                animate={gone ? {y: "-10%",x: '-75%', width: "5%", skewX: [0, 5, 0]} : {y: "0%", x: 0, width: "52%", skewY: [0, 4, 0]}}
+                animate={gone ? {y: "-10%", x: '-75%', width: "5%", skewX: [0, 5, 0]} : {
+                    y: "0%",
+                    x: 0,
+                    width: "52%",
+                    skewY: [0, 4, 0]
+                }}
                 transition={{
                     duration: duration, ease: [0.76, 0, 0.24, 1], x: {delay: .2, duration: duration}, skewY: {
                         duration: duration,
@@ -91,7 +104,8 @@ function Fairytale() {
             />
             <motion.div
                 className="curtain-right"
-                animate={gone ? {y: "-10%",x: '80%', width: "5%", skewX: [0, -3, 0]} : {y: "0%",
+                animate={gone ? {y: "-10%", x: '80%', width: "5%", skewX: [0, -3, 0]} : {
+                    y: "0%",
                     x: 0,
                     width: "51%",
                     skewY: [0, -4, 0]
@@ -120,7 +134,7 @@ function Fairytale() {
                 <img src="../../public/imgs/01_layer_back.png" width={"100%"} className={"backLayer scene1"}/>
                 <img src="../../public/imgs/01_layer_mid.png" width={"100%"} className={"middleLayer scene1"}/>
             </motion.div>
-                <img src="../../public/imgs/01_layer_back.png" width={"100%"} className={"backLayer scene2"}/>
+            <img src="../../public/imgs/01_layer_back.png" width={"100%"} className={"backLayer scene2"}/>
         </>
     )
 }

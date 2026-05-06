@@ -39,16 +39,36 @@ p, h1, h2, h3, h4 {
     margin: auto 0;
 }
 
-.autoscrollBtn{
+.btn{
     z-index: 10;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
     width: 2rem;
     aspect-ratio: 1/1;
-    text-align: center;
     padding: .2rem;
     cursor: pointer;
+    background-color: var(--color-bg-primary);
+    transition: background-color 0.4s;
+    color: var(--color-text-primary);
+}
+
+.btn:hover{
+    background-color: color-mix(var(--color-bg-primary), var(--color-bg-secondary) 20%);
+}
+
+.homeBtn{
+    display: flex;
+    top: 20px;
+    left: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+.autoscrollBtn{
+    bottom: 20px;
+    right: 20px;
+
 }
 
 .autoscrollBtn.active{
