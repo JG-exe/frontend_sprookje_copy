@@ -7,7 +7,7 @@ function Header() {
             <header>
                 <div className="ctx flexRowSpaceBetween">
                     <Link to="/">
-                        <img src="/assets/logos/erWasEensLogoRect.svg" id="headerLogo"/>
+                        <img src="./assets/logos/erWasEensLogoRect.svg" id="headerLogo"/>
                     </Link>
                     <nav>
                         <ul className="nav">
