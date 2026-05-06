@@ -14,18 +14,48 @@ function Fairytale() {
     }, []);
 
     useEffect(() => {
-            const handler = (e) => {
-                if (e.deltaY > 0) setGone(true)
-                if (window.scrollY === 0) setGone(false)
-            };
-            window.addEventListener('wheel', handler, {passive: true})
-            window.addEventListener('touchmove', handler, {passive: true})
-            return () => {
-                window.removeEventListener('wheel', handler)
-                window.removeEventListener('touchmove', handler)
+        const handleWheel = (e) => {
+            if (e.deltaY > 0) {
+                setGone(true);
             }
-        }, []
-    )
+        };
+
+        let touchStartY = 0;
+        const handleTouchStart = (e) => {
+            touchStartY = e.touches[0].clientY;
+        };
+        const handleTouchMove = (e) => {
+            const touchEndY = e.touches[0].clientY;
+            if (touchStartY > touchEndY + 5) {
+                setGone(true);
+            }
+        };
+
+        if (!gone) {
+            window.addEventListener('wheel', handleWheel, { passive: true });
+            window.addEventListener('touchstart', handleTouchStart, { passive: true });
+            window.addEventListener('touchmove', handleTouchMove, { passive: true });
+        }
+
+        return () => {
+            window.removeEventListener('wheel', handleWheel);
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchmove', handleTouchMove);
+        };
+    }, [gone]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY === 0) {
+                setGone(false);
+            }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
 
     useEffect(() => {
         const handler = (e) => {
