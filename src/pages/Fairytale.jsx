@@ -89,10 +89,10 @@ function Fairytale() {
             </Link>
             <Landing gone={gone} setGone={setGone} duration={duration}/>
             <motion.div style={{y: stick}} className={"parallax-lock"}>
-                <img src="./imgs/01_layer_back.png" width={"100%"} className={"backLayer scene1"}/>
-                <img src="./imgs/01_layer_mid.png" width={"100%"} className={"middleLayer scene1"}/>
+                <img src="./imgs/01_layer_back.png" width={"100%"} className={"back layer scene1"}/>
+                <img src="./imgs/01_layer_mid.png" width={"100%"} className={"middle layer scene1"}/>
             </motion.div>
-            <img src="./imgs/01_layer_back.png" width={"100%"} className={"backLayer scene2"}/>
+            <img src="./imgs/01_layer_back.png" width={"100%"} className={"back layer scene2"}/>
         </>
     )
 }
