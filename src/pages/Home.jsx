@@ -1,6 +1,7 @@
 
 import {Link} from "react-router";
 import RecommendedBooks from "../components/RecommendedBooks.jsx";
+import Routes from "../routes/constants/Routes.js";
 
 function Home() {
     return (<>
@@ -28,7 +29,7 @@ function Home() {
                     Welcome to a place where technology and imagination converge.</p>
             </div>
             <br/>
-            <Link to="/All" className={"linkBtn bigTopM"}>ALL STORIES</Link>
+            <Link to={Routes.All} className={"linkBtn bigTopM"}>ALL STORIES</Link>
         </div>
     </>);
 }
