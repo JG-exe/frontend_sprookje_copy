@@ -11,6 +11,7 @@ function Fairytale() {
 
     const handleRestart = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
+        setAutoScroll(false);
         setGone(false);
     };
 
