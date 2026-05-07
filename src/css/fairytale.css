@@ -27,6 +27,7 @@ p, h1, h2, h3, h4 {
         text-shadow:
                 0 0 8px var(--color-bg-secondary),
                 0 0 20px rgba(218, 180, 110, 0.4);
+        font-size: xx-large;
     }
 
     h1 {
