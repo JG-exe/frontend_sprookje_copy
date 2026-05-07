@@ -1,17 +1,18 @@
 import {Link, NavLink} from "react-router";
-import Routes from "../constants/Routes.js";
+import NavRoutes from "../routes/constants/NavRoutes.js";
+import Routes from "../routes/constants/Routes.js";
 
 function Header() {
     return (
         <>
             <header>
                 <div className="ctx flexRowSpaceBetween">
-                    <Link to="/">
+                    <Link to={Routes.Home}>
                         <img src="./assets/logos/erWasEensLogoRect.svg" id="headerLogo"/>
                     </Link>
                     <nav>
                         <ul className="nav">
-                            {Routes.map((link) => (
+                            {NavRoutes.map((link) => (
                                 <NavLink to={link.route}>
                                     <li>
                                         {link.label}

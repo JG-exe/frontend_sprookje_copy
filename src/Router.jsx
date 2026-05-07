@@ -5,22 +5,23 @@ import Home from "./pages/Home";
 import All from "./pages/All";
 import MakingOf from "./pages/MakingOf";
 import {FairytaleRoute} from "./routes/FairytaleRoute.jsx";
+import Routes from "./routes/constants/Routes.js";
 
 
 const router = createBrowserRouter([
     {
         element: <RootLayout/>,
         children: [
-            {path: "/", element: <Home/>},
-            {path: "/All", element: <All/>},
-            {path: "/MakingOf", element: <MakingOf/>},
+            {path: Routes.Home, element: <Home/>},
+            {path: Routes.All, element: <All/>},
+            {path: Routes.MakingOf, element: <MakingOf/>},
         ],
     },
     {
         element: <BareLayout/>,
         children: [
             {
-                path: "/fairytale", element: <FairytaleRoute />
+                path: Routes.Fairytale, element: <FairytaleRoute />
             },
         ],
     },
