@@ -1,5 +1,5 @@
 import {Link, NavLink} from "react-router";
-import Routes from "../constants/Routes.js";
+import NavRoutes from "../routes/constants/NavRoutes.js";
 
 function Footer() {
     return (
@@ -16,7 +16,7 @@ function Footer() {
                 <div className="links">
                     <h4>Pages</h4>
                     <ul className="nav">
-                        {Routes.map((link) => (
+                        {NavRoutes.map((link) => (
                             <Link to={link.route}>
                                 <li>{link.label}</li>
                             </Link>
