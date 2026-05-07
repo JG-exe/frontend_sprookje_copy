@@ -9,6 +9,11 @@ function Fairytale() {
     const [autoScroll, setAutoScroll] = useState(false);
     const positionRef = useRef(null);
 
+    const handleRestart = () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        setGone(false);
+    };
+
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", "fairytale");
         return () => document.documentElement.removeAttribute("data-theme")
@@ -20,6 +25,9 @@ function Fairytale() {
                 e.preventDefault()
                 setGone(true)
                 setAutoScroll(prev => !prev)
+            }
+            if (e.code === 'KeyR') {
+                handleRestart();
             }
         }
         window.addEventListener("keydown", handler)
@@ -53,18 +61,26 @@ function Fairytale() {
     const stick = useTransform(scrollY, [0, 500, 501], [0, 0, -1080]);
     return (
         <>
-            <button
-                className={`btn autoscrollBtn ${autoScroll ? 'active' : ''}`}
-                onClick={() => {
-                    setGone(true)
-                    setAutoScroll(prev => !prev)
-                }}
-            >
-                {autoScroll ? '⏸' : '▶'}
-            </button>
+            <div className={"actionBtns"}>
+                <button
+                    className={`btn autoscrollBtn ${autoScroll ? 'active' : ''}`}
+                    onClick={() => {
+                        setGone(true)
+                        setAutoScroll(prev => !prev)
+                    }}
+                >
+                    {autoScroll ? '⏸' : '▶'}
+                </button>
+                <button
+                    className={`btn restartBtn`}
+                    onClick={handleRestart}
+                >
+                    R
+                </button>
+            </div>
             <Link to="/" className={"btn homeBtn"}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 80 80" fill="none"
-                     stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                     stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="0,40 40,5 80,40"/>
                     <polyline points="12,40 12,75 68,75 68,40"/>
                     <rect x="30" y="52" width="20" height="23" rx="2"/>

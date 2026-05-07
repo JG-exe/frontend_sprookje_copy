@@ -42,7 +42,6 @@ p, h1, h2, h3, h4 {
 
 .btn{
     z-index: 10;
-    position: fixed;
     width: 2rem;
     aspect-ratio: 1/1;
     padding: .2rem;
@@ -57,6 +56,7 @@ p, h1, h2, h3, h4 {
 }
 
 .homeBtn{
+    position: fixed;
     display: flex;
     top: 20px;
     left: 20px;
@@ -66,10 +66,20 @@ p, h1, h2, h3, h4 {
 
 }
 
-.autoscrollBtn{
+.actionBtns{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: fit-content;
+    gap: .5rem;
     bottom: 20px;
     right: 20px;
+    z-index: 10;
+}
 
+.autoscrollBtn{
+    right: 20px;
 }
 
 .autoscrollBtn.active{
