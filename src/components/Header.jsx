@@ -13,7 +13,7 @@ function Header() {
                     <nav>
                         <ul className="nav">
                             {NavRoutes.map((link) => (
-                                <NavLink to={link.route}>
+                                <NavLink to={link.route} key={link.route}>
                                     <li>
                                         {link.label}
                                     </li>

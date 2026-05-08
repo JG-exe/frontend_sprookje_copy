@@ -17,7 +17,7 @@ function Footer() {
                     <h4>Pages</h4>
                     <ul className="nav">
                         {NavRoutes.map((link) => (
-                            <Link to={link.route}>
+                            <Link to={link.route} key={link.route}>
                                 <li>{link.label}</li>
                             </Link>
                         ))}

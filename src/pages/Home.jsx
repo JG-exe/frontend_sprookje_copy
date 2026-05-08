@@ -1,14 +1,15 @@
-
 import {Link} from "react-router";
 import RecommendedBooks from "../components/RecommendedBooks.jsx";
 import Routes from "../routes/constants/Routes.js";
+import {useState} from "react";
 
 function Home() {
+    const [openBookId, setOpenBookId] = useState(null);
     return (<>
         <div className={"centerCt home"}>
             <h2>In the spotlight</h2>
             <div className={"show"}>
-                <RecommendedBooks/>
+                <RecommendedBooks openBookId={openBookId} setOpenBookId={setOpenBookId} />
             </div>
         </div>
         <div className={"centerCt onceUponATime"}>
