@@ -51,6 +51,7 @@
     .student {
         color: var(--color-accent-secondary);
         font-size: 13px;
+        margin-top: .2rem;
     }
 }
 
@@ -63,9 +64,11 @@
     height: 100%;
     background: linear-gradient(
             to right,
+            var(--color-black) 0%,
             var(--color-black-transparent) 10%,
-            var(--color-black-transparent) 50%,
-            var(--color-white-hl) 80%,
+            var(--color-black-transparent) 35%,
+            var(--color-white-hl) 60%,
+            var(--color-white-hl) 75%,
             transparent 100%
     );
     pointer-events: none;
@@ -92,26 +95,25 @@
         height: 75px;
         bottom: 4px;
         padding: 0.2rem;
-        width: fit-content;
+        width: calc(var(--book-width) - 20px);
         border-radius: 4px;
         opacity: 100%;
 
         .story {
             font-size: 14px;
             text-overflow: ellipsis;
-            max-width: calc(var(--book-width) - 20px);
             overflow: hidden;
             white-space: nowrap;
         }
 
-        .author {
-            font-size: 12px;
-            text-overflow: ellipsis;
-            max-width: calc(var(--book-width) - 20px);
-            overflow: hidden;
+        & .author {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+            font-size: 12px;
+            height: 2rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         .student {
@@ -146,7 +148,7 @@
     transform: rotateY(-180deg);
     background-color: var(--color-bg-secondary);
     color: var(--color-text-primary);
-    box-shadow: inset -8px 0 16px rgba(0,0,0,0.5);
+    box-shadow: inset -8px 0 16px rgba(0, 0, 0, 0.5);
 }
 
 .inner {
@@ -166,6 +168,7 @@
 .book:hover {
     z-index: 2;
     scale: 1.05;
+
     .cover {
         transform: rotateY(-20deg);
     }
@@ -183,18 +186,19 @@
     z-index: 2;
     width: calc(var(--book-width) * 2);
     scale: 1;
+
+    & .front .info {
+        opacity: 0%;
+    }
 }
 
 .book.open {
     .cover {
         transform: rotateY(-175deg);
         margin-left: 1px;
-
-        & .front .info {
-            opacity: 0%;
-        }
     }
-    h3{
+
+    h3 {
         font-family: "Eagle Lake", cursive;
         margin-bottom: 1rem;
     }
