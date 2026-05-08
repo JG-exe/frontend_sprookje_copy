@@ -28,6 +28,7 @@
     top calc(var(--timing) * 2) ease-in-out,
     left calc(var(--timing) * 2) ease-in-out,
     transform calc(var(--timing) * 2) ease-in-out,
+    translate calc(var(--timing) * 2) ease-in-out,
     scale calc(var(--timing) * 2) ease-in-out;
 }
 
@@ -163,9 +164,8 @@
 }
 
 .book:hover {
-    scale: 1.1;
     z-index: 2;
-
+    scale: 1.05;
     .cover {
         transform: rotateY(-20deg);
     }
@@ -182,6 +182,7 @@
 
     z-index: 2;
     width: calc(var(--book-width) * 2);
+    scale: 1;
 }
 
 .book.open {

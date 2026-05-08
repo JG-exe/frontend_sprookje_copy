@@ -1,7 +1,6 @@
 import {createPortal} from "react-dom";
 import "../css/components/book.css";
 import {useBookAnimation} from "../hooks/useBookAnimation.jsx";
-import {motion} from "motion/react";
 
 function Book({book, openBookId, setOpenBookId}) {
     const {
@@ -16,7 +15,7 @@ function Book({book, openBookId, setOpenBookId}) {
     } = useBookAnimation(book.id, openBookId, setOpenBookId);
 
     const bookMarkup = (
-        <motion.div
+        <div
         key={book.id}
         ref={bookRef}
         className={`animate book ${isOpen ? status : 'idle'}`}
@@ -57,7 +56,7 @@ function Book({book, openBookId, setOpenBookId}) {
                 </div>
             </div>
         </div>
-    </motion.div>);
+    </div>);
     return (<div className="bookSlot" ref={slotRef}>
         {isOpen && isClicked ? createPortal(bookMarkup, document.body) : bookMarkup}
     </div>);
