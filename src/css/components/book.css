@@ -38,7 +38,7 @@
 
     .story {
         color: var(--color-text-primary);
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 600;
     }
 
@@ -184,12 +184,18 @@
     width: calc(var(--book-width) * 2);
 }
 
-.book.open .cover {
-    transform: rotateY(-175deg);
-    margin-left: 1px;
+.book.open {
+    .cover {
+        transform: rotateY(-175deg);
+        margin-left: 1px;
 
-    & .front .info {
-        opacity: 0%;
+        & .front .info {
+            opacity: 0%;
+        }
+    }
+    h3{
+        font-family: "Eagle Lake", cursive;
+        margin-bottom: 1rem;
     }
 }
 

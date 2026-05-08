@@ -1,3 +1,4 @@
+import "../css/all.css"
 import books from "/books.json";
 import Book from "../components/Book.jsx";
 import RecommendedBooks, { recommendedBooksData } from "../components/RecommendedBooks.jsx";

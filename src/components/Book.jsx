@@ -46,7 +46,7 @@ function Book({book, openBookId, setOpenBookId}) {
             <div className="right half">
                 <div className="pagectx">
                     <div className="info">
-                        <div className="story">{book.title}</div>
+                        <div className="story"><h3>{book.title}</h3></div>
                         <div className="author">{book.author}</div>
                         <div className="student">{book.creator}</div>
                     </div>
