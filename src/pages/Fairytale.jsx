@@ -3,6 +3,7 @@ import {useEffect, useRef, useState} from "react";
 import {motion, useScroll, useTransform} from "motion/react"
 import {Link} from "react-router";
 import Landing from "../components/Landing";
+import Routes from "../routes/constants/Routes.js";
 
 function Fairytale() {
     const [gone, setGone] = useState(false);
@@ -79,7 +80,7 @@ function Fairytale() {
                     R
                 </button>
             </div>
-            <Link to="/" className={"btn homeBtn"}>
+            <Link to={Routes.Home} className={"btn homeBtn"}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 80 80" fill="none"
                      stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="0,40 40,5 80,40"/>
@@ -89,10 +90,11 @@ function Fairytale() {
             </Link>
             <Landing gone={gone} setGone={setGone} duration={duration}/>
             <motion.div style={{y: stick}} className={"parallax-lock"}>
-                <img src="./imgs/01_layer_back.png" width={"100%"} className={"back layer scene1"}/>
-                <img src="./imgs/01_layer_mid.png" width={"100%"} className={"middle layer scene1"}/>
+                <img src="./imgs/01_layer_back.png" width={"100%"} className={"backL layer scene1"}/>
+                <img src="./imgs/01_layer_mid.png" width={"100%"} className={"middleL layer scene1"}/>
+                <img src="./imgs/01_layer_mid.png" width={"100%"} className={"middleL layer scene1"}/>
             </motion.div>
-            <img src="./imgs/01_layer_back.png" width={"100%"} className={"back layer scene2"}/>
+            <img src="./imgs/02_background_room.png" width={"100%"} className={"backL layer scene2"}/>
         </>
     )
 }

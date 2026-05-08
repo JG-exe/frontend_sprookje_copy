@@ -92,13 +92,11 @@ p, h1, h2, h3, h4 {
     position: absolute;
 }
 
-.middle{
-
-    top: 0px;
+.middleL{
     z-index: 2;
 }
 
-.back{
+.backL{
     z-index: 1;
 }
 
