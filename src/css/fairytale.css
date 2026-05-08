@@ -6,6 +6,19 @@ html, body {
     overflow-y: scroll;
 }
 
+.parallax-lock {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.fairytale-container {
+    height: 5000px;
+    font-size: 1.2rem;
+}
+
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
     display: none;
@@ -13,6 +26,10 @@ body::-webkit-scrollbar {
 
 p, h1, h2, h3, h4 {
     text-align: center;
+}
+
+h1, h3 {
+    font-family: "Eagle Lake", sans-serif;
 }
 
 .landing {
@@ -29,10 +46,6 @@ p, h1, h2, h3, h4 {
                 0 0 8px var(--color-bg-secondary),
                 0 0 20px rgba(218, 180, 110, 0.4);
         font-size: xx-large;
-    }
-
-    h1 {
-        font-family: "Eagle Lake", sans-serif;
     }
 }
 
@@ -92,6 +105,25 @@ p, h1, h2, h3, h4 {
     position: absolute;
 }
 
+.txt{
+    z-index: 10;
+    text-align: center;
+    width: fit-content;
+    padding: 1rem 0;
+    border-radius: 8px;
+    text-shadow:
+            0 0 8px var(--color-black),
+            0 0 12px var(--color-bg-primary);
+}
+
+.xxlTxt{
+    font-size: 3rem;
+}
+
+.topL{
+    z-index: 3;
+}
+
 .middleL{
     z-index: 2;
 }
@@ -100,14 +132,19 @@ p, h1, h2, h3, h4 {
     z-index: 1;
 }
 
-.scene2{
-    top: 1080px;
+.intro{
+    color: #4BD5EE;
 }
 
-.parallax-lock {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
+.introTitle{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: goldenrod;
+}
+
+.fTonText {
+    color: goldenrod;
+    text-align: justify !important;
+    text-align-last: left;
+    text-justify: inter-word;
+    max-width: 32ch;
 }
