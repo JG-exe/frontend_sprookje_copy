@@ -1,82 +1,101 @@
 [
   {
     "id": 1,
-    "title": "De prinses en de erwt",
-    "author": "Bozo McNugger the third",
-    "creator": "classmate McDumbface Junior",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "Created for Front-End MCT 2"
+    "title": "De kleine zeemeermin",
+    "author": "Hans Christian Andersen",
+    "creator": "Cheryl Aitchedji",
+    "cover": "",
+    "back": "Een jonge zeemeermin ruilt haar stem en staart voor mensenbenen, hopend de liefde van een prins te winnen — maar de prijs is hoog.",
+    "link": ""
   },
   {
     "id": 2,
-    "title": "De draak van het westen",
-    "author": "Jane Doe",
-    "creator": "classmate Dumberface Senior",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "A tale of dragons and windmills"
+    "title": "Mulan",
+    "author": "Onbekend. Oorsprong: Chinees volksverhaal, de Ballade van Mulan.",
+    "creator": "Zonnedda Olivia",
+    "cover": "",
+    "back": "Een jonge vrouw verkleedt zich als man om haar vader te vervangen in het keizerlijke leger.",
+    "link": ""
   },
   {
     "id": 3,
-    "title": "Het vergeten koninkrijk",
-    "author": "Pietje Puk",
-    "creator": "classmate Snorkel van Dijk",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "A forgotten kingdom resurfaces beneath the Zuiderzee"
+    "title": "Roodkapje",
+    "author": "Charles Perrault (1697) / Gebroeders Grimm (1812)",
+    "creator": "Ruben Vernaillen",
+    "cover": "",
+    "back": "Een meisje gaat op weg naar haar zieke grootmoeder, maar ontmoet onderweg een gevaarlijke wolf.",
+    "link": ""
   },
   {
     "id": 4,
-    "title": "Spoken van Amsterdam",
-    "author": "Grietje Bloem",
-    "creator": "classmate Klaasje Worst",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "Ghosts haunt the canals of Amsterdam every autumn"
+    "title": "Aladin en de wonderlamp",
+    "author": "Antoine Galland (toegevoegd aan Duizend-en-een-nacht, 1710). Oorspronkelijke auteur onbekend.",
+    "creator": "Nolan Weemaels",
+    "cover": "",
+    "back": "Een straatjongen vindt een magische lamp met een djinn die al zijn wensen kan vervullen — maar een sluwe tovenaar wil de lamp voor zichzelf.",
+    "link": ""
   },
   {
     "id": 5,
-    "title": "De ijzeren molen",
-    "author": "Henk de Vries",
-    "creator": "classmate Brammetje Kaas",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "A sentient windmill terrorises the polder at midnight"
+    "title": "Repelsteeltje",
+    "author": "Mademoiselle L'Héritier (1705) / Gebroeders Grimm (1812)",
+    "creator": "Joachim Gautama",
+    "cover": "",
+    "back": "Een molenaarsdochter moet stro tot goud spinnen. Een mysterieus mannetje helpt haar — maar eist haar eerstgeboren kind als betaling.",
+    "link": "https://ehb-mct.github.io/frontEnd-sprookje-JoachimGautama/fairytale"
   },
   {
     "id": 6,
-    "title": "Nacht boven de Veluwe",
-    "author": "Sofie Janssen",
-    "creator": "classmate Dirkje Pannenkoek",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "Strange lights appear over the Veluwe forest each winter"
+    "title": "Baba Yaga",
+    "author": "Slavische folklore. Eerste schriftelijke vermelding: Lomonosov (1755). Meest bekend via Aleksandr Afanasjev (19e eeuw).",
+    "creator": "Damian Arszagi",
+    "cover": "",
+    "back": "Een meisje wordt naar de gevaarlijke heks Baba Yaga gestuurd diep in het bos — een vrouw die kinderen opeet en in een hut op kippenpoten woont.",
+    "link": ""
   },
   {
     "id": 7,
-    "title": "De laatste tulp",
-    "author": "Roos van der Berg",
-    "creator": "classmate Floris Stroopwafel",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "One tulip holds the secret to an ancient Dutch curse"
+    "title": "Jack and the Beanstalk",
+    "author": "Anoniem (eerste druk 1734). Populairste versie: Joseph Jacobs (1890).",
+    "creator": "Noah Goossens",
+    "cover": "",
+    "back": "Jack verkoopt de koe voor magische bonen, beklimt een reusachtige bonenstaak tot in de wolken en steelt goud en een magische harp van een reus.",
+    "link": ""
   },
   {
     "id": 8,
-    "title": "Zeehelden en schelmen",
-    "author": "Maarten Zeilmaker",
-    "creator": "classmate Anke Haringboom",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "Pirates and admirals clash on the Noordzee in 1672"
+    "title": "Alice's Adventures in Wonderland",
+    "author": "Lewis Carroll",
+    "creator": "Amber Denblinden",
+    "cover": "",
+    "back": "Alice valt door een konijnenpijp in een absurde fantasiewereld vol vreemde wezens, logische onzin en een tirannieke Hartenkoningin.",
+    "link": ""
   },
   {
     "id": 9,
-    "title": "De toverstaf van Leiden",
-    "author": "Willemijn Kok",
-    "creator": "classmate Sjaak Boekentas",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "A student at Leiden University accidentally summons a warlock"
+    "title": "Disney's Hercules",
+    "author": "Onbekend. Gebaseerd op de Griekse mythologie (Heracles, zoon van Zeus).",
+    "creator": "Rey Mammadbeyli",
+    "cover": "",
+    "back": "Een halfgod verliest zijn goddelijkheid als baby en moet bewijzen een ware held te zijn om zijn plek op de Olympus terug te verdienen.",
+    "link": ""
   },
   {
     "id": 10,
-    "title": "Ijs en vuur",
-    "author": "Bas Vermeer",
-    "creator": "classmate Tineke Dropje",
-    "cover": "https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg",
-    "back": "Two rival skating clans battle for control of the frozen IJssel"
+    "title": "Hans en Grietje",
+    "author": "Gebroeders Grimm",
+    "creator": "Evelien Voogt",
+    "cover": "",
+    "back": "Twee kinderen worden verlaten in het bos en vinden een huisje van snoep — bewoond door een heks die hen wil opeten.",
+    "link": ""
+  },
+  {
+    "id": 11,
+    "title": "De Sneeuwkoningin",
+    "author": "Hans Christian Andersen",
+    "creator": "Safouan Kerkich",
+    "cover": "",
+    "back": "Een meisje trekt door ijzige gebieden om haar beste vriend te redden, wiens hart is bevroren door een splinter van een betoverde spiegel.",
+    "link": ""
   }
 ]

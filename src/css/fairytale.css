@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
 @import "./components/curtains.css";
+
 html, body {
     scrollbar-width: none;
     overflow-y: scroll;
@@ -27,6 +28,7 @@ p, h1, h2, h3, h4 {
         text-shadow:
                 0 0 8px var(--color-bg-secondary),
                 0 0 20px rgba(218, 180, 110, 0.4);
+        font-size: xx-large;
     }
 
     h1 {
@@ -42,7 +44,6 @@ p, h1, h2, h3, h4 {
 
 .btn{
     z-index: 10;
-    position: fixed;
     width: 2rem;
     aspect-ratio: 1/1;
     padding: .2rem;
@@ -57,6 +58,7 @@ p, h1, h2, h3, h4 {
 }
 
 .homeBtn{
+    position: fixed;
     display: flex;
     top: 20px;
     left: 20px;
@@ -66,24 +68,35 @@ p, h1, h2, h3, h4 {
 
 }
 
-.autoscrollBtn{
+.actionBtns{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: fit-content;
+    gap: .5rem;
     bottom: 20px;
     right: 20px;
+    z-index: 10;
+}
 
+.autoscrollBtn{
+    right: 20px;
 }
 
 .autoscrollBtn.active{
     background-color: var(--color-success);
 }
 
-.middleLayer{
+.layer{
     position: absolute;
-    top: 0px;
+}
+
+.middleL{
     z-index: 2;
 }
 
-.backLayer{
-    position: absolute;
+.backL{
     z-index: 1;
 }
 
