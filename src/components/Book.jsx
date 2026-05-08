@@ -32,7 +32,7 @@ function Book({book, openBookId, setOpenBookId}) {
                 <div className="info animate">
                     <div className="story">{book.title}</div>
                     <div className="author">{book.author}</div>
-                    <div className="author">{book.creator}</div>
+                    <div className="student">{book.creator}</div>
                 </div>
             </div>
 
