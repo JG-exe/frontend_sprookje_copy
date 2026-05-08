@@ -23,8 +23,6 @@
 
     /* -- Legacy/Compatibility -- */
     /* TODO: change these to vars above where possible */
-    --color-black: #000; /* Retained for specific cases like deep shadows or overlays */
-    --color-white: #fff; /* Retained for high-contrast needs */
     --color-gray-light: var(--color-bg-tertiary);
     --color-silver: silver;
     --color-recommended-background: color-mix(in srgb, goldenrod, transparent 50%);
@@ -37,7 +35,7 @@
     --color-gold: #ffd700;
     --color-royal-purple: #4b0082;
     --color-forest-green: #228b22;
-    --color-text-glow: #DAB46E; /* Aged Gold / Parchment Glow */
+    --color-text-glow: #DAB46E;
 
     --color-bg-primary: #1a1a1a;
     --color-bg-secondary: #a9a9b3;
