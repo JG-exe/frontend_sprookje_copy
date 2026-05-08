@@ -3,7 +3,7 @@
     text-decoration: none;
     padding: .5rem 1rem;
     color: var(--color-text-primary);
-    background-color: var(--color-bg-tertiary);
+    background-color: var(--color-accent-primary);
     border-radius: 8px;
     transition: all .3s ease-in-out;
     border: transparent;

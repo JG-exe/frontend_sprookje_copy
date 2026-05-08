@@ -9,12 +9,12 @@ const recommendedBooks = (() => {
     return [...indexes].map((index) => books[index]);
 })();
 
-function RecommendedBooks(){
+function RecommendedBooks({openBookId, setOpenBookId}){
     return(
         <>
             <div className="bookList">
                 {recommendedBooks.map((book) => (
-                    <Book key={`rec-${book.id}`} book={book}/>
+                    <Book key={`rec-${book.id}`} book={book} openBookId={openBookId} setOpenBookId={setOpenBookId} />
                 ))}
             </div>
         </>
