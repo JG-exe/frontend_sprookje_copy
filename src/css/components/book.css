@@ -29,6 +29,22 @@
     position: relative;
     margin: 0 0.4rem;
     line-height: 1rem;
+
+    .story {
+        color: var(--color-text-primary);
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .author {
+        color: var(--color-text-secondary);
+        font-size: 11px;
+    }
+
+    .student {
+        color: var(--color-accent-secondary);
+        font-size: 10px;
+    }
 }
 
 .front::before {
@@ -65,24 +81,44 @@
     & .front .info {
         background-color: color-mix(in srgb, var(--color-text-secondary), transparent 80%);
         mix-blend-mode: exclusion;
-        top: -4rem;
+        position: absolute;
+        bottom: 4px;
         padding: 0.2rem;
         width: fit-content;
         border-radius: 4px;
         opacity: 100%;
 
         .story {
-            font-size: small;
+            font-size: 12px;
+            text-overflow: ellipsis;
+            max-width: 130px;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
-        .creator {
-            font-size: x-small;
+        .author {
+            font-size: 10px;
+            text-overflow: ellipsis;
+            max-width: 130px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .student {
+            font-size: 10px;
+            color: var(--color-text-primary);
         }
     }
 }
 
 .pagectx {
     margin: 0.4rem;
+
+    p {
+        font-size: 11px;
+        color: var(--color-text-secondary);
+        margin-bottom: 0.4rem;
+    }
 }
 
 .front,
@@ -94,8 +130,8 @@
 
 .back {
     transform: rotateY(-180deg);
-    background-color: var(--color-white);
-    color: var(--color-black);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
 }
 
 .inner {
@@ -146,11 +182,11 @@
 
 .right {
     transform-origin: left center;
-    background-color: var(--color-white);
-    color: var(--color-black);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
 }
 
-.actions{
+.actions {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
