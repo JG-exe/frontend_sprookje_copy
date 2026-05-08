@@ -1,5 +1,7 @@
 :root {
     --book-width: 180px;
+
+    --timing: 0.4s;
 }
 
 .bookSlot {
@@ -21,12 +23,12 @@
 }
 
 .animate {
-    transition: opacity 0.4s ease-in-out,
-    width 0.8s ease-in-out,
-    top 0.8s ease-in-out,
-    left 0.8s ease-in-out,
-    transform 0.8s ease-in-out,
-    scale 0.8s ease-in-out;
+    transition: opacity var(--timing) ease-in-out,
+    width calc(var(--timing) * 2) ease-in-out,
+    top calc(var(--timing) * 2) ease-in-out,
+    left calc(var(--timing) * 2) ease-in-out,
+    transform calc(var(--timing) * 2) ease-in-out,
+    scale calc(var(--timing) * 2) ease-in-out;
 }
 
 .info {
@@ -209,21 +211,4 @@
     flex-direction: row;
     width: calc(100% - 2rem);
     justify-content: space-between;
-}
-
-.actions button {
-    background-color: var(--color-bg-tertiary);
-    color: var(--color-text-secondary);
-    border: 1px solid var(--color-text-tertiary);
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.actions button:hover {
-    background-color: var(--color-danger);
-    color: var(--color-white);
-    border-color: var(--color-danger-dark);
 }

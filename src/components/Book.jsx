@@ -1,22 +1,25 @@
 import {createPortal} from "react-dom";
 import "../css/components/book.css";
 import {useBookAnimation} from "../hooks/useBookAnimation.jsx";
+import {motion} from "motion/react";
 
 function Book({book, openBookId, setOpenBookId}) {
     const {
         status,
         slotRef,
         bookRef,
-        isThisBookOpen,
+        isOpen,
+        isClicked,
         handleClick,
         handleClose,
         handleTransitionEnd,
     } = useBookAnimation(book.id, openBookId, setOpenBookId);
 
-    const bookMarkup = (<div
+    const bookMarkup = (
+        <motion.div
         key={book.id}
         ref={bookRef}
-        className={`animate book ${isThisBookOpen ? status : 'idle'}`}
+        className={`animate book ${isOpen ? status : 'idle'}`}
         id={`book${book.id}`}
         onClick={handleClick}
         onTransitionEnd={handleTransitionEnd}
@@ -49,14 +52,14 @@ function Book({book, openBookId, setOpenBookId}) {
                     </div>
                     <div className={"actions"}>
                         <a href={book.link} className="linkBtn" target={"_blank"}>go to story</a><br/>
-                        {isThisBookOpen && status === "open" && <button onClick={handleClose}>close</button>}
+                        {isOpen && status === "open" && <button onClick={handleClose} className="danger">close</button>}
                     </div>
                 </div>
             </div>
         </div>
-    </div>);
+    </motion.div>);
     return (<div className="bookSlot" ref={slotRef}>
-        {isThisBookOpen ? createPortal(bookMarkup, document.body) : bookMarkup}
+        {isOpen && isClicked ? createPortal(bookMarkup, document.body) : bookMarkup}
     </div>);
 }
 

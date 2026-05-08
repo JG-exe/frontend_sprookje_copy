@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Mulan",
-    "author": "Geen auteur. Oorsprong: Chinees volksverhaal, de Ballade van Mulan.",
+    "author": "Onbekend. Oorsprong: Chinees volksverhaal, de Ballade van Mulan.",
     "creator": "Zonnedda Olivia",
     "cover": "",
     "back": "Een jonge vrouw verkleedt zich als man om haar vader te vervangen in het keizerlijke leger.",
@@ -42,7 +42,7 @@
     "creator": "Joachim Gautama",
     "cover": "",
     "back": "Een molenaarsdochter moet stro tot goud spinnen. Een mysterieus mannetje helpt haar — maar eist haar eerstgeboren kind als betaling.",
-    "link": "https://ehb-mct.github.io/frontEnd-sprookje-JoachimGautama/"
+    "link": "https://ehb-mct.github.io/frontEnd-sprookje-JoachimGautama/fairytale"
   },
   {
     "id": 6,
@@ -74,7 +74,7 @@
   {
     "id": 9,
     "title": "Disney's Hercules",
-    "author": "Gebaseerd op de Griekse mythologie (Heracles, zoon van Zeus). Geen enkelvoudige auteur.",
+    "author": "Onbekend. Gebaseerd op de Griekse mythologie (Heracles, zoon van Zeus).",
     "creator": "Rey Mammadbeyli",
     "cover": "",
     "back": "Een halfgod verliest zijn goddelijkheid als baby en moet bewijzen een ware held te zijn om zijn plek op de Olympus terug te verdienen.",

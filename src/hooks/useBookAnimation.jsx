@@ -3,10 +3,11 @@ import {useState, useRef, useEffect} from "react";
 export const useBookAnimation = (bookId, openBookId, setOpenBookId) => {
     const [status, setStatus] = useState("idle");
     const [originRect, setOriginRect] = useState(null);
+    const [isClicked, setIsClicked] = useState(false);
     const slotRef = useRef(null);
     const bookRef = useRef(null);
 
-    const isThisBookOpen = openBookId === bookId;
+    const isOpen = openBookId === bookId;
     const isAnyBookOpen = openBookId !== null;
 
     const handleClick = () => {
@@ -14,6 +15,7 @@ export const useBookAnimation = (bookId, openBookId, setOpenBookId) => {
         const rect = slotRef.current.getBoundingClientRect();
         setOriginRect(rect);
         setStatus("opening");
+        setIsClicked(true);
         setOpenBookId(bookId);
     };
 
@@ -68,6 +70,7 @@ export const useBookAnimation = (bookId, openBookId, setOpenBookId) => {
             }
             setStatus("idle");
             setOpenBookId(null);
+            setIsClicked(false);
         }
     };
 
@@ -75,8 +78,9 @@ export const useBookAnimation = (bookId, openBookId, setOpenBookId) => {
         status,
         slotRef,
         bookRef,
-        isThisBookOpen,
+        isOpen,
         isAnyBookOpen,
+        isClicked,
         handleClick,
         handleClose,
         handleTransitionEnd,
