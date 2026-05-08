@@ -1,7 +1,7 @@
 import Book from "./Book.jsx";
 import books from "../../books.json";
 
-export const recommendedBooksData = (() => {
+const recommendedBooksData = (() => {
     const indexes = new Set();
     while (indexes.size < 3) {
         indexes.add(Math.floor(Math.random() * books.length));
