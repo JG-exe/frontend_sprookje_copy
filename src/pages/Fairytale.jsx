@@ -8,6 +8,7 @@ function Fairytale() {
     const [gone, setGone] = useState(false);
     const [autoScroll, setAutoScroll] = useState(false);
     const positionRef = useRef(null);
+    const [millerBoastVisible, setMillerBoastVisible] = useState(false);
 
     const handleRestart = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});
@@ -92,7 +93,14 @@ function Fairytale() {
     const txtOpacity8 = useTransform(scrollY, [scene2End + 490, scene2End + 530], [0, 1]);
     const scene3Fade = useTransform(scrollY, [scene2End + 250, scene2End + 290, scene2End + 750, scene3End], [0, 1, 1, 0]);
     // scene 04
-    const scene4Fade = useTransform(scrollY, [scene3End, scene3End + 40, scene3End + 500, scene3End + 600], [0, 1, 1, 0]);
+    const scene4End = scene3End + 900;
+    const scene4Fade = useTransform(scrollY, [scene3End, scene3End + 40, scene3End + 500, scene4End], [0, 1, 1, 0]);
+    const txtOpacity9 = useTransform(scrollY, [scene3End + 50, scene3End + 100], [0, 1]);
+    const txtOpacity10 = useTransform(scrollY, [scene3End + 150, scene3End + 200], [0, 1]);
+    const txtOpacity11 = useTransform(scrollY, [scene3End + 250, scene3End + 300], [0, 1]);
+    const txtOpacity12 = useTransform(scrollY, [scene3End + 350, scene3End + 400], [0, 1]);
+    const txtOpacity13 = useTransform(scrollY, [scene3End + 450, scene3End + 500], [0, 1]);
+
     return (
         <>
             <div className="fairytale-container">
@@ -217,8 +225,8 @@ function Fairytale() {
                            className={"parallax-lock topL layer"}
                     />
                     <m.p className={"txt parallax-lock"} style={{...center, top: "90vh"}}>
-                        <m.span style={{opacity: txtOpacity5}}>The </m.span>
-                        <m.span style={{opacity: txtOpacity6}}>poor </m.span>
+                        <m.span style={{opacity: txtOpacity5}}>The</m.span>&nbsp;
+                        <m.span style={{opacity: txtOpacity6}}>poor</m.span>&nbsp;
                         <m.span style={{opacity: txtOpacity7}}>miller</m.span>
                         <br/>
                         <m.span style={{opacity: txtOpacity8}}>If only he was just that...</m.span>
@@ -228,15 +236,21 @@ function Fairytale() {
                     <m.div className={"miller parallax-lock"}>
                         <m.img src="./imgs/01_poor_miller_side_arm.png" className="arm"></m.img>
                         <m.img src="./imgs/01_poor_miller_side_no_arm.png" className="body"></m.img>
-                        <m.div className={"parallax-lock"}>
-                            <m.p className={"txt txtLeft parallax-lock"} style={{opacity: 1, ...center, top: "30vh", left: "30%"}}>
-                                <m.span>But no...</m.span>
-                                <br/>
-                                <m.span>
-                                    He LOVED boasting about things.
-                                </m.span>
-                            </m.p>
-                        </m.div>
+                    </m.div>
+                    <m.div className={"parallax-lock"}>
+                        <m.p
+                            className={"txt txtLeft parallax-lock"}
+                            style={{...center, top: "30vh", left: "30%"}}
+                            style={{...center, top: "30vh", left: "30%", opacity: txtOpacity9}}
+                        >
+                            <span>But no...</span>
+                            <br/>
+                            <m.span style={{opacity: txtOpacity10}}>He LOVED boasting about things.</m.span>
+                            <br/>
+                            <m.span style={{opacity: txtOpacity11}}>EVEN if those things weren't always true.</m.span><br/>
+                            <m.span style={{opacity: txtOpacity12}}>Like about his daughter for example.</m.span>
+                        </m.p>
+                        <m.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{...center, scale: 0.06, top: "-192%", x: "-45%", y: "0", opacity: txtOpacity12}}/>
                     </m.div>
                 </m.div>
             </div>

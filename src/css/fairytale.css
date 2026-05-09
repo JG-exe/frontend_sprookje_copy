@@ -12,6 +12,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
 }
 
 [data-theme="fairytale"] {
+
     .parallax-lock {
         position: fixed;
         top: 0;
@@ -21,7 +22,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
 
     .fairytale-container {
-        height: 5000px;
+        height: 8000px;
         font-size: 1.2rem;
     }
 
@@ -76,8 +77,8 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     .homeBtn {
         position: fixed;
         display: flex;
-        top: 20px;
-        left: 20px;
+        top: 1.5rem;
+        left: 2.5rem;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
