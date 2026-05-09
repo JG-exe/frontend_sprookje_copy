@@ -1,62 +1,24 @@
-import {useEffect, useRef, useState} from "react";
-import {motion, useScroll, useTransform} from "motion/react"
+import {useEffect, useState} from "react";
+import {motion, useScroll} from "motion/react"
 import {Link} from "react-router";
 import Landing from "../components/Landing";
 import Routes from "../routes/constants/Routes.js";
+import {useScene1} from "../hooks/useScene1.js";
+import {useScene2} from "../hooks/useScene2.js";
+import {useScene3} from "../hooks/useScene3.js";
+import {useScene4} from "../hooks/useScene4.js";
+import {usePlayback} from "../hooks/usePlayback.js";
+import {useAutoScroll} from "../hooks/useAutoScroll.js";
 
 function Fairytale() {
-    const [gone, setGone] = useState(false);
-    const [autoScroll, setAutoScroll] = useState(false);
     const [millerHover, setMillerHover] = useState(false)
-    const positionRef = useRef(null);
-
-    const handleRestart = () => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-        setAutoScroll(false);
-        setGone(false);
-    };
+    const playback = usePlayback();
+    useAutoScroll(playback.autoScroll, playback.gone, playback.setAutoScroll);
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", "fairytale");
         return () => document.documentElement.removeAttribute("data-theme")
     }, []);
-
-    useEffect(() => {
-        const handler = (e) => {
-            if (e.code === 'Space') {
-                e.preventDefault()
-                setGone(true)
-                setAutoScroll(prev => !prev)
-            }
-            if (e.code === 'KeyR') {
-                handleRestart();
-            }
-        }
-        window.addEventListener("keydown", handler)
-        return () => window.removeEventListener("keydown", handler)
-    }, [])
-
-    useEffect(() => {
-        if (!gone || !autoScroll) {
-            cancelAnimationFrame(positionRef.current);
-            return
-        }
-
-        const tick = () => {
-            window.scrollBy(0, 0.5);
-            positionRef.current = requestAnimationFrame(tick);
-        }
-        positionRef.current = requestAnimationFrame(tick);
-        return () => cancelAnimationFrame(positionRef.current);
-    }, [gone, autoScroll])
-
-    useEffect(() => {
-        const pause = () => setAutoScroll(false)
-        window.addEventListener('wheel', pause, {passive: true})
-        return () => {
-            window.removeEventListener('wheel', pause)
-        }
-    }, [])
 
     // eslint-disable-next-line no-unused-vars
     const m = motion;
@@ -65,59 +27,24 @@ function Fairytale() {
         textAlign: "center",
         left: "50%",
     }
-    // scene 01
-    const scene1End = 1980;
     const {scrollY} = useScroll()
-    const scene1 = useTransform(scrollY, [0, scene1End, scene1End + 1], [0, 0, -1080]);
-    const aLongTimeTxt = useTransform(scrollY, [250, 300, 500, 530], [0, 1, 1, 0]);
-    const rumpel1Opacity = useTransform(scrollY, [575, 580], [0, 1]);
-    const rumpel1Scale = useTransform(scrollY, [570, 900, 950], [3, .4, 0]);
-    const txt1 = useTransform(scrollY, [950, 2000], [1400, -1800]);
-    const crawlRotateX = useTransform(scrollY, [950, 2000], [20, 35]);
-    const crawlOpacity = useTransform(scrollY, [0, 950, 1700, 1950], [0, 1, 1, 0]);
-    const crawlScale = useTransform(scrollY, [950, 2000], ["100%", "10%"])
-    // scene 02
-    const scene2End = scene1End + 600;
-    const scene2Fade = useTransform(scrollY, [scene1End, scene1End + 100, scene1End + 550, scene2End], [0, 1, 1, 0]);
-    const openMiddle = useTransform(scrollY, [scene1End - 10, scene1End + 900], [0, -1100]);
-    const zoomClose = useTransform(scrollY, [scene1End - 10, scene1End + 900], [1, 1.4]);
-    const zoomFar = useTransform(scrollY, [scene1End - 10, scene1End + 900], [1, 1.2]);
-    const zoomYAdjust = useTransform(scrollY, [scene1End - 10, scene1End + 900], [0, -40]);
-    const txtOpacity2 = useTransform(scrollY, [scene1End - 10, scene1End + 200, scene1End + 300], [1, 1, 0])
-    const txtOpacity3 = useTransform(scrollY, [scene1End + 290, scene1End + 350, scene1End + 500, scene1End + 550], [0, 1, 1, 0])
-    // scene 03
-    const scene3End = scene2End + 800;
-    const txtOpacity4 = useTransform(scrollY, [scene2End, scene2End + 40, scene2End + 200, scene2End + 250], [0, 1, 1, 0]);
-    const txtOpacity5 = useTransform(scrollY, [scene2End + 300, scene2End + 310, scene2End + 500, scene2End + 550], [0, 1, 1, 0]);
-    const txtOpacity6 = useTransform(scrollY, [scene2End + 340, scene2End + 350, scene2End + 500, scene2End + 550], [0, 1, 1, 0]);
-    const txtOpacity7 = useTransform(scrollY, [scene2End + 380, scene2End + 390, scene2End + 500, scene2End + 550], [0, 1, 1, 0]);
-    const txtOpacity8 = useTransform(scrollY, [scene2End + 490, scene2End + 530], [0, 1]);
-    const scene3Fade = useTransform(scrollY, [scene2End + 250, scene2End + 290, scene2End + 750, scene3End], [0, 1, 1, 0]);
-    // scene 04
-    const scene4End = scene3End + 1400;
-    const scene4Fade = useTransform(scrollY, [scene3End, scene3End + 40, scene4End - 100, scene4End], [0, 1, 1, 0]);
-    const txtOpacity9 = useTransform(scrollY, [scene3End + 50, scene3End + 100], [0, 1]);
-    const txtOpacity10 = useTransform(scrollY, [scene3End + 150, scene3End + 200], [0, 1]);
-    const txtOpacity11 = useTransform(scrollY, [scene3End + 250, scene3End + 300], [0, 1]);
-    const txtOpacity12 = useTransform(scrollY, [scene3End + 450, scene3End + 490], [0, 1]);
-    const txtOpacity13 = useTransform(scrollY, [scene3End + 600, scene3End + 640], [0, 1]);
-    const txtOpacity14 = useTransform(scrollY, [scene3End + 750, scene3End + 790], [0, 1]);
+    const scene1 = useScene1(scrollY);
+    const scene2 = useScene2(scrollY, scene1.sceneEnd);
+    const scene3 = useScene3(scrollY, scene2.sceneEnd);
+    const scene4 = useScene4(scrollY, scene3.sceneEnd);
     return (
         <>
             <div className="fairytale-container">
                 <div className={"actionBtns"}>
                     <button
-                        className={`btn autoscrollBtn ${autoScroll ? 'active' : ''}`}
-                        onClick={() => {
-                            setGone(true)
-                            setAutoScroll(prev => !prev)
-                        }}
+                        className={`btn autoscrollBtn ${playback.autoScroll ? 'active' : ''}`}
+                        onClick={playback.toggleAutoScroll}
                     >
-                        {autoScroll ? '⏸' : '▶'}
+                        {playback.autoScroll ? '⏸' : '▶'}
                     </button>
                     <button
                         className={`btn restartBtn`}
-                        onClick={handleRestart}
+                        onClick={playback.handleRestart}
                     >
                         R
                     </button>
@@ -130,10 +57,10 @@ function Fairytale() {
                         <rect x="30" y="52" width="20" height="23" rx="2"/>
                     </svg>
                 </Link>
-                <Landing gone={gone} setGone={setGone} duration={1.2}/>
-                <m.div style={{y: scene1}} className={"parallax-lock"}>
+                <Landing gone={playback.gone} setGone={playback.setGone} duration={1.2}/>
+                <m.div style={{y: scene1.scene}} className={"parallax-lock"}>
                     <m.p className={"txt layer xxlTxt intro"}
-                         style={{opacity: aLongTimeTxt, x: "-50%", textAlign: "center", left: "50%", top: "50vh"}}
+                         style={{opacity: scene1.aLongTimeTxt, x: "-50%", textAlign: "center", left: "50%", top: "50vh"}}
                          initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
                         A long time ago in a place far, far away....
                     </m.p>
@@ -141,13 +68,13 @@ function Fairytale() {
                           style={{
                               ...center,
                               top: "50vh",
-                              opacity: rumpel1Opacity,
-                              scale: rumpel1Scale
+                              opacity: scene1.rumpelOpacity,
+                              scale: scene1.rumpelScale
                           }}>
                         R U M P E L S T I L T S K I N
                     </m.h3>
                     <m.div style={{
-                        scale: crawlScale,
+                        scale: scene1.crawlScale,
                         transformOrigin: "top center",
                         perspective: "800px",
                         transformStyle: "preserve-3d"
@@ -155,9 +82,9 @@ function Fairytale() {
                         <m.p className={"txt layer  xxlTxt fTonText"}
                              style={{
                                  ...center,
-                                 y: txt1,
-                                 opacity: crawlOpacity,
-                                 rotateX: crawlRotateX,
+                                 y: scene1.txt1,
+                                 opacity: scene1.crawlOpacity,
+                                 rotateX: scene1.crawlRotateX,
                              }}>
                             It is a period of perilous bargains and deep deceit.
                             <br/>
@@ -188,37 +115,37 @@ function Fairytale() {
                         </m.p>
                     </m.div>
                 </m.div>
-                <m.div style={{opacity: scene2Fade,}} className={"parallax-lock"}>
-                    <m.div style={{y: zoomYAdjust}}>
+                <m.div style={{opacity: scene2.sceneFade,}} className={"parallax-lock"}>
+                    <m.div style={{y: scene2.zoomYAdjust}}>
                         <m.img src="./imgs/01_layer_back.png"
-                               style={{scale: zoomFar}}
+                               style={{scale: scene2.zoomFar}}
                                width={"100%"}
                                className={"backL layer "}
                         />
-                        <m.div style={{scale: zoomClose}} className={"parallax-lock"}>
+                        <m.div style={{scale: scene2.zoomClose}} className={"parallax-lock"}>
                             <m.img src="./imgs/01_layer_mid_left.png"
                                    width={"100%"}
                                    className={"middleL layer "}
-                                   style={{left: openMiddle}}
+                                   style={{left: scene2.openMiddle}}
                             />
                             <m.img src="./imgs/01_layer_mid_right.png"
                                    width={"100%"}
                                    className={"middleL layer "}
-                                   style={{right: openMiddle}}
+                                   style={{right: scene2.openMiddle}}
                             />
                         </m.div>
                     </m.div>
-                    <m.p className={"txt parallax-lock"} style={{...center, top: "90vh", opacity: txtOpacity2}}>There
+                    <m.p className={"txt parallax-lock"} style={{...center, top: "90vh", opacity: scene2.txtOpacity1}}>There
                         once was a kingdom ruled by a really rich king.
                     </m.p>
-                    <m.p className={"txt parallax-lock"} style={{...center, top: "90vh", opacity: txtOpacity3}}>And as
+                    <m.p className={"txt parallax-lock"} style={{...center, top: "90vh", opacity: scene2.txtOpacity2}}>And as
                         we all know, no-one gets that rich by being good.
                     </m.p>
                 </m.div>
-                <m.p className={"parallax-lock txt"} style={{opacity: txtOpacity4, ...center, top: "60vh"}}>
+                <m.p className={"parallax-lock txt"} style={{opacity: scene3.txtOpacity1, ...center, top: "60vh"}}>
                     Meet our unwilling and foolish catalyst.
                 </m.p>
-                <m.div className={"parallax-lock"} style={{opacity: scene3Fade}}>
+                <m.div className={"parallax-lock"} style={{opacity: scene3.sceneFade}}>
                     <m.img src="./imgs/01_mill.png" width={"72%"} className={"backL layer "}
                            style={{...center, top: "10px"}}/>
                     <m.img src="./imgs/01_poor_miller_side.png"
@@ -226,18 +153,18 @@ function Fairytale() {
                            className={"parallax-lock topL layer"}
                     />
                     <m.p className={"txt parallax-lock"} style={{...center, top: "90vh"}}>
-                        <m.span style={{opacity: txtOpacity5}}>The</m.span>
+                        <m.span style={{opacity: scene3.txtOpacity2}}>The</m.span>
                         &nbsp;
-                        <m.span style={{opacity: txtOpacity6}}>poor</m.span>
+                        <m.span style={{opacity: scene3.txtOpacity3}}>poor</m.span>
                         &nbsp;
-                        <m.span style={{opacity: txtOpacity7}}>miller</m.span>
+                        <m.span style={{opacity: scene3.txtOpacity4}}>miller</m.span>
                         <br/>
-                        <m.span style={{opacity: txtOpacity8}}>If only he was just that...</m.span>
+                        <m.span style={{opacity: scene3.txtOpacity5}}>If only he was just that...</m.span>
                     </m.p>
                 </m.div>
-                <m.div className={"millerScene"} style={{opacity: scene4Fade, top: "0"}}>
+                <m.div className={"millerScene"} style={{opacity: scene4.sceneFade, top: "0"}}>
                     <m.div className={"miller parallax-lock"} onHoverStart={() => setMillerHover(true)} onHoverEnd={() => setMillerHover(false)}>
-                        {millerHover && txtOpacity12.get() > 0 && (
+                        {millerHover && scene4.txtOpacity4.get() > 0 && (
                             <m.div
                                 className={"speech-bubble"}
                                 initial={{opacity: 0, y: 10}}
@@ -255,15 +182,15 @@ function Fairytale() {
                     <m.div className={"parallax-lock"}>
                         <m.p
                             className={"txt txtLeft parallax-lock"}
-                            style={{...center, top: "30vh", left: "30%", opacity: txtOpacity9}}
+                            style={{...center, top: "30vh", left: "30%", opacity: scene4.txtOpacity1}}
                         >
                             <span>But no...</span>
                             <br/>
-                            <m.span style={{opacity: txtOpacity10}}>He LOVED boasting about things.</m.span>
+                            <m.span style={{opacity: scene4.txtOpacity2}}>He LOVED boasting about things.</m.span>
                             <br/>
-                            <m.span style={{opacity: txtOpacity11}}>EVEN if those things weren't always true.</m.span>
+                            <m.span style={{opacity: scene4.txtOpacity3}}>EVEN if those things weren't always true.</m.span>
                             <br/>
-                            <m.span style={{opacity: txtOpacity12}}>Like about his daughter for example.</m.span>
+                            <m.span style={{opacity: scene4.txtOpacity4}}>Like about his daughter for example.</m.span>
                         </m.p>
                         <m.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{
                             ...center,
@@ -271,11 +198,11 @@ function Fairytale() {
                             top: "-192%",
                             x: "-45%",
                             y: "0",
-                            opacity: txtOpacity12
+                            opacity: scene4.txtOpacity4
                         }}/>
                         <m.p className={"txt parallax-lock"} style={{...center, top: "85vh"}}>
-                            <m.span style={{ opacity: txtOpacity13}} >He would tell everyone who wanted to hear how his daughter could turn hay into gold by spinning it.</m.span><br/>
-                            <m.span style={{opacity: txtOpacity14}}>And everyone who didn't want to hear it, but happened to cross him...<br/>They got to hear it too. Try to pass him without making him mention it, I dare you!</m.span>
+                            <m.span style={{ opacity: scene4.txtOpacity5}} >He would tell everyone who wanted to hear how his daughter could turn hay into gold by spinning it.</m.span><br/>
+                            <m.span style={{opacity: scene4.txtOpacity6}}>And everyone who didn't want to hear it, but happened to cross him...<br/>They got to hear it too. Try to pass him without making him mention it, I dare you!</m.span>
                         </m.p>
                     </m.div>
                 </m.div>
