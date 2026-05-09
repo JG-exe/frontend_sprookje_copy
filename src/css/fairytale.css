@@ -40,11 +40,11 @@ h1, h3 {
     width: 100%;
     height: 100dvh;
     overflow: hidden;
+
     h1, h2 {
         margin: 0 auto;
-        text-shadow:
-                0 0 8px var(--color-bg-secondary),
-                0 0 20px rgba(218, 180, 110, 0.4);
+        text-shadow: 0 0 8px var(--color-bg-secondary),
+        0 0 20px rgba(218, 180, 110, 0.4);
         font-size: xx-large;
     }
 }
@@ -55,7 +55,7 @@ h1, h3 {
     color: var(--color-black-transparent);
 }
 
-.btn{
+.btn {
     z-index: 10;
     width: 2rem;
     aspect-ratio: 1/1;
@@ -66,11 +66,11 @@ h1, h3 {
     color: var(--color-text-primary);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: color-mix(var(--color-bg-primary), var(--color-bg-secondary) 20%);
 }
 
-.homeBtn{
+.homeBtn {
     position: fixed;
     display: flex;
     top: 20px;
@@ -81,7 +81,7 @@ h1, h3 {
 
 }
 
-.actionBtns{
+.actionBtns {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -93,50 +93,49 @@ h1, h3 {
     z-index: 10;
 }
 
-.autoscrollBtn{
+.autoscrollBtn {
     right: 20px;
 }
 
-.autoscrollBtn.active{
+.autoscrollBtn.active {
     background-color: var(--color-success);
 }
 
-.layer{
+.layer {
     position: absolute;
 }
 
-.txt{
+.txt {
     z-index: 10;
     text-align: center;
     width: fit-content;
     padding: 1rem 0;
     border-radius: 8px;
-    text-shadow:
-            0 0 8px black,
-            0 0 12px var(--color-bg-primary);
+    text-shadow: 0 0 8px black,
+    0 0 12px var(--color-bg-primary);
 }
 
-.xxlTxt{
+.xxlTxt {
     font-size: 3rem;
 }
 
-.topL{
+.topL {
     z-index: 3;
 }
 
-.middleL{
+.middleL {
     z-index: 2;
 }
 
-.backL{
+.backL {
     z-index: 1;
 }
 
-.intro{
+.intro {
     color: #4BD5EE;
 }
 
-.introTitle{
+.introTitle {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: goldenrod;
 }
@@ -147,4 +146,31 @@ h1, h3 {
     text-align-last: left;
     text-justify: inter-word;
     max-width: 32ch;
+}
+
+.millerScene{
+    height: 100vh;
+    width: 100vw;
+}
+.miller {
+    top: 30%;
+    left: 40%;
+    .body{
+        height: 400px;
+        position: absolute;
+    }
+
+    .arm {
+        height: 140px;
+        position: absolute;
+        top: 36px;
+        left: 154px;
+        transform-origin: left center;
+        animation: wave 2.5s infinite alternate ease-in-out;
+    }
+}
+
+@keyframes wave{
+    from {transform: rotate(-5deg)}
+    to {transform: rotate(10deg)}
 }
