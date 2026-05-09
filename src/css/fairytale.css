@@ -174,13 +174,14 @@
         }
     }
 
-    @keyframes wave {
-        from {
-            transform: rotate(-5deg)
-        }
-        to {
-            transform: rotate(10deg)
-        }
-    }
 
+}
+
+@keyframes wave {
+    from {
+        transform: rotate(-5deg)
+    }
+    to {
+        transform: rotate(10deg)
+    }
 }
