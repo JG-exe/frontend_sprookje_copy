@@ -217,8 +217,8 @@ function Fairytale() {
                            className={"parallax-lock topL layer"}
                     />
                     <m.p className={"txt parallax-lock"} style={{...center, top: "90vh"}}>
-                        <m.span style={{opacity: txtOpacity5}}>The</m.span>
-                        <m.span style={{opacity: txtOpacity6}}>poor</m.span>
+                        <m.span style={{opacity: txtOpacity5}}>The </m.span>
+                        <m.span style={{opacity: txtOpacity6}}>poor </m.span>
                         <m.span style={{opacity: txtOpacity7}}>miller</m.span>
                         <br/>
                         <m.span style={{opacity: txtOpacity8}}>If only he was just that...</m.span>
@@ -228,6 +228,15 @@ function Fairytale() {
                     <m.div className={"miller parallax-lock"}>
                         <m.img src="./imgs/01_poor_miller_side_arm.png" className="arm"></m.img>
                         <m.img src="./imgs/01_poor_miller_side_no_arm.png" className="body"></m.img>
+                        <m.div className={"parallax-lock"}>
+                            <m.p className={"txt txtLeft parallax-lock"} style={{opacity: 1, ...center, top: "30vh", left: "30%"}}>
+                                <m.span>But no...</m.span>
+                                <br/>
+                                <m.span>
+                                    He LOVED boasting about things.
+                                </m.span>
+                            </m.p>
+                        </m.div>
                     </m.div>
                 </m.div>
             </div>
