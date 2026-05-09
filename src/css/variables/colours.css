@@ -30,7 +30,7 @@
     --color-white-hl: rgba(255, 255, 255, 0.15);
 }
 
-:root[data-theme='fairytale'] {
+[data-theme='fairytale'] {
     --color-straw: #e3d4a3;
     --color-gold: #ffd700;
     --color-royal-purple: #4b0082;
