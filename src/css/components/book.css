@@ -1,7 +1,11 @@
 :root {
     --book-width: 180px;
 
-    --timing: 0.4s;
+    --timing: 0.8s;
+}
+
+h3{
+    font-family: "Eagle Lake", cursive;
 }
 
 .bookSlot {
@@ -23,13 +27,13 @@
 }
 
 .animate {
-    transition: opacity var(--timing) ease-in-out,
-    width calc(var(--timing) * 2) ease-in-out,
-    top calc(var(--timing) * 2) ease-in-out,
-    left calc(var(--timing) * 2) ease-in-out,
-    transform calc(var(--timing) * 2) ease-in-out,
-    translate calc(var(--timing) * 2) ease-in-out,
-    scale calc(var(--timing) * 2) ease-in-out;
+    transition: opacity calc(var(--timing) / 2) ease-in-out,
+    width var(--timing) ease-in-out,
+    top var(--timing) ease-in-out,
+    left var(--timing) ease-in-out,
+    transform var(--timing) ease-in-out,
+    translate var(--timing) ease-in-out,
+    scale var(--timing) ease-in-out;
 }
 
 .info {
@@ -39,7 +43,7 @@
 
     .story {
         color: var(--color-text-primary);
-        font-size: 13px;
+        font-size: 10px;
         font-weight: 600;
     }
 
@@ -64,7 +68,7 @@
     height: 100%;
     background: linear-gradient(
             to right,
-            var(--color-black) 0%,
+            black 0%,
             var(--color-black-transparent) 10%,
             var(--color-black-transparent) 35%,
             var(--color-white-hl) 60%,
@@ -129,6 +133,7 @@
     box-sizing: border-box;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 
     p {
         font-size: 13px;
@@ -199,7 +204,7 @@
     }
 
     h3 {
-        font-family: "Eagle Lake", cursive;
+        font-size: 13px;
         margin-bottom: 1rem;
     }
 }

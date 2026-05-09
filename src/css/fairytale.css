@@ -1,176 +1,186 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
 @import "./components/curtains.css";
 
-html, body {
-    scrollbar-width: none;
-    overflow-y: scroll;
-}
+[data-theme="fairytale"] {
 
-.parallax-lock {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-.fairytale-container {
-    height: 5000px;
-    font-size: 1.2rem;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none;
-}
-
-p, h1, h2, h3, h4 {
-    text-align: center;
-}
-
-h1, h3 {
-    font-family: "Eagle Lake", sans-serif;
-}
-
-.landing {
-    position: absolute;
-    z-index: 6;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100dvh;
-    overflow: hidden;
-
-    h1, h2 {
-        margin: 0 auto;
-        text-shadow: 0 0 8px var(--color-bg-secondary),
-        0 0 20px rgba(218, 180, 110, 0.4);
-        font-size: xx-large;
+    html, body {
+        scrollbar-width: none;
+        overflow-y: scroll;
     }
-}
 
-.title {
-    width: 100%;
-    margin: auto 0;
-    color: var(--color-black-transparent);
-}
+    .parallax-lock {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
 
-.btn {
-    z-index: 10;
-    width: 2rem;
-    aspect-ratio: 1/1;
-    padding: .2rem;
-    cursor: pointer;
-    background-color: var(--color-bg-primary);
-    transition: background-color 0.4s;
-    color: var(--color-text-primary);
-}
+    .fairytale-container {
+        height: 5000px;
+        font-size: 1.2rem;
+    }
 
-.btn:hover {
-    background-color: color-mix(var(--color-bg-primary), var(--color-bg-secondary) 20%);
-}
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
+    }
 
-.homeBtn {
-    position: fixed;
-    display: flex;
-    top: 20px;
-    left: 20px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    p, h1, h2, h3, h4 {
+        text-align: center;
+    }
 
-}
+    h1, h3 {
+        font-family: "Eagle Lake", sans-serif;
+    }
 
-.actionBtns {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: fit-content;
-    gap: .5rem;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10;
-}
+    .landing {
+        position: absolute;
+        z-index: 6;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100dvh;
+        overflow: hidden;
 
-.autoscrollBtn {
-    right: 20px;
-}
+        h1, h2 {
+            margin: 0 auto;
+            text-shadow: 0 0 8px var(--color-bg-secondary),
+            0 0 20px rgba(218, 180, 110, 0.4);
+            font-size: xx-large;
+        }
+    }
 
-.autoscrollBtn.active {
-    background-color: var(--color-success);
-}
+    .title {
+        width: 100%;
+        margin: auto 0;
+        color: var(--color-black-transparent);
+    }
 
-.layer {
-    position: absolute;
-}
+    .btn {
+        z-index: 10;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        padding: .2rem;
+        cursor: pointer;
+        background-color: var(--color-bg-primary);
+        transition: background-color 0.4s;
+        color: var(--color-text-primary);
+    }
 
-.txt {
-    z-index: 10;
-    text-align: center;
-    width: fit-content;
-    padding: 1rem 0;
-    border-radius: 8px;
-    text-shadow: 0 0 8px black,
-    0 0 12px var(--color-bg-primary);
-}
+    .btn:hover {
+        background-color: color-mix(var(--color-bg-primary), var(--color-bg-secondary) 20%);
+    }
 
-.xxlTxt {
-    font-size: 3rem;
-}
+    .homeBtn {
+        position: fixed;
+        display: flex;
+        top: 20px;
+        left: 20px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
 
-.topL {
-    z-index: 3;
-}
+    }
 
-.middleL {
-    z-index: 2;
-}
+    .actionBtns {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: fit-content;
+        gap: .5rem;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+    }
 
-.backL {
-    z-index: 1;
-}
+    .autoscrollBtn {
+        right: 20px;
+    }
 
-.intro {
-    color: #4BD5EE;
-}
+    .autoscrollBtn.active {
+        background-color: var(--color-success);
+    }
 
-.introTitle {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: goldenrod;
-}
-
-.fTonText {
-    color: goldenrod;
-    text-align: justify !important;
-    text-align-last: left;
-    text-justify: inter-word;
-    max-width: 32ch;
-}
-
-.millerScene{
-    height: 100vh;
-    width: 100vw;
-}
-.miller {
-    top: 30%;
-    left: 40%;
-    .body{
-        height: 400px;
+    .layer {
         position: absolute;
     }
 
-    .arm {
-        height: 140px;
-        position: absolute;
-        top: 36px;
-        left: 154px;
-        transform-origin: left center;
-        animation: wave 2.5s infinite alternate ease-in-out;
+    .txt {
+        z-index: 10;
+        text-align: center;
+        width: fit-content;
+        padding: 1rem 0;
+        border-radius: 8px;
+        text-shadow: 0 0 8px black,
+        0 0 12px var(--color-bg-primary);
     }
-}
 
-@keyframes wave{
-    from {transform: rotate(-5deg)}
-    to {transform: rotate(10deg)}
+    .xxlTxt {
+        font-size: 3rem;
+    }
+
+    .topL {
+        z-index: 3;
+    }
+
+    .middleL {
+        z-index: 2;
+    }
+
+    .backL {
+        z-index: 1;
+    }
+
+    .intro {
+        color: #4BD5EE;
+    }
+
+    .introTitle {
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: goldenrod;
+    }
+
+    .fTonText {
+        color: goldenrod;
+        text-align: justify !important;
+        text-align-last: left;
+        text-justify: inter-word;
+        max-width: 32ch;
+    }
+
+    .millerScene {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .miller {
+        top: 30%;
+        left: 40%;
+
+        .body {
+            height: 400px;
+            position: absolute;
+        }
+
+        .arm {
+            height: 140px;
+            position: absolute;
+            top: 36px;
+            left: 154px;
+            transform-origin: left center;
+            animation: wave 2.5s infinite alternate ease-in-out;
+        }
+    }
+
+    @keyframes wave {
+        from {
+            transform: rotate(-5deg)
+        }
+        to {
+            transform: rotate(10deg)
+        }
+    }
+
 }
