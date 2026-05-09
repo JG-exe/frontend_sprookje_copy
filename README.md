@@ -9,3 +9,5 @@ This project is a React web application built for the Front-End course at Erasmu
   - Can all be found in /public/imgs/
   - Most images are edited in photoshop after
 - Routing based on the way I learned it in Dual Learning (Data mode)
+- [lince-clamp css](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/line-clamp)
+  - used in book.css

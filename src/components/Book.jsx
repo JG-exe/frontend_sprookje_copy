@@ -1,117 +1,65 @@
-import {useState, useRef, useEffect} from "react";
 import {createPortal} from "react-dom";
 import "../css/components/book.css";
+import {useBookAnimation} from "../hooks/useBookAnimation.jsx";
 
-function Book({book}) {
-    const [status, setStatus] = useState("idle");
-    const [originRect, setOriginRect] = useState(null);
-    const slotRef = useRef(null);
-    const bookRef = useRef(null);
-
-    const handleClick = () => {
-        if (status !== "idle") return;
-        const rect = slotRef.current.getBoundingClientRect();
-        setOriginRect(rect);
-        setStatus("opening");
-    };
-
-    useEffect(() => {
-        const current = bookRef.current;
-        const style = current.style;
-        if (status === "opening" && bookRef.current && originRect) {
-            style.top = `${originRect.top}px`;
-            style.left = `${originRect.left}px`;
-            style.width = `${originRect.width}px`;
-            style.transform = `none`;
-
-            requestAnimationFrame(() => {
-                style.top = "";
-                style.left = "";
-                style.width = "";
-                style.transform = "";
-            });
-        }
-    });
-
-    const handleClose = (e) => {
-        e.stopPropagation();
-        console.log("click");
-        const current = bookRef.current;
-        const style = current.style;
-
-        const rect = slotRef.current.getBoundingClientRect();
-
-        style.top = `${rect.top}px`;
-        style.left = `${rect.left}px`;
-        style.width = `${rect.width}px`;
-        style.transform = `none`;
-
-        requestAnimationFrame(() => {
-            style.top = `${originRect.top}px`;
-            style.left = `${originRect.left}px`;
-            style.width = `${originRect.width}px`;
-            setStatus("closing");
-        });
-    };
-
-    const handleTransitionEnd = (e) => {
-        if (e.propertyName !== "width") return;
-        if (status === "opening") setStatus("open");
-        if (status === "closing") {
-            bookRef.current.style.cssText = "";
-            setStatus("idle");
-        }
-    };
+function Book({book, openBookId, setOpenBookId}) {
+    const {
+        status,
+        slotRef,
+        bookRef,
+        isOpen,
+        isClicked,
+        handleClick,
+        handleClose,
+        handleTransitionEnd,
+    } = useBookAnimation(book.id, openBookId, setOpenBookId);
 
     const bookMarkup = (
         <div
-            key={book.id}
-            ref={bookRef}
-            className={`animate book ${status}`}
-            id={`book${book.id}`}
-            onClick={handleClick}
-            onTransitionEnd={handleTransitionEnd}
-        >
-            <div className="animate cover">
-                <div className="front">
-                    <img
-                        src={book.cover || `https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg`}
-                        alt=""/>
-                    <div className="info animate">
-                        <div className="story">{book.title}</div>
-                        <div className="author">{book.author}</div>
-                        <div className="author">{book.creator}</div>
-                    </div>
+        key={book.id}
+        ref={bookRef}
+        className={`animate book ${isOpen ? status : 'idle'}`}
+        id={`book${book.id}`}
+        onClick={handleClick}
+        onTransitionEnd={handleTransitionEnd}
+    >
+        <div className="animate cover">
+            <div className="front">
+                <img
+                    src={book.cover || `https://www.heritagechristiancollege.com/wp-content/uploads/2019/05/free-book-cover-design-templates-of-diy-book-covers-of-free-book-cover-design-templates.jpg`}
+                    alt=""/>
+                <div className="info animate">
+                    <div className="story">{book.title}</div>
+                    <div className="author">{book.author}</div>
+                    <div className="student">{book.creator}</div>
                 </div>
+            </div>
 
-                <div className="back">
-                    <div className="pagectx">
-                        <p>Created for Front-End MCT 2</p>
-                        <div className={"actions"}>
-                            <a href={book.link} className="linkBtn" target={"_blank"}>go to story</a><br/>
-                            {status === "open" && <button onClick={handleClose}>close</button>}
-                        </div>
-                    </div>
+            <div className="back">
+                <div className="pagectx">
+
                 </div>
             </div>
-            <div className="inner">
-                <div className="right half">
-                    <div className="pagectx">
-                        <div className="info">
-                            <div className="story">{book.title}</div>
-                            <div className="author">{book.author}</div>
-                            <div className="student">{book.creator}</div>
-                        </div>
+        </div>
+        <div className="inner">
+            <div className="right half">
+                <div className="pagectx">
+                    <div className="info">
+                        <div className="story"><h3>{book.title}</h3></div>
+                        <div className="author">{book.author}</div>
+                        <div className="student">{book.creator}</div>
+                    </div>
+                    <div className={"actions"}>
+                        <a href={book.link} className="linkBtn" target={"_blank"}>go to story</a><br/>
+                        {isOpen && status === "open" && <button onClick={handleClose} className="danger">close</button>}
                     </div>
                 </div>
             </div>
         </div>
-    );
-    return (
-        <div className="bookSlot" ref={slotRef}>
-            {status === "idle" ? bookMarkup : createPortal(bookMarkup, document.body)}
-        </div>
-    );
+    </div>);
+    return (<div className="bookSlot" ref={slotRef}>
+        {isOpen && isClicked ? createPortal(bookMarkup, document.body) : bookMarkup}
+    </div>);
 }
 
 export default Book;

@@ -195,6 +195,7 @@ input[type="search"]::placeholder {
     width: fit-content;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 
     .bookSlot {
         margin: 10px;
