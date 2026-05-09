@@ -3,7 +3,7 @@ import {motion, useScroll} from "motion/react"
 import {Link} from "react-router";
 import Landing from "../components/Landing";
 import Routes from "../routes/constants/Routes.js";
-import { useScene1, useScene2, useScene3, useScene4, usePlayback, useAutoScroll } from "../hooks/fairytale"
+import { useScene1, useScene2, useScene3, useScene4, useScene5, usePlayback, useAutoScroll } from "../hooks/fairytale"
 
 function Fairytale() {
     const [millerHover, setMillerHover] = useState(false)
@@ -27,6 +27,8 @@ function Fairytale() {
     const s2 = useScene2(scrollY, s1.sceneEnd);
     const s3 = useScene3(scrollY, s2.sceneEnd);
     const s4 = useScene4(scrollY, s3.sceneEnd);
+    const s5 = useScene5(scrollY, s4.sceneEnd);
+
     return (
         <>
             <div className="fairytale-container">
@@ -206,6 +208,9 @@ function Fairytale() {
                             </m.span>
                         </m.p>
                     </m.div>
+                </m.div>
+                <m.div className={"parallax-lock"} style={{opacity: s5.sceneFade}}>
+
                 </m.div>
             </div>
             <div className={"end"}>Ending</div>
