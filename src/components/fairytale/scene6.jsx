@@ -5,7 +5,10 @@ function Scene6({ s }) {
 
     return(
         <>
+            <motion.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
+            <p>scene 6</p>
+            </motion.div>
     </>)
 }
 
-export default scene6
+export default Scene6
