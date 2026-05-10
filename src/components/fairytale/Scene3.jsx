@@ -1,12 +1,6 @@
 import { motion } from "motion/react";
 
-function Scene3({ s }) {
-    const center = {
-        x: "-50%",
-        textAlign: "center",
-        left: "50%",
-    };
-
+function Scene3({ s, center }) {
     return (
         <>
             <motion.p className={"parallax-lock txt"} style={{opacity: s.txtOpacity1, ...center, top: "60vh"}}>

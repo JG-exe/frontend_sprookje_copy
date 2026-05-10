@@ -1,14 +1,15 @@
-import {useState} from "react";
-import {motion, useMotionValueEvent} from "motion/react";
+import {motion} from "motion/react";
 
-function Scene6({ s }) {
-
-    return(
+function Scene6({ s, center }) {
+    const m = motion
+    return (
         <>
-            <motion.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
-            <p>scene 6</p>
-            </motion.div>
-    </>)
+            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
+                <m.p className={"parallax-lock txt"} style={{opacity: s.txtOpacity1, ...center, top: "60vh"}}>
+                    The king demanded the girl show up at the palace.
+                </m.p>
+            </m.div>
+        </>)
 }
 
 export default Scene6

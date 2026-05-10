@@ -1,13 +1,8 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 
-function Scene4({ s }) {
+function Scene4({ s, center }) {
     const [millerHover, setMillerHover] = useState(false);
-    const center = {
-        x: "-50%",
-        textAlign: "center",
-        left: "50%",
-    };
 
     return (
         <motion.div className={"millerScene"} style={{opacity: s.sceneFade, top: "0"}}>

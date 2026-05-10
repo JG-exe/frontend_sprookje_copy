@@ -14,6 +14,12 @@ function Fairytale() {
         return () => document.documentElement.removeAttribute("data-theme")
     }, []);
 
+    const center = {
+        x: "-50%",
+        textAlign: "center",
+        left: "50%",
+    };
+
     const {scrollY} = useScroll()
     const s1 = f.useScene1(scrollY);
     const s2 = f.useScene2(scrollY, s1.sceneEnd);
@@ -23,7 +29,6 @@ function Fairytale() {
     const s6 = f.useScene6(scrollY, s5.sceneEnd);
 
     const introAudioRef = f.useFairytaleAudio(playback.isMuted, s1.sceneEnd, scrollY);
-
     return (
         <>
             <audio ref={introAudioRef} src="/assets/sounds/Intro.mp3" loop preload="auto"/>
@@ -56,12 +61,12 @@ function Fairytale() {
                     </svg>
                 </Link>
                 <s.Landing gone={playback.gone} setGone={playback.setGone} duration={1.2} style={{zIndex: 20}}/>
-                <s.Scene1 s={s1}/>
-                <s.Scene2 s={s2}/>
-                <s.Scene3 s={s3}/>
-                <s.Scene4 s={s4}/>
-                <s.Scene5 s={s5}/>
-                <s.Scene6 s={s6}/>
+                <s.Scene1 s={s1} center={center}/>
+                <s.Scene2 s={s2} center={center}/>
+                <s.Scene3 s={s3} center={center}/>
+                <s.Scene4 s={s4} center={center}/>
+                <s.Scene5 s={s5} center={center}/>
+                <s.Scene6 s={s6} center={center}/>
             </div>
             <div className={"end"}>Ending</div>
             {/* TODO: add ending screen */}

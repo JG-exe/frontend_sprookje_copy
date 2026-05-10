@@ -1,14 +1,9 @@
 import {useState} from "react";
 import {motion, useMotionValueEvent} from "motion/react";
 
-function Scene5({s}) {
+function Scene5({s, center}) {
     const [showBubble, setShowBubble] = useState(false);
     const [showBubble2, setShowBubble2] = useState(false);
-    const center = {
-        x: "-50%",
-        textAlign: "center",
-        left: "50%",
-    };
 
     const bubble = {
         hidden: {opacity: 0, scale: 0},

@@ -1,12 +1,6 @@
 import { motion } from "motion/react";
 
-function Scene2({ s }) {
-    const center = {
-        x: "-50%",
-        textAlign: "center",
-        left: "50%",
-    };
-
+function Scene2({ s, center }) {
     return (
         <motion.div style={{opacity: s.sceneFade,}} className={"parallax-lock"}>
             <motion.div style={{y: s.zoomYAdjust}}>

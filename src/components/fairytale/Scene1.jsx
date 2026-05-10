@@ -1,12 +1,6 @@
 import { motion } from "motion/react";
 
-function Scene1({ s }) {
-    const center = {
-        x: "-50%",
-        textAlign: "center",
-        left: "50%",
-    };
-
+function Scene1({ s, center }) {
     return (
         <motion.div style={{ y: s.scene }} className={"parallax-lock"}>
             <motion.p className={"txt layer xxlTxt intro"}
