@@ -3,7 +3,7 @@ import {motion, useScroll} from "motion/react"
 import {Link} from "react-router";
 import Landing from "../components/Landing";
 import Routes from "../routes/constants/Routes.js";
-import { useScene1, useScene2, useScene3, useScene4, useScene5, usePlayback, useAutoScroll } from "../hooks/fairytale"
+import {useScene1, useScene2, useScene3, useScene4, useScene5, usePlayback, useAutoScroll} from "../hooks/fairytale"
 
 function Fairytale() {
     const [millerHover, setMillerHover] = useState(false)
@@ -199,7 +199,7 @@ function Fairytale() {
                         }}/>
                         <m.p className={"txt parallax-lock"} style={{...center, top: "85vh"}}>
                             <m.span style={{opacity: s4.txtOpacity5}}>He would tell everyone who wanted to hear how his
-                                daughter could turn hay into gold by spinning it.
+                                daughter could turn straw into gold by spinning it.
                             </m.span>
                             <br/>
                             <m.span style={{opacity: s4.txtOpacity6}}>And everyone who didn't want to hear it, but
@@ -210,8 +210,25 @@ function Fairytale() {
                     </m.div>
                 </m.div>
                 <m.div className={"parallax-lock"} style={{opacity: s5.sceneFade}}>
+                    <m.img src="./imgs/01_king_in_carriage.png" style={{
+                        scale: 0.4, ...center,
+                        y: s5.carriageY,
+                        x: s5.carriageX,
+                        rotate: s5.carriageRot,
+                        transformOrigin: "center center"
+                    }}/>
+                    <m.p className={"txt parallax-lock"} style={{...center, top: "90vh"}}>
+                        <m.span>
+                            One day, the king overheard the story of a girl who could turn straw into gold.
+                        </m.span>
+                        <br/>
+                        <m.span>
+                            Of course, if this was true, he had to have her.
+                        </m.span>
+                    </m.p>
 
                 </m.div>
+                {/* end scene 5 */}
             </div>
             <div className={"end"}>Ending</div>
             {/* TODO: add ending screen */}
