@@ -5,3 +5,4 @@ export { default as Scene3 } from './Scene3';
 export { default as Scene4 } from './Scene4';
 export { default as Scene5 } from './Scene5';
 export { default as Scene6 } from './Scene6';
+export { default as Scene7 } from './Scene7';

@@ -27,6 +27,7 @@ function Fairytale() {
     const s4 = f.useScene4(scrollY, s3.sceneEnd);
     const s5 = f.useScene5(scrollY, s4.sceneEnd);
     const s6 = f.useScene6(scrollY, s5.sceneEnd);
+    const s7 = f.useScene7(scrollY, s6.sceneEnd);
 
     const introAudioRef = f.useFairytaleAudio(playback.isMuted, s1.sceneEnd, scrollY);
     return (
@@ -67,6 +68,7 @@ function Fairytale() {
                 <s.Scene4 s={s4} center={center}/>
                 <s.Scene5 s={s5} center={center}/>
                 <s.Scene6 s={s6} center={center}/>
+                <s.Scene7 s={s7} center={center}/>
             </div>
             <div className={"end"}>Ending</div>
             {/* TODO: add ending screen */}
