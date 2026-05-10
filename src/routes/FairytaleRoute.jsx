@@ -1,11 +1,11 @@
 import {lazy, Suspense} from "react";
 import "../css/fairytale.css"
+import Curtains from "../pages/Curtains.jsx";
 
 const Fairytale = lazy(() => import("../pages/Fairytale.jsx"));
 export const FairytaleRoute = () => (
 <Suspense fallback={<>
-    <div className="curtain-left" style={{width: "52%"}}/>
-    <div className="curtain-right" style={{width: "51%"}}/>
+<Curtains/>
 </>}>
     <Fairytale/>
 </Suspense>);

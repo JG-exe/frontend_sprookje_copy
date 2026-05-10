@@ -5,6 +5,9 @@ export default defineConfig(({ command }) => {
   return {
     plugins: [react()],
     base: command === 'build' ? '/frontEnd-sprookje-JoachimGautama/' : '/',
+    server: {
+      port: 4173,
+    },
   };
 });
 
