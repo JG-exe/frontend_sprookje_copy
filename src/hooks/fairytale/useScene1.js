@@ -1,8 +1,8 @@
 import { useTransform } from "motion/react";
 
 export const useScene1 = (scrollY) => {
-    const sceneEnd = 1980;
-    const scene = useTransform(scrollY, [0, sceneEnd, sceneEnd + 1], [0, 0, -1080]);
+    const SCENE_END = 1980;
+    const scene = useTransform(scrollY, [0, SCENE_END, SCENE_END + 1], [0, 0, -1080]);
     const aLongTimeTxt = useTransform(scrollY, [250, 300, 500, 530], [0, 1, 1, 0]);
     const rumpelOpacity = useTransform(scrollY, [575, 580], [0, 1]);
     const rumpelScale = useTransform(scrollY, [570, 900, 950], [3, .4, 0]);
@@ -12,7 +12,7 @@ export const useScene1 = (scrollY) => {
     const crawlScale = useTransform(scrollY, [950, 2000], ["100%", "10%"]);
 
     return {
-        sceneEnd,
+        sceneEnd: SCENE_END,
         scene,
         aLongTimeTxt,
         rumpelOpacity,
