@@ -13,3 +13,5 @@ This project is a React web application built for the Front-End course at Erasmu
   - used in book.css
 - [Does refactoring make sense and barrel file explanation (Claude)](https://claude.ai/share/05ec5f49-a04e-4e94-ae1d-24372dc81517)
   - used in /hooks/fairytale/*
+- [explain conditional rendering and advise on extracting to components](https://claude.ai/share/394289b6-d8c8-48a1-b93a-2c593c1914c4)
+  - used in Fairytale.jsx and influenced decision to extract scenes to components
