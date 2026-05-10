@@ -236,3 +236,24 @@ footer {
         margin-top: -1rem;
     }
 }
+
+.gridCtx50 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 20px;
+}
+
+.txtColumn {
+    padding-right: 20px;
+    p{
+        margin-bottom: .4rem;
+    }
+}
+
+.iframeColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
