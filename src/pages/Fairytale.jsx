@@ -1,15 +1,9 @@
 import {useEffect} from "react";
 import {useScroll} from "motion/react"
 import {Link} from "react-router";
-import Landing from "../components/fairytale/Landing.jsx";
 import Routes from "../routes/constants/Routes.js";
 import * as f from "../hooks/fairytale"
-import Scene1 from "../components/fairytale/Scene1.jsx";
-import Scene2 from "../components/fairytale/Scene2.jsx";
-import Scene3 from "../components/fairytale/Scene3.jsx";
-import Scene4 from "../components/fairytale/Scene4.jsx";
-import Scene5 from "../components/fairytale/Scene5.jsx";
-import Scene6 from "../components/fairytale/scene6.jsx";
+import * as s from "../components/fairytale";
 
 function Fairytale() {
     const playback = f.usePlayback();
@@ -51,13 +45,13 @@ function Fairytale() {
                         <rect x="30" y="52" width="20" height="23" rx="2"/>
                     </svg>
                 </Link>
-                <Landing gone={playback.gone} setGone={playback.setGone} duration={1.2} style={{zIndex: 20}}/>
-                <Scene1 s={s1}/>
-                <Scene2 s={s2}/>
-                <Scene3 s={s3}/>
-                <Scene4 s={s4}/>
-                <Scene5 s={s5}/>
-                <Scene6 s={s6}/>
+                <s.Landing gone={playback.gone} setGone={playback.setGone} duration={1.2} style={{zIndex: 20}}/>
+                <s.Scene1 s={s1}/>
+                <s.Scene2 s={s2}/>
+                <s.Scene3 s={s3}/>
+                <s.Scene4 s={s4}/>
+                <s.Scene5 s={s5}/>
+                <s.Scene6 s={s6}/>
             </div>
             <div className={"end"}>Ending</div>
             {/* TODO: add ending screen */}
