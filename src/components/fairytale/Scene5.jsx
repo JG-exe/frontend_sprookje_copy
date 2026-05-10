@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
-import { motion, useMotionValueEvent } from "motion/react";
+import {useState, useEffect} from "react";
+import {motion, useMotionValueEvent} from "motion/react";
 
-function Scene5({ s5 }) {
+function Scene5({s5}) {
     const [showBubble, setShowBubble] = useState(false);
+    const [showBubble2, setShowBubble2] = useState(false);
     const center = {
         x: "-50%",
         textAlign: "center",
@@ -17,6 +18,10 @@ function Scene5({ s5 }) {
     useMotionValueEvent(s5.carriageX, "change", (latest) => {
         if (latest <= -1680) setShowBubble(true)
         else setShowBubble(false)
+    });
+    useMotionValueEvent(s5.txtOpacity3, "change", (latest) => {
+        if (latest >= 0.9) setShowBubble2(true)
+        else setShowBubble2(false)
     });
 
     return (
@@ -42,7 +47,7 @@ function Scene5({ s5 }) {
                 true.
             </motion.p>
             <motion.div className={"miller parallax-lock"}
-                   style={{top: "50%", left: "10%", opacity: s5.txtOpacity2}}>
+                        style={{top: "50%", left: "10%", opacity: s5.millerOpacity}}>
                 <motion.img src="./imgs/01_poor_miller_side_arm.png" className="arm"></motion.img>
                 <motion.img src="./imgs/01_poor_miller_side_no_arm.png" className="body"></motion.img>
             </motion.div>
@@ -55,9 +60,21 @@ function Scene5({ s5 }) {
                 transition={{type: "spring", stiffness: 400, damping: 20}}
             >
                 <img src="./imgs/02_gold_pile.png" height={"80px"}/>
-                <span className={"xxlTxt"}>!</span>
+                <span className={"xxlTxt"}>?</span>
             </motion.div>}
-            <motion.p className={"txt parallax-lock"} style={{...center, top: "92vh", opacity: s5.txtOpacity3}}>Foolishly, he said yes.</motion.p>
+            <motion.p className={"txt parallax-lock"}
+                      style={{...center, top: "92vh", opacity: s5.txtOpacity3}}>Foolishly, he said yes.
+            </motion.p>
+            {showBubble2 && <motion.div
+                className="speech-bubble"
+                style={{top: "380px", left: "13.4%", x: "0", position: "absolute"}}
+                variants={bubble}
+                initial="hidden"
+                animate="visible"
+                transition={{type: "spring", stiffness: 400, damping: 20}}
+            >
+                <span className={"xxlTxt"}>👍</span>
+            </motion.div>}
         </motion.div>
     );
 }
