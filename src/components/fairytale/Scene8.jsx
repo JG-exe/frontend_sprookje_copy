@@ -29,9 +29,9 @@ function Scene8({s, center}) {
                        style={{width: "100vw", height: "100vh", ...center, opacity: 1}}/>
                 <m.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{
                     ...center,
-                    height: "350px",
+                    height: "450px",
                     width: "auto",
-                    top: "32vh",
+                    top: "50vh",
                     x: "-50%",
                     left: "40%",
                     y: "0",
@@ -39,7 +39,7 @@ function Scene8({s, center}) {
                 }}/>
                 <m.div className={"rumpel middleL layer parallax-lock"}
                        style={{
-                           height: "300px", width: "auto", ...center, top: "55vh", left: "60vw"
+                           height: "250px", width: "auto", ...center, top: "50vh", left: "60vw"
                        }}
                        variants={rumpelSpring}
                 animate={showRumpel ? "animate" : "initial"}>
@@ -48,6 +48,10 @@ function Scene8({s, center}) {
                     <m.img src="./imgs/03_rumpelstiltskin_horns.png" className={"rumpelImg"}
                            style={{...center}}/>
                 </m.div>
+                <m.p className={"parallax-lock txt"} style={{...center, top: "2vh"}}>
+                    After the king leaves, the girl starts crying. <br/>
+                    How would she ever do this? She couldn't turn straw into gold, let alone this much...
+                </m.p>
             </m.div>
         </>
     );
