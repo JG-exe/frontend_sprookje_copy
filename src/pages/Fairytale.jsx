@@ -32,7 +32,7 @@ function Fairytale() {
     const introAudioRef = f.useFairytaleAudio(playback.isMuted, s1.sceneEnd, scrollY);
     return (
         <>
-            <audio ref={introAudioRef} src="./sounds/Intro.mp3" loop preload="auto"/>
+            <audio ref={introAudioRef} src="./static/sounds/Intro.mp3" loop preload="auto"/>
             <div className="fairytale-container">
                 <div className={"actionBtns"}>
                     <button

@@ -8,7 +8,7 @@ function Header() {
             <header>
                 <div className="ctx flexRowSpaceBetween">
                     <Link to={Routes.Home}>
-                        <img src="./assets/logos/erWasEensLogoRect.svg" id="headerLogo"/>
+                        <img src="./static/logos/erWasEensLogoRect.svg" id="headerLogo"/>
                     </Link>
                     <nav>
                         <ul className="nav">

@@ -102,7 +102,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
 
     .muteBtn{
-        background-image: url("./speakerIcon.svg");
+        background-image: url("./static/speakerIcon.svg");
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: center center;
