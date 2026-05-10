@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-function Scene1({ s1 }) {
+function Scene1({ s }) {
     const center = {
         x: "-50%",
         textAlign: "center",
@@ -8,9 +8,9 @@ function Scene1({ s1 }) {
     };
 
     return (
-        <motion.div style={{ y: s1.scene }} className={"parallax-lock"}>
+        <motion.div style={{ y: s.scene }} className={"parallax-lock"}>
             <motion.p className={"txt layer xxlTxt intro"}
-                 style={{opacity: s1.aLongTimeTxt, x: "-50%", textAlign: "center", left: "50%", top: "50vh"}}
+                 style={{opacity: s.aLongTimeTxt, x: "-50%", textAlign: "center", left: "50%", top: "50vh"}}
                  initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
                 A long time ago in a place far, far away....
             </motion.p>
@@ -18,13 +18,13 @@ function Scene1({ s1 }) {
                   style={{
                       ...center,
                       top: "50vh",
-                      opacity: s1.rumpelOpacity,
-                      scale: s1.rumpelScale
+                      opacity: s.rumpelOpacity,
+                      scale: s.rumpelScale
                   }}>
                 R U M P E L S T I L T S K I N
             </motion.h3>
             <motion.div style={{
-                scale: s1.crawlScale,
+                scale: s.crawlScale,
                 transformOrigin: "top center",
                 perspective: "800px",
                 transformStyle: "preserve-3d"
@@ -32,9 +32,9 @@ function Scene1({ s1 }) {
                 <motion.p className={"txt layer  xxlTxt fTonText"}
                      style={{
                          ...center,
-                         y: s1.txt1,
-                         opacity: s1.crawlOpacity,
-                         rotateX: s1.crawlRotateX,
+                         y: s.txt1,
+                         opacity: s.crawlOpacity,
+                         rotateX: s.crawlRotateX,
                      }}>
                     It is a period of perilous bargains and deep deceit.
                     <br/>

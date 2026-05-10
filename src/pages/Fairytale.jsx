@@ -50,11 +50,11 @@ function Fairytale() {
                     </svg>
                 </Link>
                 <Landing gone={playback.gone} setGone={playback.setGone} duration={1.2} style={{zIndex: 20}}/>
-                <Scene1 s1={s1}/>
-                <Scene2 s2={s2}/>
-                <Scene3 s3={s3}/>
-                <Scene4 s4={s4}/>
-                <Scene5 s5={s5}/>
+                <Scene1 s={s1}/>
+                <Scene2 s={s2}/>
+                <Scene3 s={s3}/>
+                <Scene4 s={s4}/>
+                <Scene5 s={s5}/>
             </div>
             <div className={"end"}>Ending</div>
             {/* TODO: add ending screen */}
