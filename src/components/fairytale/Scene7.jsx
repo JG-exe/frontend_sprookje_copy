@@ -1,18 +1,34 @@
-import { motion, useAnimation, useMotionValueEvent } from "motion/react";
+import {motion, useAnimation, useMotionValueEvent} from "motion/react";
+import {useState} from "react";
 
-    const kingAnimation = {
-        initial: {
-            rotate: -90,
-            opacity: 0
-        },
-        animate: {
-            rotate: 0,
-            opacity: 1,
-            transition: { type: "spring", stiffness: 200, damping: 15 }
-        }
+const kingAnimation = {
+    initial: {
+        rotate: -90,
+        opacity: 0
+    },
+    animate: {
+        rotate: 0,
+        opacity: 1,
+        transition: {type: "spring", stiffness: 200, damping: 15}
     }
+}
+
+const bubble = {
+    hidden: {opacity: 0, scale: 0},
+    visible: {
+        opacity: 1, scale: 1,
+        transition: {type: "spring", stiffness: 400, damping: 15}
+    }
+};
 
 function Scene7({s, center}) {
+    const [showBubble, setShowBubble] = useState(false);
+
+    useMotionValueEvent(s.bubbleTrigger, "change", (latest) => {
+        if (latest >= 0.5) setShowBubble(true)
+        else setShowBubble(false)
+    });
+
     const m = motion;
 
     const kingControls = useAnimation();
@@ -25,12 +41,15 @@ function Scene7({s, center}) {
             <m.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
                 <m.img src="./imgs/02_background_room.png" className={"backL layer parallax-lock"}
                        style={{width: "100vw", height: "100vh", ...center, opacity: 1}}/>
-                <m.p className={"parallax-lock"} style={{...center, top: "90vh"}}>
-                    <m.span className={"parallax-lock txt"} style={{opacity: s.txtOpacity1, ...center}}>
-                    When the girl arrived, she was immediately taken to a cold room full of straw.
-                    </m.span>
-                    <m.span className={"parallax-lock txt"} style={{opacity: s.txtOpacity2, ...center}}>
+                <m.p className={"parallax-lock txt"} style={{...center, top: "90vh"}}>
+                    <m.span style={{opacity: s.txtOpacity1}}>
+                        When the girl arrived, she was immediately taken to a cold room full of straw.
+                    </m.span><br/>
+                    <m.span style={{opacity: s.txtOpacity2}}>
                         The king explained to her what he expected.
+                    </m.span><br/>
+                    <m.span style={{opacity: s.txtOpacity3}}>
+                        He wanted to see all the straw turned into gold.
                     </m.span>
                 </m.p>
                 <m.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{
@@ -58,6 +77,17 @@ function Scene7({s, center}) {
                         transformOrigin: "center bottom"
                     }}
                 />
+                {showBubble && <motion.div
+                    className="speech-bubble"
+                    style={{top: "210px", left: "81%", x: "0", position: "absolute"}}
+                    variants={bubble}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{type: "spring", stiffness: 400, damping: 20}}
+                >
+                    <img src="./imgs/02_gold_pile.png" height={"80px"}/>
+                    <span className={"xxlTxt"}>!</span>
+                </motion.div>}
             </m.div>
         </>
     );
