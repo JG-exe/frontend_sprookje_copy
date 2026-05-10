@@ -22,8 +22,11 @@ function Fairytale() {
     const s5 = f.useScene5(scrollY, s4.sceneEnd);
     const s6 = f.useScene6(scrollY, s5.sceneEnd);
 
+    const introAudioRef = f.useFairytaleAudio(playback.isMuted, s1.sceneEnd, scrollY);
+
     return (
         <>
+            <audio ref={introAudioRef} src="/assets/sounds/Intro.mp3" loop preload="auto"/>
             <div className="fairytale-container">
                 <div className={"actionBtns"}>
                     <button
@@ -35,6 +38,13 @@ function Fairytale() {
                         className={`btn restartBtn`}
                         onClick={playback.handleRestart}>
                         R
+                    </button>
+                    <button
+                        className={`btn muteBtn`}
+                        onClick={playback.toggleMute}>
+                        <span>
+                        {playback.isMuted ? "/" : ""}
+                        </span>
                     </button>
                 </div>
                 <Link to={Routes.Home} className={"btn homeBtn"}>

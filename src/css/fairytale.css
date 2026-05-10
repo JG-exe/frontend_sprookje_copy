@@ -97,12 +97,22 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         z-index: 10;
     }
 
-    .autoscrollBtn {
-        right: 20px;
-    }
-
     .autoscrollBtn.active {
         background-color: var(--color-success);
+    }
+
+    .muteBtn{
+        background-image: url("./assets/speakerIcon.svg");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        span{
+            position: absolute;
+            transform: translate(-50%, -60%);
+            color: var(--color-danger);
+            font-size: x-large;
+            font-weight: bold;
+        }
     }
 
     .layer {

@@ -1,5 +1,6 @@
 export { usePlayback } from "./usePlayback.js"
 export { useAutoScroll } from "./useAutoScroll.js"
+export { useFairytaleAudio } from "./useFairytaleAudio.js"
 export { useScene1 } from "./useScene1.js"
 export { useScene2 } from "./useScene2.js"
 export { useScene3 } from "./useScene3.js"
