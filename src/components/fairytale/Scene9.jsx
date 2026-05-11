@@ -4,7 +4,7 @@ function Scene9({s, center}) {
     const m = motion;
     return (
         <>
-            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
+            <m.div style={{opacity: s.sceneFade}} className={"parallax-lock"}>
                     <m.img src="./imgs/02_background_room.png" className={"backL layer parallax-lock"}
                            style={{width: "100vw", height: "100vh", ...center, opacity: 1}}/>
                     <m.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{
