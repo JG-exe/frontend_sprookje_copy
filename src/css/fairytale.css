@@ -226,6 +226,10 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         position: absolute;
     }
 
+    .dimmed{
+        opacity: 0.6;
+    }
+
 }
 
 @keyframes wave {

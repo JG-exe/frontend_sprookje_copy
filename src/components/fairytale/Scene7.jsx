@@ -3,7 +3,7 @@ import {useState} from "react";
 
 const kingAnimation = {
     initial: {
-        rotate: -90,
+        rotate: 90,
         opacity: 0
     },
     animate: {
@@ -44,16 +44,17 @@ function Scene7({s, center}) {
                 <m.p className={"parallax-lock txt"} style={{...center, top: "90vh"}}>
                     <m.span style={{opacity: s.txtOpacity1}}>
                         When the girl arrived, she was immediately taken to a cold room full of straw.
-                    </m.span><br/>
+                    </m.span>
+                    <br/>
                     <m.span style={{opacity: s.txtOpacity2}}>
                         The king explained to her what he expected.
-                    </m.span><br/>
+                    </m.span>
+                    <br/>
                     <m.span style={{opacity: s.txtOpacity3}}>
                         He wanted to see all the straw turned into gold.
                     </m.span>
                 </m.p>
                 <m.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{
-                    ...center,
                     height: "350px",
                     width: "auto",
                     top: "32vh",
@@ -62,32 +63,34 @@ function Scene7({s, center}) {
                     y: "0",
                     opacity: 1
                 }}/>
-                <m.img
-                    src="./imgs/02_king_mansplaining.png"
-                    className={"topL parallax-lock"}
-                    variants={kingAnimation}
-                    initial="initial"
-                    animate={kingControls}
-                    style={{
-                        height: "850px",
-                        width: "auto",
-                        left: "70%",
-                        top: "35vh",
-                        scaleX: -1,
-                        transformOrigin: "center bottom"
-                    }}
-                />
-                {showBubble && <motion.div
-                    className="speech-bubble"
-                    style={{top: "210px", left: "81%", x: "0", position: "absolute"}}
-                    variants={bubble}
-                    initial="hidden"
-                    animate="visible"
-                    transition={{type: "spring", stiffness: 400, damping: 20}}
-                >
-                    <img src="./imgs/02_gold_pile.png" height={"80px"}/>
-                    <span className={"xxlTxt"}>!</span>
-                </motion.div>}
+                <m.div className={"topL parallax-lock"}
+                       variants={kingAnimation}
+                       initial="initial"
+                       animate={kingControls}
+                       style={{left: "70vw", top: "36vh", height: "850px",
+                           width: "auto", transformOrigin: "center bottom"
+                       }}>
+                    <m.img
+                        src="./imgs/02_king_mansplaining.png"
+                        className={"topL"}
+                        style={{
+                            height: "100%",
+                            width: "auto",
+                            scaleX: -1,
+                        }}
+                    />
+                    {showBubble && <motion.div
+                        className="speech-bubble"
+                        style={{top: "-120px", left: "210px", x: "0", position: "absolute"}}
+                        variants={bubble}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{type: "spring", stiffness: 400, damping: 20}}
+                    >
+                        <img src="./imgs/02_gold_pile.png" height={"80px"}/>
+                        <span className={"xxlTxt"}>!</span>
+                    </motion.div>}
+                </m.div>
             </m.div>
         </>
     );
