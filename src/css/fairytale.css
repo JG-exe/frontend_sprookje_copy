@@ -22,7 +22,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
 
     .fairytale-container {
-        height: 8000px;
+        height: 10000px;
         font-size: 1.2rem;
     }
 
@@ -220,6 +220,15 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         border-color: white transparent transparent transparent;
     }
 
+    .rumpelImg{
+        height: 250px;
+        width: auto;
+        position: absolute;
+    }
+
+    .dimmed{
+        opacity: 0.6;
+    }
 
 }
 

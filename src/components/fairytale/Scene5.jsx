@@ -1,14 +1,15 @@
 import {useState} from "react";
 import {motion, useMotionValueEvent} from "motion/react";
 
-function Scene5({s, center}) {
-    const [showBubble, setShowBubble] = useState(false);
-    const [showBubble2, setShowBubble2] = useState(false);
-
     const bubble = {
         hidden: {opacity: 0, scale: 0},
         visible: {opacity: 1, scale: 1}
     };
+
+function Scene5({s, center}) {
+    const [showBubble, setShowBubble] = useState(false);
+    const [showBubble2, setShowBubble2] = useState(false);
+
 
     useMotionValueEvent(s.carriageX, "change", (latest) => {
         if (latest <= -1680) setShowBubble(true)
