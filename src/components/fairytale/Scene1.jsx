@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 function Scene1({ s, center }) {
     return (
-        <motion.div style={{ y: s.scene }} className={"parallax-lock"}>
+        <motion.div style={{ y: s.scene, pointerEvents: "none" }} className={"parallax-lock"}>
             <motion.p className={"txt layer xxlTxt intro"}
                  style={{opacity: s.aLongTimeTxt, x: "-50%", textAlign: "center", left: "50%", top: "50vh"}}
                  initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>

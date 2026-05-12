@@ -1,5 +1,6 @@
 import {motion, useAnimation, useMotionValueEvent} from "motion/react";
 import {useState} from "react";
+import King from "./components/King.jsx";
 
 const goldPiles = [
     {left: "16vw", top: "65vh"},
@@ -13,37 +14,13 @@ const goldPiles = [
     {left: "12vw", top: "85vh"},
 ]
 
-const kingAnimation = {
-    initial: {
-        rotate: 90,
-        opacity: 0
-    },
-    animate: {
-        rotate: 0,
-        opacity: 1,
-        transition: {type: "spring", stiffness: 200, damping: 15}
-    }
-}
-
-const bubble = {
-    hidden: {opacity: 0, scale: 0},
-    visible: {
-        opacity: 1, scale: 1,
-        transition: {type: "spring", stiffness: 400, damping: 15}
-    }
-};
-const eyes = {
-    hidden: {opacity: 0, scale: 0},
-    visible: {
-        opacity: 1, scale: 1,
-        transition: {type: "spring", stiffness: 400, damping: 15}
-    }
-};
 
 
 function Scene9({s, center, nightNumber}) {
     const [showBubble, setShowBubble] = useState(false);
     const [showHearts, setShowHearts] = useState(false);
+    const amount = (nightNumber + 1) * 3;
+    const limitedGold = goldPiles.slice(0, amount);
 
     useMotionValueEvent(s.bubbleTrigger, "change", (latest) => {
         if (latest >= 0.5) setShowBubble(true)
@@ -54,8 +31,6 @@ function Scene9({s, center, nightNumber}) {
         if (latest >= 0.5) setShowHearts(true)
         else setShowHearts(false)
     });
-    const amount = (nightNumber + 1) * 3;
-    const limitedGold = goldPiles.slice(0, amount);
 
     const m = motion;
 
@@ -66,7 +41,7 @@ function Scene9({s, center, nightNumber}) {
 
     return (
         <>
-            <m.div style={{opacity: s.sceneFade}} className={"parallax-lock"}>
+            <m.div style={{opacity: s.sceneFade, pointerEvents: "none"}} className={"parallax-lock night"}>
                 <m.img src="./imgs/02_background_room.png" className={"backL layer parallax-lock"}
                        style={{width: "100vw", height: "100vh", ...center, opacity: 1}}/>
                 <m.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{
@@ -93,39 +68,10 @@ function Scene9({s, center, nightNumber}) {
                 <m.p className={"parallax-lock txt"} style={{...center, top: "90vh", opacity: s.txtOpacity3}}>
                     {nightNumber < 2 ? "The king was so happy, in fact, that he decided it wasn't enough." : "The king was so happy, in fact, that he promptly made her his queen."}
                 </m.p>
-                <m.div className={"topL parallax-lock"}
-                       variants={kingAnimation}
-                       initial="initial"
-                       animate={kingControls}
-                       style={{
-                           left: "70vw", top: "36vh", height: "850px",
-                           width: "auto", transformOrigin: "center bottom"
-                       }}>
-                    <m.img
-                        src="./imgs/02_king_mansplaining.png"
-                        className={"middleL"}
-                        style={{
-                            height: "100%",
-                            width: "auto",
-                            scaleX: -1,
-                        }}
-                    />
-                    {showHearts && <m.div className={"heartEyes topL"} style={{...center, position: "absolute", top: 107, x: "-40px"}} transition={{delayChildren: .9}}>
-                        <m.span variants={eyes} initial="hidden" animate="visible">🩷</m.span>
-                        <m.span variants={eyes} initial="hidden" animate="visible">🩷</m.span>
-                    </m.div>}
-                    {showBubble && <m.div
-                        className="speech-bubble"
-                        style={{top: "-120px", left: "210px", x: "0", position: "absolute"}}
-                        variants={bubble}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{type: "spring", stiffness: 400, damping: 20}}>
-                        <img src="./imgs/02_gold_pile.png" height={"80px"}/>
-                        <span className={"xxlTxt"}>{"!".repeat(nightNumber + 1)}</span>
-                    </m.div>}
+            {/*TODO: add king element back*/}
+                <m.div className={"king parallax-lock topL"}>
+                <King center={center} exclamationNumber={nightNumber} kingControls={kingControls} showBubble={showBubble} showHearts={showHearts}/>
                 </m.div>
-
             </m.div>
         </>
     );

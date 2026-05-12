@@ -45,7 +45,7 @@ function Scene8({s, center, nightNumber}) {
             <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2}}>
                 <div className={"dimmed"}>
                     <m.img src="./imgs/02_background_room.png" className={"backL layer parallax-lock"}
-                           style={{width: "100vw", height: "100vh", ...center, opacity: 1}}/>
+                           style={{width: "100vw", height: "100vh", ...center, opacity: 1, pointerEvents: "none"}}/>
                     <m.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{
                         ...center,
                         height: "450px",

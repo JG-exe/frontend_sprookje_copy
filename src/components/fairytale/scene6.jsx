@@ -19,7 +19,7 @@ function Scene6({s, center, rep}) {
     const m = motion
     return (
         <>
-            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
+            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, pointerEvents: "none"}}>
                 <m.p className={"parallax-lock txt"} style={{...center, top: "50vh"}}>
                     {storyTxt[rep].top}<br/>
                     <m.span style={{opacity: s.txtOpacity1}}>

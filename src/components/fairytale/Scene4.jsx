@@ -5,7 +5,7 @@ function Scene4({ s, center }) {
     const [millerHover, setMillerHover] = useState(false);
 
     return (
-        <motion.div className={"millerScene"} style={{opacity: s.sceneFade, top: "0"}}>
+        <motion.div className={"millerScene"} style={{opacity: s.sceneFade, top: "0", pointerEvents: "auto"}}>
             <motion.div className={"miller parallax-lock"} onHoverStart={() => setMillerHover(true)}
                    onHoverEnd={() => setMillerHover(false)}>
                 {millerHover && s.txtOpacity4.get() > 0 && (

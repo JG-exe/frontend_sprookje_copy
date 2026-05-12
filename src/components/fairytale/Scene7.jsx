@@ -1,5 +1,6 @@
 import {motion, useAnimation, useMotionValueEvent} from "motion/react";
 import {useState} from "react";
+import King from "./components/King.jsx";
 
 const kingAnimation = {
     initial: {
@@ -63,33 +64,8 @@ function Scene7({s, center}) {
                     y: "0",
                     opacity: 1
                 }}/>
-                <m.div className={"topL parallax-lock"}
-                       variants={kingAnimation}
-                       initial="initial"
-                       animate={kingControls}
-                       style={{left: "70vw", top: "36vh", height: "850px",
-                           width: "auto", transformOrigin: "center bottom"
-                       }}>
-                    <m.img
-                        src="./imgs/02_king_mansplaining.png"
-                        className={"topL"}
-                        style={{
-                            height: "100%",
-                            width: "auto",
-                            scaleX: -1,
-                        }}
-                    />
-                    {showBubble && <m.div
-                        className="speech-bubble"
-                        style={{top: "-120px", left: "210px", x: "0", position: "absolute"}}
-                        variants={bubble}
-                        initial="hidden"
-                        animate="visible"
-                        transition={{type: "spring", stiffness: 400, damping: 20}}
-                    >
-                        <img src="./imgs/02_gold_pile.png" height={"80px"}/>
-                        <span className={"xxlTxt"}>!</span>
-                    </m.div>}
+                <m.div className={"king parallax-lock topL"}>
+                    <King center={center} exclamationNumber={0} kingControls={kingControls} showBubble={showBubble} showHearts={false}/>
                 </m.div>
             </m.div>
         </>

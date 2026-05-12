@@ -73,7 +73,7 @@ function Landing({ gone, setGone, duration }) {
                     delay: duration, duration: 0.5, ease: "easeInOut"
                 }}
             >
-                <div className={`title ${gone ? 'hidden' : ''}`}>
+                <div className={`title ${gone ? 'hidden' : ''}`} style={{pointerEvents: "none"}}>
                     <h2>Once Upon A Time...</h2>
                     <h1>Rumpelstiltskin</h1>
                 </div>
