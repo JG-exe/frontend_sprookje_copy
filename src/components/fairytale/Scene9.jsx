@@ -68,7 +68,6 @@ function Scene9({s, center, nightNumber}) {
                 <m.p className={"parallax-lock txt"} style={{...center, top: "90vh", opacity: s.txtOpacity3}}>
                     {nightNumber < 2 ? "The king was so happy, in fact, that he decided it wasn't enough." : "The king was so happy, in fact, that he promptly made her his queen."}
                 </m.p>
-            {/*TODO: add king element back*/}
                 <m.div className={"king parallax-lock topL"}>
                 <King center={center} exclamationNumber={nightNumber} kingControls={kingControls} showBubble={showBubble} showHearts={showHearts}/>
                 </m.div>
