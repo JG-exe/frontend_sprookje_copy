@@ -32,6 +32,10 @@ function Fairytale() {
     const s9 = f.useScene9(scrollY, s8.sceneEnd);
     const s6Repeat = f.useScene6(scrollY, s9.sceneEnd);
     const s8Repeat = f.useScene8(scrollY, s6Repeat.sceneEnd);
+    const s9Repeat = f.useScene9(scrollY, s8Repeat.sceneEnd);
+    const s6Repeat2 = f.useScene6(scrollY, s9Repeat.sceneEnd);
+    const s8Repeat2 = f.useScene8(scrollY, s6Repeat2.sceneEnd);
+    const s9Repeat2 = f.useScene9(scrollY, s8Repeat2.sceneEnd);
 
     const introAudioRef = f.useFairytaleAudio(playback.isMuted, s1.sceneEnd, scrollY);
     return (
@@ -71,12 +75,16 @@ function Fairytale() {
                 <s.Scene3 s={s3} center={center}/>
                 <s.Scene4 s={s4} center={center}/>
                 <s.Scene5 s={s5} center={center}/>
-                <s.Scene6 s={s6} center={center} rep={0}/>
+                <s.Scene6 s={s6} center={center} rep={0} key={"inbetween1"}/>
                 <s.Scene7 s={s7} center={center}/>
-                <s.Scene8 s={s8} center={center} nightNumber={0}/>
-                <s.Scene9 s={s9} center={center}/>
-                <s.Scene6 s={s6Repeat} center={center} rep={1} key={"repeat"}/>
-                <s.Scene8 s={s8Repeat} center={center} nightNumber={1}/>
+                <s.Scene8 s={s8} center={center} nightNumber={0} key={"night1"}/>
+                <s.Scene9 s={s9} center={center} nightNumber={0} key={"gold1"}/>
+                <s.Scene6 s={s6Repeat} center={center} rep={1} key={"inbetween2"}/>
+                <s.Scene8 s={s8Repeat} center={center} nightNumber={1} key={"night2"}/>
+                <s.Scene9 s={s9Repeat} center={center} nightNumber={1} key={"gold2"}/>
+                <s.Scene6 s={s6Repeat2} center={center} rep={2} key={"inbetween3"}/>
+                <s.Scene8 s={s8Repeat2} center={center} nightNumber={2} key={"night3"}/>
+                <s.Scene9 s={s9Repeat2} center={center} nightNumber={2} key={"gold3"}/>
             </div>
             <div className={"end"}>Ending</div>
             {/* TODO: add ending screen */}

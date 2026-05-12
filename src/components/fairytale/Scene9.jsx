@@ -7,6 +7,10 @@ const goldPiles = [
     {left: "10vw", top: "70vh"},
     {left: "14vw", top: "78vh"},
     {left: "6vw", top: "80vh"},
+    {left: "17vw", top: "73vh"},
+    {left: "2vw", top: "75vh"},
+    {left: "20vw", top: "82vh"},
+    {left: "12vw", top: "85vh"},
 ]
 
 const kingAnimation = {
@@ -37,7 +41,7 @@ const eyes = {
 };
 
 
-function Scene9({s, center}) {
+function Scene9({s, center, nightNumber}) {
     const [showBubble, setShowBubble] = useState(false);
     const [showHearts, setShowHearts] = useState(false);
 
@@ -50,6 +54,8 @@ function Scene9({s, center}) {
         if (latest >= 0.5) setShowHearts(true)
         else setShowHearts(false)
     });
+    const amount = (nightNumber + 1) * 3;
+    const limitedGold = goldPiles.slice(0, amount);
 
     const m = motion;
 
@@ -72,7 +78,7 @@ function Scene9({s, center}) {
                     left: "40%",
                     opacity: 1
                 }}/>
-                {goldPiles.map((pile, index) => (
+                {limitedGold.map((pile, index) => (
                     <img key={index} src="./imgs/02_gold_pile.png" className={"parallax-lock"}
                          style={{width: "auto", height: "150px", ...center, top: pile.top, left: pile.left}}/>))}
 
@@ -85,7 +91,7 @@ function Scene9({s, center}) {
                     </m.span>
                 </m.p>
                 <m.p className={"parallax-lock txt"} style={{...center, top: "90vh", opacity: s.txtOpacity3}}>
-                    The king was so happy, in fact, that he decided it wasn't enough.<br/>
+                    {nightNumber < 2 ? "The king was so happy, in fact, that he decided it wasn't enough." : "The king was so happy, in fact, that he promptly made her his queen."}
                 </m.p>
                 <m.div className={"topL parallax-lock"}
                        variants={kingAnimation}
@@ -114,10 +120,9 @@ function Scene9({s, center}) {
                         variants={bubble}
                         initial="hidden"
                         animate="visible"
-                        transition={{type: "spring", stiffness: 400, damping: 20}}
-                    >
+                        transition={{type: "spring", stiffness: 400, damping: 20}}>
                         <img src="./imgs/02_gold_pile.png" height={"80px"}/>
-                        <span className={"xxlTxt"}>!</span>
+                        <span className={"xxlTxt"}>{"!".repeat(nightNumber + 1)}</span>
                     </m.div>}
                 </m.div>
 

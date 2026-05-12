@@ -30,8 +30,6 @@
 - [ ] Scene 5 – Name guessing | input field | wrong → shake | correct → destroy sequence
 - [ ] Scene 6 – Tears self in two | destroy state | CSS class swap
 
-- [ ] We encourage you to explore and experiment on your own. Adding extras is encouraged.
-
 ### Submitting your project
 In Canvas, provide the following:
 - [ ] A video demo of your features (just the result, not the code). Explain what you are showing

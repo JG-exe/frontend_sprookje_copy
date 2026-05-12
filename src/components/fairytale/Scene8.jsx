@@ -78,11 +78,11 @@ function Scene8({s, center, nightNumber}) {
                     let alone this much in this little time...
                 </m.p>
                 <m.p className={"txt parallax-lock"} style={{...center, top: "2vh", opacity: s.txtOpacity2}}>
-                    Suddenly, out of nowhere, a small imp-like man appeared.<br/>
+                    Suddenly, out of nowhere, {nightNumber === 0 ? "a" : "the"} small imp-like man appeared{nightNumber===0?"": " again"}.<br/>
                     He asked her why she was crying.
                 </m.p>
                 <m.p className={"txt parallax-lock"} style={{...center, top: "2vh", opacity: s.txtOpacity3}}>
-                    She told him the story and how she could never possibly turn this straw into gold.<br/>
+                    She told him {nightNumber===0?"the story and ":""}how she could never possibly turn this straw into gold.<br/>
                     <m.span style={{opacity: s.txtOpacity4}}>
                         I can do it for you, he said. But what do you have to offer me?
                     </m.span>
@@ -92,8 +92,8 @@ function Scene8({s, center, nightNumber}) {
                     <m.span style={{opacity: s.txtOpacity6}}>
                         {nightNumber < 2 ?
                         "That will do, the imp said with a smile. Go sleep, it will be done when you wake up."
-                            : <span>Then give me your first born.<br/>Reluctantly, the girl agreed.</span>
-                    }
+                            : <m.span>Then give me your first born, the creature said.<br/>
+                            Reluctantly, the girl agreed.</m.span>}
                     </m.span>
                 </m.p>
             </m.div>
