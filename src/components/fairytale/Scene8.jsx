@@ -23,7 +23,13 @@ const hornOpacity = {
     }
 }
 
-function Scene8({s, center}) {
+const haggleResult = [
+    "She told him she didn't have much, but she had her grandmother's necklace.",
+    "She told she didn't have much, but she had her mother's ring.",
+    "She told him she didn't have anything left."
+]
+
+function Scene8({s, center, nightNumber}) {
     const [showRumpel, setShowRumpel] = useState(false);
     const [showHorns, setShowHorns] = useState(false);
 
@@ -57,7 +63,7 @@ function Scene8({s, center}) {
                                height: "250px", width: "160px", ...center, top: "50vh", left: "60vw"
                            }}
                            variants={rumpelSpring}
-                           animate={showRumpel ? "animate" : "initial"} >
+                           animate={showRumpel ? "animate" : "initial"}>
                         <m.img src="./imgs/03_rumpelstiltskin_noHorns.png" className={"rumpelImg parallax-lock"}
                                style={{...center}}/>
                         <m.img src="./imgs/03_rumpelstiltskin_horns.png" className={"rumpelImg horns parallax-lock"}
@@ -82,9 +88,12 @@ function Scene8({s, center}) {
                     </m.span>
                 </m.p>
                 <m.p className={"txt parallax-lock"} style={{...center, top: "2vh", opacity: s.txtOpacity5}}>
-                    She told him she didn't have much, but she had her grandmother's necklace.<br/>
+                    {haggleResult[nightNumber]}<br/>
                     <m.span style={{opacity: s.txtOpacity6}}>
-                        That will do, the imp said with a smile. Go sleep, it will be done when you wake up.
+                        {nightNumber < 2 ?
+                        "That will do, the imp said with a smile. Go sleep, it will be done when you wake up."
+                            : <span>Then give me your first born.<br/>Reluctantly, the girl agreed.</span>
+                    }
                     </m.span>
                 </m.p>
             </m.div>

@@ -30,6 +30,8 @@ function Fairytale() {
     const s7 = f.useScene7(scrollY, s6.sceneEnd);
     const s8 = f.useScene8(scrollY, s7.sceneEnd);
     const s9 = f.useScene9(scrollY, s8.sceneEnd);
+    const s6Repeat = f.useScene6(scrollY, s9.sceneEnd);
+    const s8Repeat = f.useScene8(scrollY, s6Repeat.sceneEnd);
 
     const introAudioRef = f.useFairytaleAudio(playback.isMuted, s1.sceneEnd, scrollY);
     return (
@@ -69,10 +71,12 @@ function Fairytale() {
                 <s.Scene3 s={s3} center={center}/>
                 <s.Scene4 s={s4} center={center}/>
                 <s.Scene5 s={s5} center={center}/>
-                <s.Scene6 s={s6} center={center}/>
+                <s.Scene6 s={s6} center={center} rep={0}/>
                 <s.Scene7 s={s7} center={center}/>
-                <s.Scene8 s={s8} center={center}/>
+                <s.Scene8 s={s8} center={center} nightNumber={0}/>
                 <s.Scene9 s={s9} center={center}/>
+                <s.Scene6 s={s6Repeat} center={center} rep={1} key={"repeat"}/>
+                <s.Scene8 s={s8Repeat} center={center} nightNumber={1}/>
             </div>
             <div className={"end"}>Ending</div>
             {/* TODO: add ending screen */}

@@ -22,7 +22,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
 
     .fairytale-container {
-        height: 10000px;
+        height: 15000px;
         font-size: 1.2rem;
     }
 
@@ -70,7 +70,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
 
     .btn:hover {
-        background-color: color-mix(var(--color-bg-primary), var(--color-bg-secondary) 20%);
+        background-color: color-mix(in srgb, var(--color-bg-primary), var(--color-bg-secondary) 20%);
         box-shadow: none;
     }
 
@@ -125,8 +125,8 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         width: fit-content;
         padding: 1rem 0;
         border-radius: 8px;
-        text-shadow: 0 0 8px black,
-        0 0 12px var(--color-bg-primary);
+        text-shadow: 3px 3px 8px black,
+        2px 2px 4px var(--color-bg-primary);
     }
 
     .txtLeft {
@@ -230,6 +230,19 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         opacity: 0.6;
     }
 
+    .heartEyes{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        & span{
+            animation: eyes .9s infinite alternate ease-in-out, scaleEyes .4s infinite alternate ease-in-out;
+        }
+
+        & span:last-child{
+            animation-delay: .3s;
+        }
+    }
 }
 
 @keyframes wave {
@@ -238,5 +251,23 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
     to {
         transform: rotate(10deg)
+    }
+}
+
+@keyframes eyes{
+    from{
+        transform: rotate(-20deg);
+    }
+    to{
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes scaleEyes {
+    from{
+        scale: .8;
+    }
+    to{
+        scale: 1.2;
     }
 }

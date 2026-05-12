@@ -79,7 +79,7 @@ function Scene7({s, center}) {
                             scaleX: -1,
                         }}
                     />
-                    {showBubble && <motion.div
+                    {showBubble && <m.div
                         className="speech-bubble"
                         style={{top: "-120px", left: "210px", x: "0", position: "absolute"}}
                         variants={bubble}
@@ -89,7 +89,7 @@ function Scene7({s, center}) {
                     >
                         <img src="./imgs/02_gold_pile.png" height={"80px"}/>
                         <span className={"xxlTxt"}>!</span>
-                    </motion.div>}
+                    </m.div>}
                 </m.div>
             </m.div>
         </>
