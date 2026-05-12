@@ -243,6 +243,9 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
             animation-delay: .3s;
         }
     }
+    .rumpel{
+        outline: black solid 2px;
+    }
 }
 
 @keyframes wave {

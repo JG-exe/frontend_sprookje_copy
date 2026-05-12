@@ -1,5 +1,5 @@
-import {useEffect} from "react";
-import {useScroll} from "motion/react"
+import {useEffect, useState} from "react";
+import {useMotionValueEvent, useScroll} from "motion/react"
 import {Link} from "react-router";
 import Routes from "../routes/constants/Routes.js";
 import * as f from "../hooks/fairytale"
@@ -7,6 +7,7 @@ import * as s from "../components/fairytale";
 
 function Fairytale() {
     const playback = f.usePlayback();
+
     f.useAutoScroll(playback.autoScroll, playback.gone, playback.setAutoScroll);
 
     useEffect(() => {

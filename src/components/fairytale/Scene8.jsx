@@ -1,27 +1,6 @@
 import {motion, useMotionValueEvent} from "motion/react";
 import {useState} from "react";
-
-const rumpelSpring = {
-    initial: {
-        x: "700px",
-        scale: 0
-    },
-    animate: {
-        x: 0,
-        scale: 1,
-        transition: {type: "spring", stiffness: 200, damping: 25}
-    }
-}
-
-const hornOpacity = {
-    initial: {
-        opacity: 0,
-    },
-    animate: {
-        opacity: 1,
-        transition: {type: "spring", stiffness: 200, damping: 25}
-    }
-}
+import Rumpel from "./components/Rumpel";
 
 const haggleResult = [
     "She told him she didn't have much, but she had her grandmother's necklace.",
@@ -29,10 +8,8 @@ const haggleResult = [
     "She told him she didn't have anything left."
 ]
 
-function Scene8({s, center, nightNumber}) {
+function Scene8({s, center, nightNumber, pointerActive = "auto"}) {
     const [showRumpel, setShowRumpel] = useState(false);
-    const [showHorns, setShowHorns] = useState(false);
-
 
     useMotionValueEvent(s.rumpelZip, "change", (latest) => {
         if (latest >= 0.5) setShowRumpel(true)
@@ -42,7 +19,7 @@ function Scene8({s, center, nightNumber}) {
     const m = motion;
     return (
         <>
-            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2}}>
+            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2, pointerEvents: pointerActive}}>
                 <div className={"dimmed"}>
                     <m.img src="./imgs/02_background_room.png" className={"backL layer parallax-lock"}
                            style={{width: "100vw", height: "100vh", ...center, opacity: 1, pointerEvents: "none"}}/>
@@ -54,22 +31,10 @@ function Scene8({s, center, nightNumber}) {
                         x: "-50%",
                         left: "40%",
                         y: "0",
-                        opacity: 1
+                        opacity: 1,
+                        pointerEvents: "none"
                     }}/>
-                    <m.div className={"rumpel layer parallax-lock topL"}
-                           onHoverStart={() => setShowHorns(true)}
-                           onHoverEnd={() => setShowHorns(false)}
-                           style={{
-                               height: "250px", width: "160px", ...center, top: "50vh", left: "60vw"
-                           }}
-                           variants={rumpelSpring}
-                           animate={showRumpel ? "animate" : "initial"}>
-                        <m.img src="./imgs/03_rumpelstiltskin_noHorns.png" className={"rumpelImg parallax-lock"}
-                               style={{...center}}/>
-                        <m.img src="./imgs/03_rumpelstiltskin_horns.png" className={"rumpelImg horns parallax-lock"}
-                               style={{...center}} animate={showHorns ? "animate" : "initial"} variants={hornOpacity}
-                        />
-                    </m.div>
+                    <Rumpel showRumpel={showRumpel} center={center} top={"50vh"} left={"60vw"}/>
                 </div>
 
                 <m.p className={"parallax-lock txt"} style={{...center, top: "2vh", opacity: s.txtOpacity1}}>
