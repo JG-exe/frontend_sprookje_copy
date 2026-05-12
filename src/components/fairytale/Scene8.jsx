@@ -36,7 +36,7 @@ function Scene8({s, center}) {
     const m = motion;
     return (
         <>
-            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
+            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2}}>
                 <div className={"dimmed"}>
                     <m.img src="./imgs/02_background_room.png" className={"backL layer parallax-lock"}
                            style={{width: "100vw", height: "100vh", ...center, opacity: 1}}/>
@@ -50,16 +50,17 @@ function Scene8({s, center}) {
                         y: "0",
                         opacity: 1
                     }}/>
-                    <m.div className={"rumpel middleL layer parallax-lock"}
+                    <m.div className={"rumpel layer parallax-lock topL"}
+                           onHoverStart={() => setShowHorns(true)}
+                           onHoverEnd={() => setShowHorns(false)}
                            style={{
-                               height: "250px", width: "auto", ...center, top: "50vh", left: "60vw"
+                               height: "250px", width: "160px", ...center, top: "50vh", left: "60vw"
                            }}
                            variants={rumpelSpring}
-                           animate={showRumpel ? "animate" : "initial"} onHoverStart={() => setShowHorns(true)}
-                           onHoverEnd={() => setShowHorns(false)}>
-                        <m.img src="./imgs/03_rumpelstiltskin_noHorns.png" className={"rumpelImg"}
+                           animate={showRumpel ? "animate" : "initial"} >
+                        <m.img src="./imgs/03_rumpelstiltskin_noHorns.png" className={"rumpelImg parallax-lock"}
                                style={{...center}}/>
-                        <m.img src="./imgs/03_rumpelstiltskin_horns.png" className={"rumpelImg"}
+                        <m.img src="./imgs/03_rumpelstiltskin_horns.png" className={"rumpelImg horns parallax-lock"}
                                style={{...center}} animate={showHorns ? "animate" : "initial"} variants={hornOpacity}
                         />
                     </m.div>
