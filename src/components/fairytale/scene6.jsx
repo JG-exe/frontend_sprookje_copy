@@ -13,6 +13,10 @@ const storyTxt = [
         top: "The king locked the girl in an even bigger room, filled with more straw than the girl could ever imagine.",
         bottom: "'My dear girl', the king said, 'if you can turn all of this into gold by the next morning, I will make you queen."
     },
+    {
+      top:"The queen tries to guess his name over and over again. She tried every name she could come up with, every name in the country and every name her servants offered her.",
+      bottom:"But to no avail. Until, on the last night before her child would be taken, one of her servants spots something peculiar."
+    },
 ]
 
 function Scene6({s, center, rep}) {
