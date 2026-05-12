@@ -24,8 +24,8 @@
 ### Rumpelstiltskin
 #### Scenes
 - [x] Scene 1
-- [x] Scene 2 – Mill room | spinning wheel | click → spin → Rumpelstiltskin slides in
-- [ ] Scene 3 – Gold spun | shimmer/particle CSS anim on click
+- [x] Scene 2 – Mill room | Rumpelstiltskin slides in
+- [x] Scene 3 – Gold
 - [ ] Scene 4 – Baby scene | Rumpelstiltskin demands child
 - [ ] Scene 5 – Name guessing | input field | wrong → shake | correct → destroy sequence
 - [ ] Scene 6 – Tears self in two | destroy state | CSS class swap
