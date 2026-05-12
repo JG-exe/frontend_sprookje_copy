@@ -23,7 +23,7 @@ const hornOpacity = {
     }
 }
 
-function Rumpel({showRumpel, center, scale = 1, top, left}) {
+function Rumpel({showRumpel, center, scale = 1, top, left, opacity = 1}) {
     const [showHorns, setShowHorns] = useState(false);
     const m = motion;
 
@@ -32,7 +32,7 @@ function Rumpel({showRumpel, center, scale = 1, top, left}) {
                onHoverStart={() => setShowHorns(true)}
                onHoverEnd={() => setShowHorns(false)}
                style={{
-                   height: "250px", width: "160px", ...center, top: top, left: left
+                   height: "250px", width: "160px", ...center, top: top, left: left, opacity
                }}
                variants={rumpelSpring}
                animate={showRumpel ? "animate" : "initial"}>
