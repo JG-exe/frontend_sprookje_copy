@@ -18,3 +18,9 @@ This project is a React web application built for the Front-End course at Erasmu
   - decided against conditional rendering as it was introducing more issues than it solved.
 - [explain how to play audio within certain scroll ranges (Claude)](https://claude.ai/share/ff90d158-09d4-416a-be12-c93b801cd21c)
   - used in useFairytaleAudio.js
+- [explain z-index layering with parent and child elements](https://claude.ai/share/116487d7-9167-4587-affd-29e8fc5f3aea)
+  - I had a problem where scene 9 was higher in the DOM than scene 8
+    - troubled elements:
+      - scene8.jsx line 53-65
+      - scene9.jsx line 7-8 (background img (line 8) showed before scene 8, but turns out it was a parent issue)
+  - used  (indirectly) in Scene9.jsx and scene8.jsx
