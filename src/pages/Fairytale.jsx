@@ -1,11 +1,14 @@
 import {useEffect, useState} from "react";
-import {useMotionValueEvent, useScroll} from "motion/react"
+import {useScroll} from "motion/react"
 import {Link} from "react-router";
 import Routes from "../routes/constants/Routes.js";
 import * as f from "../hooks/fairytale"
 import * as s from "../components/fairytale";
+import {motion} from "motion/react";
 
 function Fairytale() {
+    const [isTearable, setIsTearable] = useState(false);
+
     const playback = f.usePlayback();
 
     f.useAutoScroll(playback.autoScroll, playback.gone, playback.setAutoScroll);
@@ -41,6 +44,9 @@ function Fairytale() {
     const s11 = f.useScene11(scrollY, s10.sceneEnd);
     const s6Repeat3 = f.useScene6(scrollY, s11.sceneEnd);
     const s12 = f.useScene12(scrollY, s6Repeat3.sceneEnd);
+    const s6Repeat4 = f.useScene6(scrollY, s12.sceneEnd);
+    const s13 = f.useScene13(scrollY, s6Repeat4.sceneEnd);
+    const s14 = f.useScene14(scrollY, s13.sceneEnd)
 
     const introAudioRef = f.useFairytaleAudio(playback.isMuted, s1.sceneEnd, scrollY);
     return (
@@ -92,10 +98,12 @@ function Fairytale() {
                 <s.Scene9 s={s9Repeat2} center={center} nightNumber={2} key={"gold3"}/>
                 <s.Scene10 s={s10} center={center}/>
                 <s.Scene11 s={s11} center={center}/>
-                <s.Scene12 s={s12} center={center}/>
                 <s.Scene6 s={s6Repeat3} center={center} rep={3} key={"inbetween4"}/>
+                <s.Scene12 s={s12} center={center}/>
+                <s.Scene6 s={s6Repeat4} center={center} rep={4} key={"inbetween5"}/>
+                <s.Scene13 s={s13} center={center} isTearable={isTearable} onSolve={() => setIsTearable(true)}/>
+                <s.Scene14 s={s14} center={center} isTearable={isTearable}/>
             </div>
-            <div className={"end"} style={{ height: "100vh" }}>Ending</div>
         </>)
 }
 

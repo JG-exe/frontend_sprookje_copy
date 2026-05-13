@@ -11,6 +11,7 @@ function Scene4({ s, center }) {
                 {millerHover && s.txtOpacity4.get() > 0 && (
                     <motion.div
                         className={"speech-bubble"}
+                        style={{pointerEvents: "none"}}
                         initial={{opacity: 0, y: 10}}
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.2, type: "spring", stiffness: 600, damping: 20}}
@@ -43,7 +44,8 @@ function Scene4({ s, center }) {
                     top: "42dvh",
                     x: "30px",
                     y: "0",
-                    opacity: s.txtOpacity4
+                    opacity: s.txtOpacity4,
+                    pointerEvents: "none"
                 }}/>
                 <motion.p className={"txt parallax-lock"} style={{...center, top: "85vh"}}>
                     <motion.span style={{opacity: s.txtOpacity5}}>He would tell everyone who wanted to hear how his

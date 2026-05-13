@@ -23,7 +23,7 @@ const hornOpacity = {
     }
 }
 
-function Rumpel({showRumpel, center, scale = 1, top, left, opacity = 1}) {
+function Rumpel({showRumpel, center, scale = 1, top, left, opacity = 1, pointerEvents = "auto"}) {
     const [showHorns, setShowHorns] = useState(false);
     const m = motion;
 
@@ -32,15 +32,14 @@ function Rumpel({showRumpel, center, scale = 1, top, left, opacity = 1}) {
                onHoverStart={() => setShowHorns(true)}
                onHoverEnd={() => setShowHorns(false)}
                style={{
-                   height: "250px", width: "160px", ...center, top: top, left: left, opacity
+                   height: "250px", width: "160px", ...center, top: top, left: left, opacity, pointerEvents, scaleX: scale
                }}
                variants={rumpelSpring}
                animate={showRumpel ? "animate" : "initial"}>
             <m.img src="./imgs/03_rumpelstiltskin_noHorns.png" className={"rumpelImg"}
-                   style={{...center,  scaleX: scale}}/>
+                   style={{...center}}/>
             <m.img src="./imgs/03_rumpelstiltskin_horns.png" className={"rumpelImg horns"}
-                   style={{...center,  scaleX: scale}} animate={showHorns ? "animate" : "initial"} variants={hornOpacity}
-            />
+                   style={{...center}} animate={showHorns ? "animate" : "initial"} variants={hornOpacity}/>
         </m.div>
     );
 }

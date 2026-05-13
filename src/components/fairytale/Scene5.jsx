@@ -10,7 +10,6 @@ function Scene5({s, center}) {
     const [showBubble, setShowBubble] = useState(false);
     const [showBubble2, setShowBubble2] = useState(false);
 
-
     useMotionValueEvent(s.carriageX, "change", (latest) => {
         if (latest <= -1680) setShowBubble(true)
         else setShowBubble(false)

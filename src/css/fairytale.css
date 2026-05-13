@@ -55,6 +55,10 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         width: 100%;
         margin: auto 0;
         color: var(--color-black-transparent);
+
+        p {
+            color: var(--color-text-secondary);
+        }
     }
 
     .btn {
@@ -101,12 +105,13 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         background-color: var(--color-success);
     }
 
-    .muteBtn{
-        background-image: url("/static/speakerIcon.svg");
+    .muteBtn {
+        background-image: url("./static/speakerIcon.svg");
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: center center;
-        span{
+
+        span {
             position: absolute;
             transform: translate(-50%, -60%);
             color: var(--color-danger);
@@ -149,6 +154,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
 
     .backL {
         z-index: 1;
+        pointer-events: none;
     }
 
     .intro {
@@ -177,6 +183,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         top: 30dvh;
         left: 40dvw;
         z-index: 8;
+
         .body {
             height: 400px;
             position: absolute;
@@ -209,6 +216,25 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         font-size: 14px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         z-index: 10;
+
+        form {
+            font-size: 13px;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            input{
+                border-radius: 4px;
+                padding: 4px;
+                text-align: center;
+                border-color: var(--color-black-transparent);
+            }
+            input[type='submit']{
+                border-radius: 50%;
+                width: 2rem;
+                aspect-ratio: 1/1;
+            }
+        }
+
     }
 
     .speech-bubble::after {
@@ -222,33 +248,37 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         border-color: white transparent transparent transparent;
     }
 
-    .rumpelImg{
+    .rumpelImg {
         height: 250px;
         width: auto;
         position: absolute;
         transform-origin: left bottom;
 
-        &.dancing{
+        &.dancing {
             animation: dancing 3s infinite alternate ease-in-out;
         }
     }
 
-    .dimmed{
+    .dimmed {
         opacity: 0.6;
     }
 
-    .heartEyes{
+    .heartEyes {
         display: flex;
         flex-direction: row;
         gap: 8px;
 
-        & span{
+        & span {
             animation: eyes .9s infinite alternate ease-in-out, scaleEyes .4s infinite alternate ease-in-out;
         }
 
-        & span:last-child{
+        & span:last-child {
             animation-delay: .3s;
         }
+    }
+
+    .shake{
+        animation: shake .5s ease-in-out;
     }
 }
 
@@ -261,27 +291,27 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
 }
 
-@keyframes eyes{
-    from{
+@keyframes eyes {
+    from {
         transform: rotate(-20deg);
     }
-    to{
+    to {
         transform: rotate(20deg);
     }
 }
 
 @keyframes scaleEyes {
-    from{
+    from {
         scale: .8;
     }
-    to{
+    to {
         scale: 1.2;
     }
 }
 
 @keyframes dancing {
     0% {
-        transform: translate(0, 0) rotate(0deg) ;
+        transform: translate(0, 0) rotate(0deg);
     }
     50% {
         transform: translate(15px, -10px) rotate(5deg);
@@ -289,4 +319,10 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     100% {
         transform: translate(-15px, 0px) rotate(-5deg);
     }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
 }

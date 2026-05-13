@@ -23,6 +23,8 @@ export const usePlayback = () => {
 
     useEffect(() => {
         const handler = (e) => {
+            if(['INPUT'].includes(document.activeElement.tagName)) return
+
             if (e.code === 'Space') {
                 e.preventDefault();
                 toggleAutoScroll();
