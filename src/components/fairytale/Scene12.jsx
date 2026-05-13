@@ -4,7 +4,7 @@ function Scene12({s, center}) {
     const m = motion;
     return (
         <>
-            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2}}>
+            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2, pointerEvents: "none"}}>
                 <m.div style={{scale: s.zoomTrees, top: s.moveTreesUp}} className={"parallax-lock"}>
                     <m.img src="./imgs/01_layer_mid_left.png"
                            width={"100%"}
@@ -41,7 +41,8 @@ function Scene12({s, center}) {
                     that Rumpelstiltskin is my name.
                 </m.span>
                 <m.p className={"parallax-lock txt"} style={{...center, top: "90vh", opacity: s.txtOpacity8}}>
-
+                    That has to be his name!<br/>
+                    Quickly, to the queen with this news!
                 </m.p>
             </m.div>
         </>
