@@ -76,6 +76,7 @@ function Landing({ gone, setGone, duration }) {
                 <div className={`title ${gone ? 'hidden' : ''}`} style={{pointerEvents: "none"}}>
                     <h2>Once Upon A Time...</h2>
                     <h1>Rumpelstiltskin</h1>
+                    <p>(best experienced with sound on and in fullscreen(f11))</p>
                 </div>
             </motion.div>
         </>
