@@ -1,10 +1,11 @@
 import {motion} from "motion/react";
 
 function Scene12({s, center}) {
+
     const m = motion;
     return (
         <>
-            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2, pointerEvents: "none"}}>
+            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2}}>
                 <m.div style={{scale: s.zoomTrees, top: s.moveTreesUp, pointerEvents: "none"}}
                        className={"parallax-lock"}>
                     <m.img src="./imgs/01_layer_mid_left.png"

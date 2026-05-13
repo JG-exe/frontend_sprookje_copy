@@ -62,7 +62,8 @@ function Scene7({s, center}) {
                     x: "-50%",
                     left: "40%",
                     y: "0",
-                    opacity: 1
+                    opacity: 1,
+                    pointerEvents: "none"
                 }}/>
                 <m.div className={"king parallax-lock topL"}>
                     <King center={center} exclamationNumber={0} kingControls={kingControls} showBubble={showBubble} showHearts={false}/>
