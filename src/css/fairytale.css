@@ -218,8 +218,21 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         z-index: 10;
 
         form {
-            /*width: 16ch;*/
-            font-size: 14px;
+            font-size: 13px;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            input{
+                border-radius: 4px;
+                padding: 4px;
+                text-align: center;
+                border-color: var(--color-black-transparent);
+            }
+            input[type='submit']{
+                border-radius: 50%;
+                width: 2rem;
+                aspect-ratio: 1/1;
+            }
         }
 
     }
@@ -263,6 +276,10 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
             animation-delay: .3s;
         }
     }
+
+    .shake{
+        animation: shake .5s ease-in-out;
+    }
 }
 
 @keyframes wave {
@@ -302,4 +319,10 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     100% {
         transform: translate(-15px, 0px) rotate(-5deg);
     }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-10px); }
+    40%, 80% { transform: translateX(10px); }
 }

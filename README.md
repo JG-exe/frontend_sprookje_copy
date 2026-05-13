@@ -26,7 +26,3 @@ This project is a React web application built for the Front-End course at Erasmu
   - used  (indirectly) in Scene9.jsx and scene8.jsx
 - [activeElement selection in HTML(MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement)
   - used in usePlayback.js
-- [How to prevent scrolling until condition is met](https://gemini.google.com/share/bd6145aba75a)
-  - Will normally be used in scene13.jsx (to be decided)
-
-[//]: # (TODO: redo linking to latest update of chat)
