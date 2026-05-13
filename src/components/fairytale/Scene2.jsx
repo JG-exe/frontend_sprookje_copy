@@ -2,14 +2,14 @@ import { motion } from "motion/react";
 
 function Scene2({ s, center }) {
     return (
-        <motion.div style={{opacity: s.sceneFade,}} className={"parallax-lock"}>
+        <motion.div style={{opacity: s.sceneFade, pointerEvents: "none"}} className={"parallax-lock"}>
             <motion.div style={{y: s.zoomYAdjust}}>
                 <motion.img src="./imgs/01_layer_back.png"
                        style={{scale: s.zoomFar}}
                        width={"100%"}
                        className={"backL layer "}
                 />
-                <motion.div style={{scale: s.zoomClose}} className={"parallax-lock"}>
+                <motion.div style={{scale: s.zoomTrees}} className={"parallax-lock"}>
                     <motion.img src="./imgs/01_layer_mid_left.png"
                            width={"100%"}
                            className={"middleL layer "}

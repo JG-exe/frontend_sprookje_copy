@@ -18,19 +18,17 @@
 - [x] Organize your website logically into different Components.
 - [x] Use the map() function to iterate over your data from a JSON file.
 - [x] Use React Router for the navigation of your portal page.
-- [ ] Demonstrate the use of Hooks for certain features of your page.
+- [x] Demonstrate the use of Hooks for certain features of your page.
 - [x] Deploy your website to GitHub Pages.
 
 ### Rumpelstiltskin
 #### Scenes
-- [ ] Scene 1 – Kingdom | parallax layers | click daughter → `sfx-cry.wav`
-- [ ] Scene 2 – Mill room | spinning wheel | click → spin → Rumpelstiltskin slides in
-- [ ] Scene 3 – Gold spun | shimmer/particle CSS anim on click
+- [x] Scene 1
+- [x] Scene 2 – Mill room | Rumpelstiltskin slides in
+- [x] Scene 3 – Gold
 - [ ] Scene 4 – Baby scene | Rumpelstiltskin demands child
 - [ ] Scene 5 – Name guessing | input field | wrong → shake | correct → destroy sequence
-- [ ] Scene 6 – Tears self in two | destroy state | CSS class swap | `sfx-destroy.wav`
-
-- [ ] We encourage you to explore and experiment on your own. Adding extras is encouraged.
+- [ ] Scene 6 – Tears self in two | destroy state | CSS class swap
 
 ### Submitting your project
 In Canvas, provide the following:

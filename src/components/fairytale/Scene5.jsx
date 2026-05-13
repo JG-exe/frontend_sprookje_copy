@@ -21,7 +21,7 @@ function Scene5({s, center}) {
     });
 
     return (
-        <motion.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
+        <motion.div className={"parallax-lock"} style={{opacity: s.sceneFade, pointerEvents: "none"}}>
             <motion.img src="./imgs/01_king_in_carriage.png" style={{
                 scale: 0.4, ...center,
                 y: s.carriageY,
