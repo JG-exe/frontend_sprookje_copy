@@ -14,7 +14,7 @@ export const useScene2 = (scrollY, prevSceneEnd) => {
         sceneEnd,
         sceneFade,
         openMiddle,
-        zoomClose,
+        zoomTrees: zoomClose,
         zoomFar,
         zoomYAdjust,
         txtOpacity1,

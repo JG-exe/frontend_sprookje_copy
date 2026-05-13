@@ -225,6 +225,11 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         height: 250px;
         width: auto;
         position: absolute;
+        transform-origin: left bottom;
+
+        &.dancing{
+            animation: dancing 3s infinite alternate ease-in-out;
+        }
     }
 
     .dimmed{
@@ -270,5 +275,17 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
     to{
         scale: 1.2;
+    }
+}
+
+@keyframes dancing {
+    0% {
+        transform: translate(0, 0) rotate(0deg) ;
+    }
+    50% {
+        transform: translate(15px, -10px) rotate(5deg);
+    }
+    100% {
+        transform: translate(-15px, 0px) rotate(-5deg);
     }
 }

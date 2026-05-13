@@ -9,7 +9,7 @@ function Scene2({ s, center }) {
                        width={"100%"}
                        className={"backL layer "}
                 />
-                <motion.div style={{scale: s.zoomClose}} className={"parallax-lock"}>
+                <motion.div style={{scale: s.zoomTrees}} className={"parallax-lock"}>
                     <motion.img src="./imgs/01_layer_mid_left.png"
                            width={"100%"}
                            className={"middleL layer "}
