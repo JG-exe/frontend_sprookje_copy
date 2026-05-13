@@ -104,9 +104,6 @@ function Fairytale() {
                 <s.Scene13 s={s13} center={center} isTearable={isTearable} onSolve={() => setIsTearable(true)}/>
                 <s.Scene14 s={s14} center={center} isTearable={isTearable}/>
             </div>
-            <div className={"end txt"}>
-                Ending
-            </div>
         </>)
 }
 
