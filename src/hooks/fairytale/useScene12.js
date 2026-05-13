@@ -13,7 +13,7 @@ export const useScene12 = (scrollY, prevSceneEnd) => {
     const txtOpacity5 = useTransform(scrollY, [prevSceneEnd + 750, prevSceneEnd + 800], [0, 1]);
     const txtOpacity6 = useTransform(scrollY, [prevSceneEnd + 900, prevSceneEnd + 950], [0, 1]);
     const txtOpacity7 = useTransform(scrollY, [prevSceneEnd + 1050, prevSceneEnd + 1100], [0, 1]);
-    const txtOpacity8 = useTransform(scrollY, [prevSceneEnd + 1050, prevSceneEnd + 1100], [0, 1]);
+    const txtOpacity8 = useTransform(scrollY, [prevSceneEnd + 1250, prevSceneEnd + 1300], [0, 1]);
     const moveTxtPos = useTransform(scrollY, [prevSceneEnd + 400, sceneEnd], [0, 100])
     const moveTxtNeg = useTransform(scrollY, [prevSceneEnd + 400, sceneEnd], [0, -100])
 

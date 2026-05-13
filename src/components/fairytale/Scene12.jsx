@@ -4,8 +4,8 @@ function Scene12({s, center}) {
     const m = motion;
     return (
         <>
-            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2}}>
-                <m.div style={{scale: s.zoomTrees, top: s.moveTreesUp}} className={"parallax-lock"}>
+            <m.div className={"parallax-lock"} style={{opacity: s.sceneFade, zIndex: 2, pointerEvents: "none"}}>
+                <m.div style={{scale: s.zoomTrees, top: s.moveTreesUp, pointerEvents: "none"}} className={"parallax-lock"}>
                     <m.img src="./imgs/01_layer_mid_left.png"
                            width={"100%"}
                            className={"middleL layer"}
@@ -16,7 +16,7 @@ function Scene12({s, center}) {
                            style={{right: s.openMiddle}}/>
                 </m.div>
                 <m.img src="./imgs/04_rumpelstiltskin.png" className={"rumpelImg dancing"}
-                       style={{...center, width: "auto", height: "250px", top: "50vh", x: "30px"}}/>
+                       style={{...center, width: "auto", height: "250px", top: "50vh", x: "30px", pointerEvents: "none"}}/>
                 <m.img src="./imgs/04_campfire.png"
                        style={{...center, width: "800px", height: "auto", top: "40vh", left: "55vw", zIndex: "revert"}}
                        className={"parallax-lock"}/>
@@ -41,7 +41,8 @@ function Scene12({s, center}) {
                     that Rumpelstiltskin is my name.
                 </m.span>
                 <m.p className={"parallax-lock txt"} style={{...center, top: "90vh", opacity: s.txtOpacity8}}>
-
+                    That has to be his name!<br/>
+                    Quickly, to the queen with this news!
                 </m.p>
             </m.div>
         </>
