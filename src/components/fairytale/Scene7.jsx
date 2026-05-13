@@ -42,7 +42,7 @@ function Scene7({s, center}) {
             <m.div className={"parallax-lock"} style={{opacity: s.sceneFade}}>
                 <m.img src="./imgs/02_background_room.png" className={"backL layer parallax-lock"}
                        style={{width: "100vw", height: "100vh", ...center, opacity: 1}}/>
-                <m.p className={"parallax-lock txt"} style={{...center, top: "90vh"}}>
+                <m.p className={"parallax-lock txt"} style={{...center, top: "88vh"}}>
                     <m.span style={{opacity: s.txtOpacity1}}>
                         When the girl arrived, she was immediately taken to a cold room full of straw.
                     </m.span>

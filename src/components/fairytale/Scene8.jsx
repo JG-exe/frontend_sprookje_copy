@@ -27,10 +27,9 @@ function Scene8({s, center, nightNumber, pointerActive = "auto"}) {
                         ...center,
                         height: "450px",
                         width: "auto",
-                        top: "50vh",
-                        x: "-50%",
+                        top: "48vh",
                         left: "40%",
-                        y: "0",
+                        // y: "0",
                         opacity: 1,
                         pointerEvents: "none"
                     }}/>
