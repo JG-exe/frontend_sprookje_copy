@@ -8,7 +8,7 @@ export const useScene5 = (scrollY, prevSceneEnd) => {
     const carriageRot = useTransform(scrollY, [prevSceneEnd, prevSceneEnd + 200], ["10deg", "0deg"])
     const txtOpacity1 = useTransform(scrollY, [prevSceneEnd + 180, prevSceneEnd + 220],[1, 0])
     const millerOpacity = useTransform(scrollY, [prevSceneEnd + 160, prevSceneEnd + 190],[0, 1])
-    const txtOpacity2 = useTransform(scrollY, [prevSceneEnd + 250, prevSceneEnd + 280], [0, 1,])
+    const txtOpacity2 = useTransform(scrollY, [prevSceneEnd + 250, prevSceneEnd + 280], [0, 1])
     const txtOpacity3 = useTransform(scrollY, [prevSceneEnd + 740, prevSceneEnd + 770], [0, 1])
 
     return {

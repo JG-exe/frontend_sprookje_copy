@@ -128,6 +128,7 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
         text-shadow: 1px 1px 4px black,
         -1px -1px 1px var(--color-bg-primary);
         pointer-events: none;
+        margin-bottom: 1rem;
     }
 
     .txtLeft {
@@ -173,8 +174,8 @@ html[data-theme="fairytale"] body::-webkit-scrollbar {
     }
 
     .miller {
-        top: 30%;
-        left: 40%;
+        top: 30dvh;
+        left: 40dvw;
         z-index: 8;
         .body {
             height: 400px;

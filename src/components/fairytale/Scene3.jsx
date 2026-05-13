@@ -7,10 +7,10 @@ function Scene3({ s, center }) {
                 Meet our unwilling and foolish catalyst.
             </motion.p>
             <motion.div className={"parallax-lock"} style={{opacity: s.sceneFade, pointerEvents: "none"}}>
-                <motion.img src="./imgs/01_mill.png" width={"72%"} className={"backL layer "}
-                       style={{...center, top: "10px"}}/>
+                <motion.img src="./imgs/01_mill.png" width={"1400px"} className={"backL layer"}
+                       style={{...center}}/>
                 <motion.img src="./imgs/01_poor_miller_side.png"
-                       style={{scale: 0.06, y: "-50%", x: "-50%", left: "41%", top: "83vh"}}
+                       style={{... center, width: "auto", height: "200px", y: "73vh", x: "-50%", left: "41%"}}
                        className={"parallax-lock topL layer"}
                 />
                 <motion.p className={"txt parallax-lock"} style={{...center, top: "90vh", pointerEvents: "none"}}>

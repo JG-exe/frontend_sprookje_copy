@@ -38,9 +38,10 @@ function Scene4({ s, center }) {
                 </motion.p>
                 <motion.img src="./imgs/01_poor_girl.png" className={"middleL parallax-lock"} style={{
                     ...center,
-                    scale: 0.06,
-                    top: "-192%",
-                    x: "-45%",
+                    height: "280px",
+                    width: "auto",
+                    top: "42dvh",
+                    x: "30px",
                     y: "0",
                     opacity: s.txtOpacity4
                 }}/>
