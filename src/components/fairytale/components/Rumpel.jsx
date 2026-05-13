@@ -39,8 +39,7 @@ function Rumpel({showRumpel, center, scale = 1, top, left, opacity = 1}) {
             <m.img src="./imgs/03_rumpelstiltskin_noHorns.png" className={"rumpelImg"}
                    style={{...center,  scaleX: scale}}/>
             <m.img src="./imgs/03_rumpelstiltskin_horns.png" className={"rumpelImg horns"}
-                   style={{...center,  scaleX: scale}} animate={showHorns ? "animate" : "initial"} variants={hornOpacity}
-            />
+                   style={{...center,  scaleX: scale}} animate={showHorns ? "animate" : "initial"} variants={hornOpacity}/>
         </m.div>
     );
 }

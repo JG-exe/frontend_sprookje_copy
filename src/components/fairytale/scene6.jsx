@@ -17,6 +17,10 @@ const storyTxt = [
       top:"The queen tries to guess his name over and over again. She tried every name she could come up with, every name in the country and every name her servants offered her.",
       bottom:"But to no avail. Until, on the last night before her child would be taken, one of her servants spots something peculiar."
     },
+    {
+      top:"The queen, happy to know the name of the imp, invited him into the palace again.",
+      bottom:"This time, she was confident."
+    },
 ]
 
 function Scene6({s, center, rep}) {

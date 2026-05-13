@@ -1,4 +1,6 @@
-import { motion } from "motion/react";
+import {motion, useMotionValueEvent} from "motion/react";
+import Rumpel from "./components/Rumpel.jsx";
+import {useState} from "react";
 
 function Scene13({ s, center }) {
     const m = motion;
@@ -12,7 +14,9 @@ function Scene13({ s, center }) {
                     <m.img src="./imgs/04_queen_happy.png" width="100%" height="100%" className={"layer parallax-lock"}
                            style={{opacity: s.queenHappy}}/>
                 </m.div>
+                <Rumpel center={center} showRumpel={true} className={"mirror"} scale={-1} top={"60vh"} left={"40vw"}/>
                 <m.p className={"parallax-lock txt"} style={{ ...center, top: "88vh", opacity: s.txtOpacity1 }}>
+
                 </m.p>
             </m.div>
         </>
