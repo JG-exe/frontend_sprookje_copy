@@ -44,12 +44,17 @@
     }
 
     .author {
-        color: var(--color-text-secondary);
+        color: var(--color-text-primary);
         font-size: 13px;
     }
 
     .student {
         color: var(--color-accent-secondary);
+        font-size: 13px;
+    }
+
+    .short {
+        color: var(--color-text-primary);
         font-size: 13px;
     }
 }
@@ -86,8 +91,7 @@
     }
 
     & .front .info {
-        background-color: color-mix(in srgb, var(--color-text-secondary), transparent 80%);
-        mix-blend-mode: exclusion;
+        background-color: color-mix(in srgb, var(--color-bg-secondary), transparent 50%);
         position: absolute;
         height: 75px;
         bottom: 4px;
@@ -95,6 +99,7 @@
         width: fit-content;
         border-radius: 4px;
         opacity: 100%;
+        font-size: 13px;
 
         .story {
             font-size: 14px;
@@ -127,6 +132,7 @@
     box-sizing: border-box;
     flex-direction: column;
     justify-content: space-between;
+    transition: opacity var(--timing) ease-in-out,;
 
     p {
         font-size: 13px;
@@ -146,7 +152,7 @@
     transform: rotateY(-180deg);
     background-color: var(--color-bg-secondary);
     color: var(--color-text-primary);
-    box-shadow: inset -8px 0 16px rgba(0,0,0,0.5);
+    box-shadow: inset -8px 0 16px rgba(0, 0, 0, 0.5);
 }
 
 .inner {
@@ -161,11 +167,18 @@
     flex: 1;
     height: 100%;
     background-color: var(--color-text-primary);
+
+    .info {
+        * {
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 .book:hover {
     z-index: 2;
     scale: 1.05;
+
     .cover {
         transform: rotateY(-20deg);
     }
@@ -194,13 +207,29 @@
             opacity: 0%;
         }
     }
-    h3{
+
+    h3 {
         font-family: "Eagle Lake", cursive;
         margin-bottom: 1rem;
     }
+
+    .pagectx {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.book.opening .right .pagectx,
+.book.closing .right .pagectx, .book.closed .right .pagectx, .book.idle .right .pagectx {
+    opacity: 0;
+}
+
+.book.closed .right .pagectx, .book.idle .right .pagectx {
+    display: none;
 }
 
 .book.closing .cover {
+    transition: transform var(--timing) ease-in-out;
     margin-left: 1px;
     transform: rotateY(0deg);
 }

@@ -6,16 +6,16 @@
     "creator": "Cheryl Aitchedji",
     "cover": "",
     "back": "Een jonge zeemeermin ruilt haar stem en staart voor mensenbenen, hopend de liefde van een prins te winnen — maar de prijs is hoog.",
-    "link": ""
+    "link": "https://urban-adventure-qjzjzk8.pages.github.io/"
   },
   {
     "id": 2,
     "title": "Mulan",
     "author": "Onbekend. Oorsprong: Chinees volksverhaal, de Ballade van Mulan.",
     "creator": "Zonnedda Olivia",
-    "cover": "",
+    "cover": "https://raw.githubusercontent.com/EHB-MCT/cp-frontend-IgorLopesOliveira/refs/heads/main/cp-igor/public/images/thumbnail-jack.png",
     "back": "Een jonge vrouw verkleedt zich als man om haar vader te vervangen in het keizerlijke leger.",
-    "link": ""
+    "link": "https://ehb-mct.github.io/cp-frontend-IgorLopesOliveira/sprookje"
   },
   {
     "id": 3,
@@ -40,7 +40,7 @@
     "title": "Repelsteeltje",
     "author": "Mademoiselle L'Héritier (1705) / Gebroeders Grimm (1812)",
     "creator": "Joachim Gautama",
-    "cover": "",
+    "cover": "https://i.pinimg.com/736x/ad/8d/87/ad8d8761737200a4c3d619f2a3cb69fb.jpg",
     "back": "Een molenaarsdochter moet stro tot goud spinnen. Een mysterieus mannetje helpt haar — maar eist haar eerstgeboren kind als betaling.",
     "link": "https://ehb-mct.github.io/frontEnd-sprookje-JoachimGautama/fairytale"
   },
@@ -94,8 +94,17 @@
     "title": "De Sneeuwkoningin",
     "author": "Hans Christian Andersen",
     "creator": "Safouan Kerkich",
+  "cover": "",
+  "back": "Een meisje trekt door ijzige gebieden om haar beste vriend te redden, wiens hart is bevroren door een splinter van een betoverde spiegel.",
+  "link": ""
+  },
+  {
+    "id": 122,
+    "title": "Roodkapje",
+    "author": "Hans Christian Andersen",
+    "creator": "Hamza El Aisati",
     "cover": "",
-    "back": "Een meisje trekt door ijzige gebieden om haar beste vriend te redden, wiens hart is bevroren door een splinter van een betoverde spiegel.",
-    "link": ""
+    "back": "",
+    "link": "https://ehb-mct.github.io/front-end-sprookje-Raicus/"
   }
 ]
