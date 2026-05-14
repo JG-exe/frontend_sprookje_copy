@@ -243,6 +243,10 @@ footer {
     gap: 20px;
     align-items: start;
     padding: 20px;
+
+    h3{
+        margin-bottom: .4rem;
+    }
 }
 
 .txtColumn {
@@ -256,4 +260,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.centerCt{
+    h3 {
+        column-span: all;
+        margin-bottom: .4rem;
+    }
+}
+.columns{
+    column-count: 3;
 }
