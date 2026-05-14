@@ -10,8 +10,8 @@
     - [x] A button leading to all projects (projects page)
 - [x] Projects page
     - [x] An overview of all projects from your classmates with a link to the deployed website
-- [ ] Making of page
-    - [ ] A page where you explain the techniques you used in the creation of your project
+- [x] Making of page
+    - [x] A page where you explain the techniques you used in the creation of your project
 - [x] Navigation: home, projects, making-of
 
 ### Technical Requirements
