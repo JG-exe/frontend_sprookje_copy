@@ -180,7 +180,7 @@ h3{
     }
 }
 
-.book:hover {
+.book:hover:not(.open, .opening, .closing) {
     z-index: 2;
     scale: 1.05;
 
