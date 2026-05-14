@@ -1,5 +1,4 @@
 :root {
-
     /* -- Backgrounds -- */
     --color-bg-primary: #1c1c1e;
     --color-bg-secondary: #2c2c2e;
@@ -27,13 +26,13 @@
     --color-silver: silver;
     --color-black-transparent: rgba(0, 0, 0, 0.6);
     --color-white-transparent: rgba(255, 255, 255, 0.5);
+
+    /* curtains */
+    --color-curtain-base: #850000;
 }
 
 :root[data-theme='fairytale'] {
     --color-royal-purple: #4b0082;
     --color-bg-primary: #1a1a1a;
     --color-bg-secondary: #a9a9b3;
-
-    /* curtains */
-    --color-curtain-base: #850000;
 }
