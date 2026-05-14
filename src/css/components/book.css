@@ -75,7 +75,7 @@ h3{
             to right,
             var(--color-black-transparent) 10%,
             var(--color-black-transparent) 50%,
-            var(--color-white-hl) 80%,
+            var(--color-white-transparent) 70%,
             transparent 100%
     );
     pointer-events: none;
