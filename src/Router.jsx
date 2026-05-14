@@ -1,19 +1,24 @@
 import {createBrowserRouter} from "react-router";
+import AppLayout from "./layouts/AppLayout.jsx";
 import RootLayout from "./layouts/RootLayout";
 import BareLayout from "./layouts/BareLayout";
-import * as p from "./pages";
-import {FairytaleRoute} from "./routes/FairytaleRoute.jsx";
 import Routes from "./routes/constants/Routes.js";
+import {FairytaleRoute} from "./routes/FairytaleRoute.jsx";
+import * as p from "./pages";
 
 
 const router = createBrowserRouter([
         {
-            element: <RootLayout/>,
-            children: [
-                {path: Routes.Home, element: <p.Home/>},
-                {path: Routes.All, element: <p.All/>},
-                {path: Routes.MakingOf, element: <p.MakingOf/>},
-            ],
+            element: <AppLayout/>,
+            children: [{
+                element: <RootLayout/>,
+                children: [
+                    {path: Routes.Home, element: <p.Home/>},
+                    {path: Routes.All, element: <p.All/>},
+                    {path: Routes.MakingOf, element: <p.MakingOf/>},
+                ],
+            }
+            ]
         },
         {
             element: <BareLayout/>,

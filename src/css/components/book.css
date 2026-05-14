@@ -1,7 +1,7 @@
 :root {
     --book-width: 180px;
 
-    --timing: 0.8s;
+    --timing: 0.4s;
 }
 
 h3{
@@ -27,13 +27,13 @@ h3{
 }
 
 .animate {
-    transition: opacity calc(var(--timing) / 2) ease-in-out,
-    width var(--timing) ease-in-out,
-    top var(--timing) ease-in-out,
-    left var(--timing) ease-in-out,
-    transform var(--timing) ease-in-out,
-    translate var(--timing) ease-in-out,
-    scale var(--timing) ease-in-out;
+    transition: opacity var(--timing) ease-in-out,
+    width calc(var(--timing) * 2) ease-in-out,
+    top calc(var(--timing) * 2) ease-in-out,
+    left calc(var(--timing) * 2) ease-in-out,
+    transform calc(var(--timing) * 2) ease-in-out,
+    translate calc(var(--timing) * 2) ease-in-out,
+    scale calc(var(--timing) * 2) ease-in-out;
 }
 
 .info {
@@ -48,7 +48,7 @@ h3{
     }
 
     .author {
-        color: var(--color-text-secondary);
+        color: var(--color-text-primary);
         font-size: 13px;
     }
 
@@ -56,6 +56,11 @@ h3{
         color: var(--color-accent-secondary);
         font-size: 13px;
         margin-top: .2rem;
+    }
+
+    .short {
+        color: var(--color-text-primary);
+        font-size: 13px;
     }
 }
 
@@ -68,11 +73,9 @@ h3{
     height: 100%;
     background: linear-gradient(
             to right,
-            black 0%,
             var(--color-black-transparent) 10%,
-            var(--color-black-transparent) 35%,
-            var(--color-white-hl) 60%,
-            var(--color-white-hl) 75%,
+            var(--color-black-transparent) 50%,
+            var(--color-white-hl) 80%,
             transparent 100%
     );
     pointer-events: none;
@@ -93,31 +96,32 @@ h3{
     }
 
     & .front .info {
-        background-color: color-mix(in srgb, var(--color-text-secondary), transparent 80%);
-        mix-blend-mode: exclusion;
+        background-color: color-mix(in srgb, var(--color-bg-secondary), transparent 50%);
         position: absolute;
         height: 75px;
         bottom: 4px;
         padding: 0.2rem;
-        width: calc(var(--book-width) - 20px);
+        width: fit-content;
         border-radius: 4px;
         opacity: 100%;
+        font-size: 13px;
 
         .story {
             font-size: 14px;
             text-overflow: ellipsis;
+            max-width: calc(var(--book-width) - 20px);
             overflow: hidden;
             white-space: nowrap;
         }
 
-        & .author {
+        .author {
+            font-size: 12px;
+            text-overflow: ellipsis;
+            max-width: calc(var(--book-width) - 20px);
+            overflow: hidden;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
-            font-size: 12px;
-            height: 2rem;
-            text-overflow: ellipsis;
-            overflow: hidden;
         }
 
         .student {
@@ -133,7 +137,7 @@ h3{
     box-sizing: border-box;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
+    transition: opacity var(--timing) ease-in-out,;
 
     p {
         font-size: 13px;
@@ -168,6 +172,12 @@ h3{
     flex: 1;
     height: 100%;
     background-color: var(--color-text-primary);
+
+    .info {
+        * {
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 .book:hover {
@@ -204,12 +214,27 @@ h3{
     }
 
     h3 {
-        font-size: 13px;
+        font-family: "Eagle Lake", cursive;
         margin-bottom: 1rem;
+    }
+
+    .pagectx {
+        display: flex;
+        opacity: 1;
     }
 }
 
+.book.opening .right .pagectx,
+.book.closing .right .pagectx, .book.closed .right .pagectx, .book.idle .right .pagectx {
+    opacity: 0;
+}
+
+.book.closed .right .pagectx, .book.idle .right .pagectx {
+    display: none;
+}
+
 .book.closing .cover {
+    transition: transform var(--timing) ease-in-out;
     margin-left: 1px;
     transform: rotateY(0deg);
 }

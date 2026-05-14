@@ -47,7 +47,8 @@ function Book({book, openBookId, setOpenBookId}) {
                     <div className="info">
                         <div className="story"><h3>{book.title}</h3></div>
                         <div className="author">{book.author}</div>
-                        <div className="student">{book.creator}</div>
+                        <div className="short">{book.back}</div>
+                        <div className="student">Interpreted by: {book.creator}</div>
                     </div>
                     <div className={"actions"}>
                         <a href={book.link} className="linkBtn" target={"_blank"}>go to story</a><br/>
