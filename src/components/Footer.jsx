@@ -1,7 +1,19 @@
-import {Link, NavLink} from "react-router";
+import {Link, useNavigate} from "react-router";
 import NavRoutes from "../routes/constants/NavRoutes.js";
+import Routes from "../routes/constants/Routes.js";
+import {useContext, useEffect} from "react";
+import {SearchContext} from "../contexts/SearchContext.jsx";
 
 function Footer() {
+    const { searchQuery, setSearchQuery } = useContext(SearchContext);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (searchQuery) {
+            navigate(Routes.All);
+        }
+    }, [searchQuery, navigate]);
+    
     return (
         <footer>
             <div className="ctx flexRowSpaceBetween">
@@ -12,6 +24,8 @@ function Footer() {
                     name="search"
                     id="footerSearch"
                     placeholder="Search a story..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                 />
                 <div className="links">
                     <h4>Pages</h4>
