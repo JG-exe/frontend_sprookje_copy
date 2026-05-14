@@ -27,8 +27,8 @@
 - [x] Scene 2 – Mill room | Rumpelstiltskin slides in
 - [x] Scene 3 – Gold
 - [x] Scene 4 – Baby scene | Rumpelstiltskin demands child
-- [ ] Scene 5 – Name guessing | input field | prevent scrolling until it is guessed
-- [ ] Scene 6 – Tears self in two | destroy state | CSS class swap
+- [x] Scene 5 – Name guessing | input field | prevent scrolling until it is guessed
+- [x] Scene 6 – Tears self in two | destroy state | CSS class swap
 
 ### Submitting your project
 In Canvas, provide the following:

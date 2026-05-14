@@ -8,6 +8,8 @@ function Footer() {
     const { searchQuery, setSearchQuery } = useContext(SearchContext);
     const navigate = useNavigate();
 
+    const year = new Date().getFullYear();
+
     useEffect(() => {
         if (searchQuery) {
             navigate(Routes.All);
@@ -39,7 +41,7 @@ function Footer() {
                 </div>
             </div>
             <div className="ctx copyRight">
-                <sub>Copyright &copy; 2026 EhB MCT (Joachim Gautama)</sub>
+                <sub>Copyright &copy; {year} EhB MCT (Joachim Gautama)</sub>
             </div>
         </footer>
     );
