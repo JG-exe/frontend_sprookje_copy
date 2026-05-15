@@ -32,6 +32,6 @@
 
 ### Submitting your project
 In Canvas, provide the following:
-- [ ] A video demo of your features (just the result, not the code). Explain what you are showing
-- [ ] Add the link to your repo as a comment
-  - [ ] add link to your live site as well
+- [x] A video demo of your features (just the result, not the code). Explain what you are showing
+- [x] Add the link to your repo as a comment
+  - [x] add link to your live site as well
