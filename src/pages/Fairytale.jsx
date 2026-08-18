@@ -4,7 +4,6 @@ import {Link} from "react-router";
 import Routes from "../routes/constants/Routes.js";
 import * as f from "../hooks/fairytale"
 import * as s from "../components/fairytale";
-import {motion} from "motion/react";
 
 function Fairytale() {
     const [isTearable, setIsTearable] = useState(false);

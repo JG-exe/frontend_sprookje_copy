@@ -1,5 +1,3 @@
 export {default as All} from "./All.jsx"
 export {default as Home} from "./Home.jsx"
 export {default as MakingOf} from "./MakingOf.jsx"
-export {default as Fairytale} from "./fairytale.jsx"
-export {default as Curtains} from "./Curtains.jsx"

@@ -137,7 +137,7 @@ h3{
     box-sizing: border-box;
     flex-direction: column;
     justify-content: space-between;
-    transition: opacity var(--timing) ease-in-out,;
+    transition: opacity var(--timing) ease-in-out;
 
     p {
         font-size: 13px;
