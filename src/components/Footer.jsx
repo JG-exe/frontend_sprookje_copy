@@ -5,7 +5,7 @@ import {useContext, useEffect} from "react";
 import {SearchContext} from "../contexts/SearchContext.jsx";
 
 function Footer() {
-    const { searchQuery, setSearchQuery } = useContext(SearchContext);
+    const {searchQuery, setSearchQuery} = useContext(SearchContext);
     const navigate = useNavigate();
 
     const year = new Date().getFullYear();
@@ -15,11 +15,11 @@ function Footer() {
             navigate(Routes.All);
         }
     }, [searchQuery, navigate]);
-    
+
     return (
         <footer>
             <div className="ctx flexRowSpaceBetween">
-                <img src="./static/logos/erWasEensLogosqr.svg" id="footerLogo"/>
+                <img src="/static/logos/erWasEensLogosqr.svg" id="footerLogo"/>
                 <div className="spacer"></div>
                 <input
                     type="search"
@@ -33,9 +33,11 @@ function Footer() {
                     <h4>Pages</h4>
                     <ul className="nav">
                         {NavRoutes.map((link) => (
-                            <Link to={link.route} key={link.route}>
-                                <li>{link.label}</li>
-                            </Link>
+                            <li>
+                                <Link to={link.route} key={link.route}>
+                                    {link.label}
+                                </Link>
+                            </li>
                         ))}
                     </ul>
                 </div>

@@ -19,16 +19,16 @@ function Header() {
             <header>
                 <div className="ctx flexRowSpaceBetween">
                     <Link to={Routes.Home}>
-                        <img src="./static/logos/erWasEensLogoRect.svg" id="headerLogo"/>
+                        <img src="/static/logos/erWasEensLogoRect.svg" id="headerLogo"/>
                     </Link>
                     <nav>
                         <ul className="nav">
                             {NavRoutes.map((link) => (
-                                <NavLink to={link.route} key={link.route}>
                                     <li>
+                                <NavLink to={link.route} key={link.route}>
                                         {link.label}
-                                    </li>
                                 </NavLink>
+                                    </li>
                             ))}
                             <li>
                                 <input
