@@ -20,7 +20,7 @@ function Header() {
 				<div className="ctx flexRowSpaceBetween">
 					<Link to={Routes.Home}>
 						<img
-							src="/static/logos/erWasEensLogoRect.svg"
+							src="./static/logos/erWasEensLogoRect.svg"
 							id="headerLogo"
 						/>
 					</Link>
