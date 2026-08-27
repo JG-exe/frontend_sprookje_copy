@@ -46,6 +46,14 @@ nav {
         text-align: right;
         justify-content: flex-end;
 
+        li {
+            display: inline;
+            vertical-align: bottom;
+            font-size: medium;
+            line-height: normal;
+            align-self: center;
+        }
+
         a {
             color: var(--color-text-secondary);
             margin-right: 1rem;
@@ -63,12 +71,6 @@ nav {
             }
         }
 
-        li {
-            display: inline;
-            vertical-align: middle;
-            font-size: medium;
-            line-height: normal;
-        }
     }
 }
 
@@ -90,7 +92,7 @@ ul.nav {
     li {
         list-style: none;
         font-size: smaller;
-        line-height: 0.5rem;
+        line-height: 1.5rem;
         white-space: nowrap;
     }
 }
